@@ -1,7 +1,7 @@
 # Documentation reference for PHP Condorcet Class
 
 <p align="center">
-  <img src="condorcet-logo.png" alt="Condorcet Class" width="25%">
+  <img src="https://raw.githubusercontent.com/julien-boudry/Condorcet/master/condorcet-logo.png" alt="Condorcet Class" width="25%">
 </p>   
 
 ## Condorcet Manal
