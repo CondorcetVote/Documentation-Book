@@ -1,9 +1,23 @@
 # Native Supported Condorcet Method
 
-## Supported Condorcet Methods
-
 * **Condorcet Basic** Give you the natural winner or looser of Condorcet, if there is one.  
 *(This method is the only core method, you cannot remove it)*
+
+```php
+// Will return the strict natural Condorcet Winner candidate. Or Null if there is not.
+$condorcet->getWinner() ; 
+// Will return the strict natural Condorcet Loser candidate. Or Null if there is not.
+$condorcet->getLoser() ;
+```
+
+# Advanced Condorcet Methods
+
+These advances give you methods (in some cases) alternatives to address the lack of winning or losing natural condorcet if Condorcet paradox.   
+They also provide a comprehensive ranking, which does not allow the original method of Marquis de Condorcet.
+
+Unless otherwise against these advanced methods can not contradict the results of Condorcet. It is therefore essential supplements.   
+
+## Description
 
 * **Copeland** http://en.wikipedia.org/wiki/Copeland%27s_method
 
@@ -23,19 +37,33 @@
     * **Schulze Ratio**
 
 
-## Use a method
+## Use an advanced method
 
-| Family  | Name  | String Class | Constant
-| :------------: |:---------------:| :-----:|:-------:|
-| natural Condorcet | Condorcet Basic | 'Condorcet_Basic' | _Condorcet\Condorcet::METHOD_BASIC_
-| Copeland      | Coepland | 'Copeland' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Winning | 'Minimax_Winning' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Margin | 'Minimax_Margin' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Opposition | 'Minimax_Opposition' | _Condorcet\Copeland::COPELAND_
-| Ranked Pairs | Ranked Pairs | 'RankedPairs' | _Condorcet\RankedPairs::RankedPairs_
-| Schulze | Schulze Winning | 'Schulze' | _Condorcet\Schulze::Schulze_
-| Schulze | Schulze Margin | 'Schulze_Margin' | _Condorcet\Schulze::Schulze_
-| Schulze | Schulze Ratio | 'Schulze Ratio' | _Condorcet\Schulze::Schulze_
+```php
+// Provide a full ranking
+$condorcet->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning.
+$condorcet->getResult('Minimax_Winning') ;
+$condorcet->getResult('KemenyYoung') ;
+$condorcet->getResult('Schulze') ;
+[...]
+
+// Just get Winner or Loser
+$condorcet->getWinner('KemenyYoung') ; 
+$condorcet->getLoser('Schulze_Margin') ;
+[...]
+```
+
+Family  | Name  | String Class Name | Default Algo.
+:-----: | :-----: | :-----:| :-----:
+| [Copeland](http://en.wikipedia.org/wiki/Copeland%27s_method) | Copland | 'Copeland'
+| [Kemeny–Young](http://en.wikipedia.org/wiki/Kemeny-Young_method) | Kemeny–Young | 'KemenyYoung'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Winning | 'Minimax_Winning'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Margin | 'Minimax_Margin'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Opposition | 'Minimax_Opposition'
+| [Ranked Pairs](https://en.wikipedia.org/wiki/Ranked_pairs) | Ranked Pairs | 'RankedPairs'
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Winning | 'Schulze' | X
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Margin | 'Schulze_Margin'
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Ratio | 'Schulze_Ratio'
 
 
 
