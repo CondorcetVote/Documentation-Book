@@ -2,14 +2,14 @@
 
 ***
 * I. - Installation & Basic Configuration
-  * 1. Installation
-  * 2. Condorcet Methods
-  * 3. Configuration
-  * 4. [Condorcet Exception Code](I # Installation & Basic Configuration # 4. Condorcet Exception Code.md)
+  * [[1. Installation|I # Installation & Basic Configuration # 1. Installation]]
+  * [[2. Condorcet Methods|I # Installation & Basic Configuration # 2. Condorcet Methods]]
+  * [[3. Configuration|I # Installation & Basic Configuration # 3. Configuration]]
+  * [[4. Condorcet Exception Code|I # Installation & Basic Configuration # 4. Condorcet Exception Code]]
 * II. Use it !
   * A. Create an Election
-     * 1. [[Start|II # A. Create an Election # 1. Start]]
-     * 2. [[2. Create Candidates|II # A. Create an Election # 2. Create Candidates]]
+     * [[1. Start|II # A. Create an Election # 1. Start]]
+     * [[2. Create Candidates|II # A. Create an Election # 2. Create Candidates]]
   * B. Vote Management
      * [[1. Add Vote|II # B. Vote management # 1. Add Vote]]
      * [[2. Manage Vote|II # B. Vote management # 2. Manage Vote]]
