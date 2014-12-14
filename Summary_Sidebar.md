@@ -8,5 +8,5 @@
   * 4. [Condorcet Exception Code](I # Installation & Basic Configuration # 4. Condorcet Exception Code.md)
 * II. Use it !
   * A. Create an Election
-     * 1. Start
+     * 1. [Start](II-#-A.-Create-an-Election-#-1.-Start.md)
   
