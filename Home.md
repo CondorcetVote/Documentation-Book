@@ -58,4 +58,4 @@ The precise documentation of methods is not a wiki. It can be found in the form 
 _This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
 * [An extremely minimalist HTTP API calculating the results of Condorcet.](https://github.com/julien-boudry/Condorcet_API)
-* [Gustav mahler fan, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
+* [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
