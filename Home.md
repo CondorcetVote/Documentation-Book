@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/julien-boudry/Condorcet/master/condorcet-logo.png" alt="Condorcet Class" width="25%">
 </p>   
 
-## Condorcet Manal
+## Condorcet Manual
 
 This wiki contains examples and tutorials for common use of the possibility of Condorcet Class.   
 
