@@ -25,17 +25,17 @@
 
 ## Use a method
 
-| Family  | Name  | String Class | Constant
-| :------------: |:---------------:| :-----:|:-------:|
-| natural Condorcet | Condorcet Basic | 'Condorcet_Basic' | _Condorcet\Condorcet::METHOD_BASIC_
-| Copeland      | Coepland | 'Copeland' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Winning | 'Minimax_Winning' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Margin | 'Minimax_Margin' | _Condorcet\Copeland::COPELAND_
-| Minimax | Minimax Opposition | 'Minimax_Opposition' | _Condorcet\Copeland::COPELAND_
-| Ranked Pairs | Ranked Pairs | 'RankedPairs' | _Condorcet\RankedPairs::RankedPairs_
-| Schulze | Schulze Winning | 'Schulze' | _Condorcet\Schulze::Schulze_
-| Schulze | Schulze Margin | 'Schulze_Margin' | _Condorcet\Schulze::Schulze_
-| Schulze | Schulze Ratio | 'Schulze Ratio' | _Condorcet\Schulze::Schulze_
+Family  | Name  | String Class Name | Default Algo.
+:-----: | :-----: | :-----:| :-----:
+| Copeland | Copland | 'Copeland'
+| Kemeny–Young | Kemeny–Young | 'KemenyYoung'
+| Minimax | Minimax Winning | 'Minimax_Winning'
+| Minimax | Minimax Margin | 'Minimax_Margin'
+| Minimax | Minimax Opposition | 'Minimax_Opposition'
+| Ranked Pairs | Ranked Pairs | 'RankedPairs'
+| Schulze | Schulze Winning | 'Schulze' | X
+| Schulze | Schulze Margin | 'Schulze_Margin'
+| Schulze | Schulze Ratio | 'Schulze_Ratio'
 
 
 
