@@ -1,4 +1,4 @@
-## Summary
+## Manual Summary
 
 ***
 * I. - Installation & Basic Configuration
