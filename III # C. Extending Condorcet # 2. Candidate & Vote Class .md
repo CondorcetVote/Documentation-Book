@@ -1,0 +1,1 @@
+# Extending Candidate & Vote Class

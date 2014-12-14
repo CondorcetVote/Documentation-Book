@@ -1,4 +1,4 @@
-## Cryptographic checksum
+# Cryptographic checksum
 ```php
 getChecksum ()
 ```

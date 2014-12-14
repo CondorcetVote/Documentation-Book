@@ -1,4 +1,4 @@
-#### Get a complete ranking from advanced methods
+# Get a complete ranking from advanced methods
 ```php
 getResult ( [mixed $method = false , array $extra_param = null, mixed $tag , bool $with = true] )
 ```
