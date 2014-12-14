@@ -55,15 +55,15 @@ $condorcet->getLoser('Schulze_Margin') ;
 
 Family  | Name  | String Class Name | Default Algo.
 :-----: | :-----: | :-----:| :-----:
-| Copeland | Copland | 'Copeland'
-| Kemeny–Young | Kemeny–Young | 'KemenyYoung'
-| Minimax | Minimax Winning | 'Minimax_Winning'
-| Minimax | Minimax Margin | 'Minimax_Margin'
-| Minimax | Minimax Opposition | 'Minimax_Opposition'
-| Ranked Pairs | Ranked Pairs | 'RankedPairs'
-| Schulze | Schulze Winning | 'Schulze' | X
-| Schulze | Schulze Margin | 'Schulze_Margin'
-| Schulze | Schulze Ratio | 'Schulze_Ratio'
+| [Copeland](http://en.wikipedia.org/wiki/Copeland%27s_method) | Copland | 'Copeland'
+| [Kemeny–Young](http://en.wikipedia.org/wiki/Kemeny-Young_method) | Kemeny–Young | 'KemenyYoung'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Winning | 'Minimax_Winning'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Margin | 'Minimax_Margin'
+| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Opposition | 'Minimax_Opposition'
+| [Ranked Pairs](https://en.wikipedia.org/wiki/Ranked_pairs) | Ranked Pairs | 'RankedPairs'
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Winning | 'Schulze' | X
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Margin | 'Schulze_Margin'
+| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Ratio | 'Schulze_Ratio'
 
 
 
