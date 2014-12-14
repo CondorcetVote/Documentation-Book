@@ -1,6 +1,6 @@
 ## Manual Summary
-
 ***
+
 * I. - Installation & Basic Configuration
   * [[1. Installation|I # Installation & Basic Configuration # 1. Installation]]
   * [[2. Condorcet Methods|I # Installation & Basic Configuration # 2. Condorcet Methods]]
@@ -26,3 +26,9 @@
      * [[1. Add your own ranking algorithm|III # C. Extending Condorcet # 1. Add your own ranking algorithm]]
      * [[2. Candidate & Vote Class|III # C. Extending Condorcet # 2. Candidate & Vote Class]]
   
+
+## [Class & Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/doc)
+***
+
+## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
+***
