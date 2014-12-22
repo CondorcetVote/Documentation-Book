@@ -22,7 +22,7 @@ Unless otherwise against these advanced methods can not contradict the results o
 * **Copeland** http://en.wikipedia.org/wiki/Copeland%27s_method
 
 * **Kemeny-Young** http://en.wikipedia.org/wiki/Kemeny-Young_method   
-*Kemeny-Young does not support default over 8 candidates per election, for performance reasons. This limit can be increased manually to 9 in this way ```php Condorcet \ KemenyYoung maxcandidates :: $ _ = 9; ```. However, you will first places provisioned at least 1024M memory for PHP ```php ini_set ('memory_limit', '1024M'); ```, and provide a calculation time can exceed 30 seconds!*
+*Kemeny-Young does not support default over 8 candidates per election, for performance reasons. This limit can be increased manually to 9 in this way ```php Condorcet\KemenyYoung::$_maxCandidates = 9; ```. However, you will first places provisioned at least 1024M memory for PHP ```php ini_set ('memory_limit', '1024M'); ```, and provide a calculation time can exceed 30 seconds!*
 
 * **Minimax Family** http://en.wikipedia.org/wiki/Minimax_Condorcet
     * **Minimax Winning** *(Does not satisfy the Condorcet loser criterion)*  
