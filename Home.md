@@ -8,7 +8,7 @@
 
 This wiki contains examples and tutorials for common use of the possibility of Condorcet Class.   
 
-This wiki is deemed to be current on the most recent version of the library, from Condorcet 0.15 and its significant changes. However, some newly added information may be valid for lower versions.  
+This wiki is deemed to be current on the most recent version of the library, from Condorcet 0.90 and its significant changes. However, some newly added information may be valid for lower versions.  
 
 
 ### Manual Summary
