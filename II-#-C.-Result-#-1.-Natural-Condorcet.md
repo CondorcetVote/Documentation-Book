@@ -6,12 +6,12 @@ getLoser ( [mixed $method = false] )
 ```
 **method:** String name of an available advanced Condorcet method. True for default method.
 
-**Return value:** Candidate name, null if there are no aviable winner or loser. Throw an exception on error.
+**Return value:** Candidate name, null if there are no available winner or loser. Throw an exception on error.
 
 ## Regular
 ```php
 $condorcet->getWinner() ; // Will return a string with the Condorcet Winner candidate name
-$condorcet->getLoser() ; // Will return a string with the Condorcet looser candidate name
+$condorcet->getLoser() ; // Will return a string with the Condorcet loser candidate name
 ```
 
 
