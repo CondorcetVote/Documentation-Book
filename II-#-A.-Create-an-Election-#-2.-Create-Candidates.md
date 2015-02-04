@@ -33,7 +33,7 @@ Candidate5
 #### Method
 ```php
 $condorcet->parseCandidates('data/candidates.txt'); // Path to text file. Absolute or relative.
-$condorcet->parseCandidates($my_big_string); // Just my big string.
+$condorcet->parseCandidates($my_json_string); // Just my big string.
 ```
 
 ### Add multiple candidates from Json
