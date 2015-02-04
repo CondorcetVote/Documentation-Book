@@ -19,24 +19,24 @@ _Note: You can add new votes after the results have already been given_
 ```php
 // addVote ( mixed $vote [, mixed $tag = null] )
 ```
-**data:** The vote ranking or vote object
+**data:** The vote ranking or vote object   
 **tag:** add tag(s) to this vote for further actions
 
 
 
 ### With an array
 ```php
-$vote[1] = 'A' ;  
+$vote[1] = 'Wagner' ;  
 $vote[2] = 'Debussy' ;  
-$vote[3] = 'Wagner' ;  
-$vote[4] = 2 ; // The last rank is optionnal 
+$vote[3] = $myRegisteredCandidateObject ;  
+$vote[4] = 'Varese' ; // The last rank is optionnal 
 $condorcet->addVote($vote) ;  
 ```
 
-Use commas in the case of a tie:  
+Use commas or an array in the case of a tie:  
 ```php
-$vote[1] = 'A,Wagner' ;  
-$vote[2] = 'Debussy' ;  
+$vote[1] = 'Debussy,Wagner' ;  
+$vote[2] = [$myRegisteredCandidateObject,'Varese'] ;  
 $condorcet->addVote($vote) ; 
 ```
 
@@ -87,10 +87,19 @@ $condorcet->addVote($vote3);
 ### Add a tag
 You can add the same or different tag for each vote:  
 ```php
+// Directly with addVote method (will add it to the Vote object)
+
 $condorcet->addVote($vote, 'Charlie') ; // Please note that a single tag is always created for each vote. 
 $condorcet->addVote($vote, 'Charlie,Claude') ; // You can also add multiple tags, separated by commas. 
-```   
 
+// Or into the vote object
+$vote1 = new Vote ([$candidate1,$candidate2]);
+$vote1 = $myVoteObjet->addTags('Charlie');
+$vote2 = new Vote ([$candidate1,$candidate2], 'Charlie');
+$vote3 = new Vote ([$candidate1,$candidate2], ['Charlie','Hebdo']);
+
+$condorcet->addVote($vote1); $condorcet->addVote($vote2); $condorcet->addVote($vote3);
+```   
 
 ## Add multiple votes from string or text file
 Once your list of candidates previously recorded. You can parse a text file or as a PHP string character to record a large number of votes at once.   
