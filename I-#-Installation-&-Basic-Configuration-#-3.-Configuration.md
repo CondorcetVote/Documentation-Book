@@ -29,8 +29,3 @@ The distinction may be useful in the case of a storage of the object in the data
 Condorcet::getClassVersion();  // Return the Class engine
 $condorcet->getObjectVersion(); // Return the Class engine who build this object
 ```
-
-#### Reset object without destroying it (discouraged pratice)
-```php
-$condorcet->resetAll (); // Destroy all but keep timer stats.
-``` 
