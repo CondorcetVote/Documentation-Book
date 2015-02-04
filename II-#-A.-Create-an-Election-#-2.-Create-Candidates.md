@@ -26,14 +26,14 @@ $condorcet->addCandidate(new Condorcet\Candidate ('Edgard Varèse')) ;
 ```
 Candidate1
 Candidate2 # You can add optionnal comments
-Candidate3 ; Candidate4 # Or in the same line separated by ;, with or without space (will be trim)
+Candidate3 ; Candidate4 # Or in the same line separated by ; with or without space (will be trim)
 Candidate5
 ``` 
 
 #### Method
 ```php
 $condorcet->parseCandidates('data/candidates.txt'); // Path to text file. Absolute or relative.
-$condorcet->parseCandidates($my_json_string); // Just my big string.
+$condorcet->parseCandidates($my_big_string); // Just my big string.
 ```
 
 ### Add multiple candidates from Json
@@ -48,7 +48,7 @@ json_encode( array(
 
 #### Method
 ```php
-$condorcet->jsonCandidates($my_big_string);
+$condorcet->jsonCandidates($my_json_string);
 ```
 
 ## Removing
