@@ -46,6 +46,7 @@ $condorcet->removeVote('Charlie') ; // Remove vote(s) with tag Charlie
 $condorcet->removeVote('Charlie', false) ; // Remove votes without tag Charlie
 $condorcet->removeVote('Charlie, Julien', false) ; // Remove votes without tag Charlie AND without tag Julien.
 $condorcet->removeVote(array('Julien','Charlie')) ; // Remove votes with tag Charlie OR with tag Julien.
+$condorcet->removeVote($myVoteObject) ; // Remove a specific registered Vote.
 ```
 
 _Note: You can remove a vote after the results have already been given._  
