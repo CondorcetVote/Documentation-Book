@@ -17,7 +17,7 @@ Currently Kemeny-Young is potentially subject to conflict leading to a relativel
 The next option allows you to get rather than ranking, information on the existence or the absence of these conflicts. The following example mounts how to you use it.   
 
 ```php
-$test = $condorcet->getResult( 'KemenyYoung', array('noConflict' => true) ) ;
+$test = $condorcet->getResult( 'KemenyYoung', array('algoOptions' => ['noConflict' => true]) ) ;
 
 if ( is_string($test) ) // There is conflicts
 {
