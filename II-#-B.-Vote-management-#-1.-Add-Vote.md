@@ -93,7 +93,7 @@ $condorcet->addVote($vote, 'Charlie,Claude') ; // You can also add multiple tags
 
 // Or into the vote object
 $vote1 = new Vote ([$candidate1,$candidate2]);
-$vote1 = $myVoteObjet->addTags('Charlie');
+$vote1->addTags('Charlie');
 $vote2 = new Vote ([$candidate1,$candidate2], 'Charlie');
 $vote3 = new Vote ([$candidate1,$candidate2], ['Charlie','Hebdo']);
 
