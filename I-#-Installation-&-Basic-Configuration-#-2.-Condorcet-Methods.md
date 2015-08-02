@@ -50,8 +50,10 @@ $condorcet->getResult('Schulze') ;
 [...]
 
 // Just get Winner or Loser
-$condorcet->getWinner('KemenyYoung') ; 
-$condorcet->getLoser('Schulze_Margin') ;
+
+$condorcet->getWinner() ; // Give you a winner by strict use of the original method from Marquis of Condorcet.
+$condorcet->getLoser('Schulze_Margin') ; // use the Schulze margin method, which complements the original method.
+$condorcet->getWinner('KemenyYoung') ;
 [...]
 ```
 
