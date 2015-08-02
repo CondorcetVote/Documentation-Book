@@ -72,13 +72,10 @@ $vote2 = new Vote ( array( 1 => 'A',
                            3 => 'B',
                            4 => ['H','G']
 ));
-
-
 $vote3 = new Vote ( array(
-1 => new Condorcet\Candidate ('A') // Will be convert to existing 'A' candidate object
+1 => $CandidateA // Condorcet\Candidate
 2 => $election->getCandidatesList()[array_search('B',$election->getCandidatesList(),false)] // Put the object corresponding to the 'B' candidate from getCandidatesList method. Off course, ou can also just entrer string 'B' and Condorcet class will do the job for you.
 3 => 'C' // Condorcet class will do the job for you.
-
 ));
 
 $condorcet->addVote($vote1);  
