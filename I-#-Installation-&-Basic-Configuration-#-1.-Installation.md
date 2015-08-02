@@ -5,7 +5,7 @@
 require_once 'Condorcet/lib/Condorcet/Condorcet.php' ; // Customize the path for your use.
 use Condorcet\Condorcet ; // Optionnal if you prefer to use the full namespace length
 
-$condorcet = new Condorcet () ; // You can specify as an argument, the name string of method instead of default Schulze Method.  
+$condorcet = new Condorcet () ;
 ```
 
 #### Example with the official PSR-0 example of Autoloader
