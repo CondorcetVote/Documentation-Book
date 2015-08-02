@@ -19,7 +19,7 @@ $condorcet->addCandidate('Debussy') ;
 $myAutoCandidate = $condorcet->addCandidate() ; // Empty argument will return an candidate object with an automatic name for you (From A to ZZZZZ)  
 $condorcet->addCandidate(2) ; // If you use integer, he will be converted to string (= '2')
 $condorcet->addCandidate(new Condorcet\Candidate ('Edgard Varèse')) ;
-
+```
 ### Add multiple candidates from string or text file
 
 #### Syntax
