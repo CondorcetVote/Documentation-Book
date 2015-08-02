@@ -67,8 +67,10 @@ Well, let be a little more powerful:
 
 ```php
 $vote1 = new Vote ('A>B=C=H>G=T>Q');
-$vote2 = new Vote ( array(
-	1 => 'A', 2 => 'C', 3 => 'B', 4 => array('H','G')
+$vote2 = new Vote ( array( 1 => 'A',
+                           2 => 'C',
+                           3 => 'B',
+                           4 => ['H','G']
 ));
 
 
