@@ -16,7 +16,7 @@ Enter (or not) a Candidate Name
 ```php
 $condorcet->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= self::MAX_LENGTH_CANDIDATE_ID, Default: 30
 $condorcet->addCandidate('Debussy') ;  
-$condorcet->addCandidate() ; // Empty argument will return an automatic candidate name for you (From A to ZZZZZ)  
+$myAutoCandidate = $condorcet->addCandidate() ; // Empty argument will return an candidate object with an automatic name for you (From A to ZZZZZ)  
 $condorcet->addCandidate(2) ; // If you use integer, he will be converted to string (= '2')
 $condorcet->addCandidate(new Condorcet\Candidate ('Edgard Varèse')) ;
 
