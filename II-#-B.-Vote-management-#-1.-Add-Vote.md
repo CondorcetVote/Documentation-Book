@@ -17,7 +17,7 @@ _Note: You can add new votes after the results have already been given_
 
 
 ```php
-// addVote ( mixed $vote [, mixed $tag = null] )
+addVote ( mixed $vote [, mixed $tag = null] )
 ```
 **data:** The vote ranking or vote object   
 **tag:** add tag(s) to this vote for further actions
