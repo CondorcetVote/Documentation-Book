@@ -8,43 +8,12 @@ use Condorcet\Condorcet ; // Optionnal if you prefer to use the full namespace l
 $condorcet = new Condorcet () ;
 ```
 
-#### Example with the official PSR-0 example of Autoloader
-```php
-// PSR-0 style Loader
-
-	// ENTER HERE THE PATH TO YOUR LIB FOLDER
-	define('LIB_PATH', 'lib'.DIRECTORY_SEPARATOR);
-
-	function autoload($className)
-	{
-	    $className = ltrim($className, '\\');
-	    $fileName  = '' ;
-	    $namespace = '';
-	    if ($lastNsPos = strripos($className, '\\')) {
-	        $namespace = substr($className, 0, $lastNsPos);
-	        $className = substr($className, $lastNsPos + 1);
-	        $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
-	    }
-	    $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
-
-	    require LIB_PATH.$fileName;
-	}
-
-	spl_autoload_register('autoload');
-
-
-///// STARTING
-
-use Condorcet\Condorcet ; // Optional!
-
-$condorcet = new Condorcet (); // If you omit the previous line, do: new Condorcet\Condorcet () ;
-
-```
-
+If not other compatible autoloader is use, Condorcet will apply his own PSR-0 like autoloader (limited to himself). But, if you have your own PSR-0 or PSR-4 autoloader, dont worry about requiring Condorcet file.
 
 ## With Frameworks
 *Read the doc! The Condorcet folder inside the lib directory can be move into your solution lib directory*
 
+Condorcet library is compliant with PSR-0 and PSR-4 autoloader.
 
 ## With Composer
 `composer require julien-boudry/condorcet`
