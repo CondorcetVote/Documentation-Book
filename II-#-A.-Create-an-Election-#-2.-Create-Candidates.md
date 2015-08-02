@@ -53,7 +53,7 @@ $condorcet->jsonCandidates($my_json_string);
 
 ## Removing
 ```php
-removeCandidate ( mixed $name = automatic )
+removeCandidate ( mixed $name )
 ```
 **name:** Alphanumeric string of Condorcet\Candidate object.   
 
