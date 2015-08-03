@@ -26,4 +26,4 @@ $condorcet->getLoser(true) // With the default object method (Class Default: Sch
 $condorcet->getLoser('Schulze') ; // Name of an valid method  
 ```
 
-Will return a string with the Candidate Name or many separated by commas  
+In case of using some advanced Condorcet methods, like Schulze. getWinner() ou getLoser() methods can return one or multiple winners/losers. If there is only one, a Candidate object will be returning, else an array of Candidate objects.
