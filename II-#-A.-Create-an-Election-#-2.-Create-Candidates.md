@@ -14,11 +14,11 @@ addCandidate ( [mixed $name = automatic] )
 Enter (or not) a Candidate Name 
 
 ```php
-$condorcet->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= self::MAX_LENGTH_CANDIDATE_ID, Default: 30
-$condorcet->addCandidate('Debussy') ;  
-$myAutoCandidate = $condorcet->addCandidate() ; // Empty argument will return an candidate object with an automatic name for you (From A to ZZZZZ)  
-$condorcet->addCandidate(2) ; // If you use integer, he will be converted to string (= '2')
-$condorcet->addCandidate(new Condorcet\Candidate ('Edgard Varèse')) ;
+$election->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= self::MAX_LENGTH_CANDIDATE_ID, Default: 30
+$election->addCandidate('Debussy') ;  
+$myAutoCandidate = $election->addCandidate() ; // Empty argument will return an candidate object with an automatic name for you (From A to ZZZZZ)  
+$election->addCandidate(2) ; // If you use integer, he will be converted to string (= '2')
+$election->addCandidate(new Condorcet\Candidate ('Edgard Varèse')) ;
 ```
 ### Add multiple candidates from string or text file
 
@@ -32,8 +32,8 @@ Candidate5
 
 #### Method
 ```php
-$condorcet->parseCandidates('data/candidates.txt'); // Path to text file. Absolute or relative.
-$condorcet->parseCandidates($my_big_string); // Just my big string.
+$election->parseCandidates('data/candidates.txt'); // Path to text file. Absolute or relative.
+$election->parseCandidates($my_big_string); // Just my big string.
 ```
 
 ### Add multiple candidates from Json
@@ -48,7 +48,7 @@ json_encode( array(
 
 #### Method
 ```php
-$condorcet->jsonCandidates($my_json_string);
+$election->jsonCandidates($my_json_string);
 ```
 
 ## Removing
@@ -61,8 +61,8 @@ removeCandidate ( mixed $name )
 
 
 ```php
-$condorcet->removeCandidate('Wagner') ;
-$condorcet->removeCandidate($myCandidateObject); // Not destroying your Candidate object. But just unlink it from this Election.
+$election->removeCandidate('Wagner') ;
+$election->removeCandidate($myCandidateObject); // Not destroying your Candidate object. But just unlink it from this Election.
 ```
 
 
@@ -76,8 +76,8 @@ getCandidatesList ( bool $string_mode = false )
 
 
 ```php
-$condorcet->getCandidatesList(); // Will return an array with all Candidate object.
-$condorcet->getCandidatesList(true); // Will return an array with all candidate name as string.
+$election->getCandidatesList(); // Will return an array with all Candidate object.
+$election->getCandidatesList(true); // Will return an array with all candidate name as string.
 ```
 
 _Note: When you start voting, you will never be able to edit the candidates list._  
