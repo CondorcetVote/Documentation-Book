@@ -5,9 +5,9 @@
 
 ```php
 // Will return the strict natural Condorcet Winner candidate. Or Null if there is not.
-$condorcet->getWinner() ; 
+$election->getWinner() ; 
 // Will return the strict natural Condorcet Loser candidate. Or Null if there is not.
-$condorcet->getLoser() ;
+$election->getLoser() ;
 ```
 
 # Advanced Condorcet Methods
@@ -43,17 +43,17 @@ Unless otherwise against these advanced methods can not contradict the results o
 
 ```php
 // Provide a full ranking
-$condorcet->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning.
-$condorcet->getResult('Minimax_Winning') ;
-$condorcet->getResult('KemenyYoung') ;
-$condorcet->getResult('Schulze') ;
+$election->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning.
+$election->getResult('Minimax_Winning') ;
+$election->getResult('KemenyYoung') ;
+$election->getResult('Schulze') ;
 [...]
 
 // Just get Winner or Loser
 
-$condorcet->getWinner() ; // Give you a winner by strict use of the original method from Marquis of Condorcet.
-$condorcet->getLoser('Schulze_Margin') ; // use the Schulze margin method, which complements the original method.
-$condorcet->getWinner('KemenyYoung') ;
+$election->getWinner() ; // Give you a winner by strict use of the original method from Marquis of Condorcet.
+$election->getLoser('Schulze_Margin') ; // use the Schulze margin method, which complements the original method.
+$election->getWinner('KemenyYoung') ;
 [...]
 ```
 
