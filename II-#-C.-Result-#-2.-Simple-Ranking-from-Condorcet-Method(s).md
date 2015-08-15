@@ -1,6 +1,6 @@
 # Get a complete ranking from advanced methods
 ```php
-getResult ( [mixed $method = false , array $options] )
+Election::getResult ( [mixed $method = false , array $options] )
 ```
 **method:** String name of an available advanced Condorcet method. True for default method.
 **options:** Array

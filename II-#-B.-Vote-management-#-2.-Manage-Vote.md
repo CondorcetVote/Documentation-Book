@@ -2,7 +2,7 @@
 
 ## Verify the registered votes list
 ```php
-getVotesList ( [mixed $tag = null, bool $with = true] )
+Election::getVotesList ( [mixed $tag = null, bool $with = true] )
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)   
@@ -22,7 +22,7 @@ __Note: Make a test, and look the return format. For each vote, you can get as a
 ## Count registered votes
 
 ```php
-countVotes ( [mixed $tag = null, bool $with = true] )
+Election::countVotes ( [mixed $tag = null, bool $with = true] )
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)    
@@ -36,7 +36,7 @@ $condorcet->countVotes (array('Julien','Charlie'), false); // Count vote without
 
 ## Remove vote
 ```php
-removeVote( mixed $tag [, bool $with = true] )
+Election::removeVote( mixed $tag [, bool $with = true] )
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)    

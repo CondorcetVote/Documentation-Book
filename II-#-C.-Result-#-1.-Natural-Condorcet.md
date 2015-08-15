@@ -1,8 +1,8 @@
 # Just get the natural Condorcet Winner
 
 ```php
-getWinner ( [mixed $method = false] )
-getLoser ( [mixed $method = false] )
+Election::getWinner ( [mixed $method = false] )
+Election::getLoser ( [mixed $method = false] )
 ```
 **method:** String name of an available advanced Condorcet method. True for default method.
 

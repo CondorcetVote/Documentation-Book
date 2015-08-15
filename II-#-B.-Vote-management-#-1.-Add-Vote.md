@@ -17,7 +17,7 @@ _Note: You can add new votes after the results have already been given_
 
 
 ```php
-addVote ( mixed $vote [, mixed $tag = null] )
+Election::addVote ( mixed $vote [, mixed $tag = null] )
 ```
 **data:** The vote ranking or vote object   
 **tag:** add tag(s) to this vote for further actions
@@ -147,6 +147,6 @@ $election->jsonVotes($json_votes);
 Be applied and reset each call parseVotes() or jsonVotes()   
 
 ```php
-Condorcet::setMaxParseIteration(500); // Will generate an exception and stop after 500 registered vote by call.
-Condorcet::setMaxParseIteration(null); // No limit (default mode)
+Election::setMaxParseIteration(500); // Will generate an exception and stop after 500 registered vote by call.
+Election::setMaxParseIteration(null); // No limit (default mode)
 ```  

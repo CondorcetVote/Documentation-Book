@@ -5,7 +5,7 @@
 ### Regular
 
 ```php
-addCandidate ( [mixed $name = automatic] ) 
+Election::addCandidate ( [mixed $name = automatic] ) 
 ```
 **name:** Alphanumeric string or Condorcet\Candidate objet. Your candidate name will be trim()    
 
@@ -53,7 +53,7 @@ $election->jsonCandidates($my_json_string);
 
 ## Removing
 ```php
-removeCandidate ( mixed $name )
+Election::removeCandidate ( mixed $name )
 ```
 **name:** Alphanumeric string of Condorcet\Candidate object.   
 
@@ -68,7 +68,7 @@ $election->removeCandidate($myCandidateObject); // Not destroying your Candidate
 
 ## Verify the Candidates list
 ```php
-getCandidatesList ( bool $string_mode = false )
+Election::getCandidatesList ( bool $string_mode = false )
 ```
 **string_mode:** If false, Candidate object are returned. Else Candidate as string name.
 

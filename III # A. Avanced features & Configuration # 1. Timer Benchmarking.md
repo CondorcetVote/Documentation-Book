@@ -3,7 +3,7 @@ These two methods can be useful in estimating the computation time of each call 
 
 ## Last timer
 ```php
-getLastTimer (bool $float = false)
+Election::getLastTimer (bool $float = false)
 ```
 **float:** If true, return a float number. Else, it return number_format($result, 5).
 
@@ -26,7 +26,7 @@ $election->getLastTimer(true); // Return 0.00010030 (float) . But Copeland is re
 
 ## Global timer
 ```php
-getGlobalTimer (bool $float = false)
+Election::getGlobalTimer (bool $float = false)
 ```
 **float:** If true, return a float number. Else, it return number_format($result, 5).
 
@@ -37,5 +37,5 @@ getGlobalTimer (bool $float = false)
 $election->getResult('RankedPairs');
 $election->getResult('KemenyYoung');
 $election->getResult('Copeland');
-$election->getLastTimer(true); // Return 0.02600050 (float) . Time calculation, including that of the Pairwise
+$election->getGlobalTimer(true); // Return 0.02600050 (float) . Time calculation, including that of the Pairwise
 ```
