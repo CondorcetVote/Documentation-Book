@@ -8,8 +8,8 @@ _Note: By default, there is no limit_
 Condorcet::setMaxVoteNumber(2042); // All election, new or wake up, will be limit at this maximum vote number.
 Condorcet::setMaxVoteNumber(null); // No limit for evrybody. (Default)
 
-$condorcet->ignoreMaxVote(true); // Ho well, I'm a rebel. This Class limit do not apply to me.
-$condorcet->ignoreMaxVote(false); // Ok, ok, it apply to me.
+$election->ignoreMaxVote(true); // Ho well, I'm a rebel. This Class limit do not apply to me.
+$election->ignoreMaxVote(false); // Ok, ok, it apply to me.
 ```
 
 ## Add a vote
@@ -30,14 +30,14 @@ $vote[1] = 'Wagner' ;
 $vote[2] = 'Debussy' ;  
 $vote[3] = $myRegisteredCandidateObject ;  
 $vote[4] = 'Varese' ; // The last rank is optionnal 
-$condorcet->addVote($vote) ;  
+$election->addVote($vote) ;  
 ```
 
 Use commas or an array in the case of a tie:  
 ```php
 $vote[1] = 'Debussy,Wagner' ;  
 $vote[2] = [$myRegisteredCandidateObject,'Varese'] ;  
-$condorcet->addVote($vote) ; 
+$election->addVote($vote) ; 
 ```
 
 *The last rank is optionnal, it will be automatically deducted.*  
@@ -47,11 +47,11 @@ You can do like this:
 
 ```php
 $vote = 'A>B=C=H>G=T>Q' ;
-$condorcet->addVote($vote) ;  
+$election->addVote($vote) ;  
 
 // It's working with some space, if you want to be durty...
 $vote = 'A> B = C=H >G=T > Q' ;
-$condorcet->addVote($vote) ;  
+$election->addVote($vote) ;  
 
 // But you can not use '<' operator
 $vote = 'A<B<C' ; // It's not correct
@@ -78,9 +78,9 @@ $vote3 = new Vote ( array(
 3 => 'C' // Condorcet class will do the job for you.
 ));
 
-$condorcet->addVote($vote1);  
-$condorcet->addVote($vote2);  
-$condorcet->addVote($vote3);  
+$election->addVote($vote1);  
+$election->addVote($vote2);  
+$election->addVote($vote3);  
 ```
 
 ### Add a tag
@@ -88,15 +88,15 @@ You can add the same or different tag for each vote:
 ```php
 // Directly with addVote method (will add it to the Vote object)
 
-$condorcet->addVote($vote, 'Charlie') ; // Please note that a single tag is always created for each vote. 
-$condorcet->addVote($vote, 'Charlie,Claude') ; // You can also add multiple tags, separated by commas. 
+$election->addVote($vote, 'Charlie') ; // Please note that a single tag is always created for each vote. 
+$election->addVote($vote, 'Charlie,Claude') ; // You can also add multiple tags, separated by commas. 
 
 // Or into the vote object
 $vote1 = new Vote ([$candidate1,$candidate2]);
 $vote2 = new Vote ([$candidate1,$candidate2], 'Charlie');
 $vote3 = new Vote ([$candidate1,$candidate2], ['Charlie','Hebdo']);
 
-$condorcet->addVote($vote1); $condorcet->addVote($vote2); $condorcet->addVote($vote3);
+$election->addVote($vote1); $election->addVote($vote2); $election->addVote($vote3);
 $vote1->addTags('Charlie');
 ```   
 
@@ -117,8 +117,8 @@ C>D>B*8;A=D>B;Julien,Christelle||A>C>D>B*4;D=B=C>A # Alternatively, you can repl
 
 ### Method
 ```php
-$condorcet->parseVotes('data/vote42.txt'); // Path to text file. Absolute or relative.
-$condorcet->parseVotes($my_big_string); // Just my big string.
+$election->parseVotes('data/vote42.txt'); // Path to text file. Absolute or relative.
+$election->parseVotes($my_big_string); // Just my big string.
 ```
 
 ## Add multiple votes from Json
@@ -139,7 +139,7 @@ In the previous example, all parameters are optional exept vote.
 
 ### Method
 ```php
-$condorcet->jsonVotes($json_votes);
+$election->jsonVotes($json_votes);
 ```
 
 **Anti-flood:**

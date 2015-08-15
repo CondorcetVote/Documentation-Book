@@ -14,7 +14,7 @@ addCandidate ( [mixed $name = automatic] )
 Enter (or not) a Candidate Name 
 
 ```php
-$election->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= self::MAX_LENGTH_CANDIDATE_ID, Default: 30
+$election->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= Election::MAX_LENGTH_CANDIDATE_ID, Default: 30
 $election->addCandidate('Debussy') ;  
 $myAutoCandidate = $election->addCandidate() ; // Empty argument will return an candidate object with an automatic name for you (From A to ZZZZZ)  
 $election->addCandidate(2) ; // If you use integer, he will be converted to string (= '2')

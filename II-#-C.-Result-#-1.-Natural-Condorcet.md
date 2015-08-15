@@ -10,8 +10,8 @@ getLoser ( [mixed $method = false] )
 
 ## Regular
 ```php
-$condorcet->getWinner() ; // Will return a string with the Condorcet Winner candidate name
-$condorcet->getLoser() ; // Will return a string with the Condorcet loser candidate name
+$election->getWinner() ; // Will return a string with the Condorcet Winner candidate name
+$election->getLoser() ; // Will return a string with the Condorcet loser candidate name
 ```
 
 
@@ -19,11 +19,11 @@ $condorcet->getLoser() ; // Will return a string with the Condorcet loser candid
 If there is not a regular Condorcet Winner or Loser, process to a special winner(s) using an advanced method.  
 
 ```php
-$condorcet->getWinner(true) ; // With the default object method (Class Default: Schulze)  
-$condorcet->getWinner('Schulze') ; // Name of an valid method  
+$election->getWinner(true) ; // With the default object method (Class Default: Schulze)  
+$election->getWinner('Schulze') ; // Name of an valid method  
 
-$condorcet->getLoser(true) // With the default object method (Class Default: Schulze)  
-$condorcet->getLoser('Schulze') ; // Name of an valid method  
+$election->getLoser(true) // With the default object method (Class Default: Schulze)  
+$election->getLoser('Schulze') ; // Name of an valid method  
 ```
 
 In case of using some advanced Condorcet methods, like Schulze. getWinner() ou getLoser() methods can return one or multiple winners/losers. If there is only one, a Candidate object will be returning, else an array of Candidate objects.

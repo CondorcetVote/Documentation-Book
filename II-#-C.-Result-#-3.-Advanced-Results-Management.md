@@ -2,10 +2,10 @@
 
 ## Get compute details
 ```php
-$condorcet->getPairwise() ; // Return an explicit array using your Candidate Name as keys.  
+$election->getPairwise() ; // Return an explicit array using your Candidate Name as keys.  
 
-$condorcet->getResultStats() ; // Get stats about computing result for the default object method. (Class Default: Schulze)  
-$condorcet->getResultStats('Schulze') ; // Same thing with a specific method.  
+$election->getResultStats() ; // Get stats about computing result for the default object method. (Class Default: Schulze)  
+$election->getResultStats('Schulze') ; // Same thing with a specific method.  
 ```
 
 
@@ -17,7 +17,7 @@ Currently Kemeny-Young is potentially subject to conflict leading to a relativel
 The next option allows you to get rather than ranking, information on the existence or the absence of these conflicts. The following example mounts how to you use it.   
 
 ```php
-$test = $condorcet->getResult( 'KemenyYoung', array('algoOptions' => ['noConflict' => true]) ) ;
+$test = $election->getResult( 'KemenyYoung', array('algoOptions' => ['noConflict' => true]) ) ;
 
 if ( is_string($test) ) // There is conflicts
 {
