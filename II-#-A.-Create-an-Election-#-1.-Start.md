@@ -3,7 +3,7 @@
 ## Make a new Election
 ```php
 // Classic way :
-$myElection = new Condorcet\Condorcet ();
+$myElection = new Condorcet\Election ();
 ```
 
 ## Election Cycle
