@@ -50,12 +50,15 @@ The precise documentation of methods is not a wiki. It can be found in the form 
 
 ### Officials examples
 
-* [Basic & Advanced Examples](https://github.com/julien-boudry/Condorcet/tree/master/example)
+* [Quick tour](https://github.com/julien-boudry/Condorcet#really-quick-and-simple-example)
+* [Great tour](https://github.com/julien-boudry/Condorcet/blob/master/examples/Overview.php)
+* [Basic and intermediate demonstration with html](https://github.com/julien-boudry/Condorcet/tree/master/examples/examples-with-html)
 
 
 ### Condorcet Class Implementation
 
 _This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
-* [An extremely minimalist HTTP API calculating the results of Condorcet.](https://github.com/julien-boudry/Condorcet_API)
+* [www.Condorcet.Vote](https://www.Condorcet.Vote)
+** [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
 * [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
