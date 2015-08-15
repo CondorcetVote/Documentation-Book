@@ -37,7 +37,7 @@ Unless otherwise against these advanced methods can not contradict the results o
     * **Schulze Ratio**
 
 ### Comparative
-* [Table on Condorcet-Vote.org](http://www.condorcet-vote.org/Condorcet_Methods)
+* [Table on Condorcet.Vote](http://www.condorcet.Vote)
 
 ## Use an advanced method
 
