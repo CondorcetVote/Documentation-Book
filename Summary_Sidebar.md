@@ -1,6 +1,6 @@
 ## Manual Summary
+* [[Home|Home]]
 ***
-
 * I. - Installation & Basic Configuration
   * [[1. Installation|I # Installation & Basic Configuration # 1. Installation]]
   * [[2. Condorcet Methods|I # Installation & Basic Configuration # 2. Condorcet Methods]]

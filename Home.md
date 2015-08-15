@@ -33,7 +33,7 @@ This wiki is deemed to be current on the most recent version of the library, fro
   * A. Advanced Features
      * [[1. Timer Benchmarking|III # A. Avanced features & Configuration # 1. Timer Benchmarking]]
      * [[2. Cryptographic Checksum|III # A. Avanced features & Configuration # 2. Cryptographic Checksum]]
-  * B. Guide for a 100% advanced object oriented use
+  * B. [[Guide for a 100% advanced object oriented use|III # B. Guide for a 100% advanced object oriented use]]
   * C. Extending Condorcet
      * [[1. Add your own ranking algorithm|III # C. Extending Condorcet # 1. Add your own ranking algorithm]]
      * [[2. Candidate & Vote Class|III # C. Extending Condorcet # 2. Candidate & Vote Class]]
@@ -61,6 +61,6 @@ This wiki is a manual for the last stable version.
 
 _This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
-* [www.Condorcet.Vote](https://www.Condorcet.Vote)    
+* [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.    
   * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
 * [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
