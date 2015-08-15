@@ -7,7 +7,7 @@ Election::getResult ( [mixed $method = false , array $options] )
 
 **Return value:** Throw an exception on error, else a nice array for ranking.
 
-__Warning: Using getResult() with tags filter don't use cache engin and computing each time you call it, prefer clone object and remove votes if you can do it.__
+__Warning: Using getResult() with tags filter don't use cache engine and computing each time you call it, prefer clone object and remove votes if you need performance.__
 
 
 ```php

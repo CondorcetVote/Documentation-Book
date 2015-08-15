@@ -1,4 +1,4 @@
-# Documentation reference for PHP Condorcet Class
+# Manual PHP Condorcet Class
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/julien-boudry/Condorcet/master/condorcet-logo.png" alt="Condorcet Class" width="25%">
