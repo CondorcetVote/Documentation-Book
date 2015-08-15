@@ -59,6 +59,6 @@ The precise documentation of methods is not a wiki. It can be found in the form 
 
 _This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
-* [www.Condorcet.Vote](https://www.Condorcet.Vote)
+* [www.Condorcet.Vote](https://www.Condorcet.Vote)    
 ** [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
 * [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
