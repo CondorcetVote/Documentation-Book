@@ -44,7 +44,7 @@ This wiki is deemed to be current on the most recent version of the library, fro
 The precise and full documentation is not this wiki. It can be found in as Markdown in the "doc" folder for each release.    
 This wiki is a manual for the last stable version.
 
-*Full documentation of the master branch :*
+**Full documentation of the master branch :**
 * [Class & Methods documentation](https://github.com/julien-boudry/Condorcet/tree/master/doc)
 
 
@@ -62,5 +62,5 @@ This wiki is a manual for the last stable version.
 _This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
 * [www.Condorcet.Vote](https://www.Condorcet.Vote)    
-  ** [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
+  * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
 * [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
