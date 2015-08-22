@@ -2,7 +2,7 @@
 
 ## Basically
 ```php
-require_once 'Condorcet/lib/Condorcet.php' ; // Customize the path for your use.
+require_once 'Condorcet/__CondorcetAutoload.php' ; // Customize the path for your use.
 use Condorcet\Condorcet ; // Optionnal if you prefer to use the full namespace length
 
 $condorcet = new Condorcet () ;
