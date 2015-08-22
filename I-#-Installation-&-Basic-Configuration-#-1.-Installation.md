@@ -7,8 +7,7 @@ use Condorcet\Condorcet ; // Optionnal if you prefer to use the full namespace l
 
 $condorcet = new Condorcet () ;
 ```
-
-If not other compatible autoloader is use, Condorcet will apply his own PSR-0 like autoloader (limited to himself). But, if you have your own PSR-4 autoloader, dont worry about requiring Condorcet file.
+Include __CondorcetAutoload.php only if you don't have any PSR-4 autoloader. If you don't know, include it.
 
 ## With Frameworks
 *Read the doc! The Condorcet folder inside the lib directory can be move into your solution lib directory*
