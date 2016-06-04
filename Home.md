@@ -33,6 +33,7 @@ This wiki is deemed to be current on the most recent version of the library, fro
   * A. Advanced Features
      * [[1. Timer Benchmarking|III # A. Avanced features & Configuration # 1. Timer Benchmarking]]
      * [[2. Cryptographic Checksum|III # A. Avanced features & Configuration # 2. Cryptographic Checksum]]
+     * [[3. Get started to handle millions of votes |III # A. Avanced features & Configuration # 3. Get started to handle millions of votes]]
   * B. [[Guide for a 100% advanced object oriented use|III # B. Guide for a 100% advanced object oriented use]]
   * C. Extending Condorcet
      * [[1. Add your own ranking algorithm|III # C. Extending Condorcet # 1. Add your own ranking algorithm]]
