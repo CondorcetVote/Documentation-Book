@@ -6,7 +6,7 @@ namespace MyNameSpace;
 
 class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\MethodInterface
 {
-	const METHOD_NAME = 'FirstMethodName,Alias1,Alias_2,Alias 3,Other Alias[...]'; // Note: All of them will be converted to uppercase.
+	const METHOD_NAME = ['FirstMethodName','Alias1','Alias_2','Alias 3'];
 
 	$protected $myResult;
 	$protected $myStats;
