@@ -6,7 +6,7 @@ require_once 'Condorcet/__CondorcetAutoload.php' ; // Customize the path for you
 
 use Condorcet\Election ;
 
-$myElection = new Election () ;
+$election = new Election () ;
 ``
 
 ## With Frameworks
