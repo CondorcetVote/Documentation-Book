@@ -57,6 +57,8 @@ This wiki is a manual for the last stable version.
 * [Great tour](https://github.com/julien-boudry/Condorcet/blob/master/examples/Overview.php)
 * [Basic and intermediate demonstration with html](https://github.com/julien-boudry/Condorcet/tree/master/examples/examples-with-html)
 
+* [Setup Condorcet to manage up to hundred millions votes](https://github.com/julien-boudry/Condorcet/blob/master/examples/specifics_examples/use_large_election_external_database_drivers.php)
+
 
 ### Condorcet Class Implementation
 
