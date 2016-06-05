@@ -17,6 +17,7 @@ $election->getLoser() ; // Will return a string with the Condorcet loser candida
 
 ## Special
 If there is not a regular Condorcet Winner or Loser, process to a special winner(s) using an advanced method.  
+Have a look to [Condorcet Methods manual chapter](https://github.com/julien-boudry/Condorcet/wiki/I-%23-Installation-%26-Basic-Configuration-%23-2.-Condorcet-Methods)
 
 ```php
 $election->getWinner(true) ; // With the default object method (Class Default: Schulze)  
