@@ -2,12 +2,12 @@
 
 ## Basically
 ```php
-require_once 'Condorcet/__CondorcetAutoload.php' ; // Customize the path for your use.
-use Condorcet\Condorcet ; // Optionnal if you prefer to use the full namespace length
+require_once 'Condorcet/__CondorcetAutoload.php' ; // Customize the path for your use. You don't need that if you use composer or other external PSR-4 autoloader.
 
-$condorcet = new Condorcet () ;
-```
-Include __CondorcetAutoload.php only if you don't have any PSR-4 autoloader. If you don't know, include it.
+use Condorcet\Election ;
+
+$myElection = new Election () ;
+``
 
 ## With Frameworks
 *Read the doc! The Condorcet folder inside the lib directory can be move into your solution lib directory*
