@@ -1,40 +1,56 @@
 # Link your algorithm
 
-The class specifications and name should be in this format: 
+Take inspiration from the simplified example below. Read code from Condorcet\Algo\Method (abstract class) and Condorcet\Algo\MethodInterface (interface).
+You should also read Condorcet\Algo\Methods\Copeland code, it's a simple and efficient implementation.
+
 ```php
 namespace MyNameSpace;
 
 class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\MethodInterface
 {
-	const METHOD_NAME = ['FirstMethodName','Alias1','Alias_2','Alias 3'];
+    const METHOD_NAME = ['FirstMethodName','Alias1','Alias_2','Alias 3'];
 
-	$protected $myResult;
-	$protected $myStats;
 
-	public function getResult ($options) {
-		$this->mywork($this->_selfElection, $options);
+    // Get the Result object
+    public function getResult ($options = null) : Result
+    {
+        // Cache
+        if ( $this->_Result !== null )
+        {
+            return $this->_Result;
+        }
 
-		return $this->myResult;
-	}
+            //////
 
-	public function getStats () {
-		$this->myWork();
+        // Ranking calculation
+        $this->makeRanking();
 
-		return $this->myStats; // You are free to return all you want or null, this go directly to the userland.
-	}
+        // Return
+        return $this->_Result;
+    }
 
-	protected function myWork (Condorcet\Election $election, $options) {
-		
-		if ( empty($myResult) ) {
-			// Your job here
 
-			# Result must follow this format
-			$this->myResult = [0=>$CandidateX, 1=> [$CandidateY,$CandidateZ], 2=> $CandidateR]; // Candidate must be valid Condorcet\Candidate object.
+    // Compute the Stats
+    protected function getStats () : array
+    {
+        return []; // You are free to do all you wants. Must be an array.;
+    }
 
-			# Additionnals stats
-			$this->myStats = 'You are free to do all you wants';
-		}		
-	}
+
+
+/////////// COMPUTE ///////////
+
+
+    //:: ALGORITHM. :://
+
+    protected function makeRanking ()
+    {
+        $myPairwise = $this->_selfElection->getPairwise(false);
+
+        $result = [0=>$CandidateX, 1=> [$CandidateY,$CandidateZ], 2=> $CandidateR]; // Candidate must be valid Condorcet\Candidate object.
+
+        $this->_Result = $this->createResult($result);
+    }
 }
 ```  
 
