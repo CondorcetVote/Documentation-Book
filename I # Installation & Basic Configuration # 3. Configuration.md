@@ -11,7 +11,7 @@ $election->getConfig (); // Will return an explicit array about the object and C
 
 Condorcet::getDefaultMethod(); // Return a string with the name of the default method in used.
 
-Condorcet::getAuthMethods (); // Get an array of authorized methods to use with the correct string to use as parameter.  
+Condorcet::getAuthMethods(); // Get an array of authorized methods to use with the correct string to use as parameter.  
 ```
 
 ## Get library version / Get object version

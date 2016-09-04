@@ -9,7 +9,7 @@ Election::addCandidate ( [mixed $name = automatic] )
 ```
 **name:** Alphanumeric string or Condorcet\Candidate objet. Your candidate name will be trim()    
 
-**Return value:** The new candidate name (your or automatic one). Throw an exception on error (existing candidate...)    
+**Return value:** The new candidate object. Throw an exception on error (existing candidate...)    
 
 Enter (or not) a Candidate Name 
 
@@ -41,8 +41,8 @@ $election->parseCandidates($my_big_string); // Just my big string.
 #### Syntax
 ```php
 json_encode( array(
-	'Candidate1',
-	'Candidate2'
+	'CandidateName1',
+	'CandidateName2'
 ) );
 ``` 
 
@@ -55,7 +55,7 @@ $election->jsonCandidates($my_json_string);
 ```php
 Election::removeCandidate ( mixed $name )
 ```
-**name:** Alphanumeric string of Condorcet\Candidate object.   
+**name:** Alphanumeric string or Condorcet\Candidate object.   
 
 **Return value:** True on success. Throw an exception if candidate name can't be found or if the vote has began.
 
