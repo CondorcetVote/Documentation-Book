@@ -8,7 +8,7 @@
 
 This wiki contains examples and tutorials for common use of the possibility of Condorcet Class.   
 
-This wiki is deemed to be current on the most recent version of the library, from Condorcet 0.90 and its significant changes. However, some newly added information may be valid for lower versions.  
+This wiki is deemed to be current on the most recent version of the library, from Condorcet 1.1 and its significant changes. However, most of information may be valid for lower versions.  
 
 
 ### Manual Summary
@@ -34,16 +34,15 @@ This wiki is deemed to be current on the most recent version of the library, fro
      * [[1. Timer Benchmarking|III # A. Avanced features & Configuration # 1. Timer Benchmarking]]
      * [[2. Cryptographic Checksum|III # A. Avanced features & Configuration # 2. Cryptographic Checksum]]
      * [[3. Get started to handle millions of votes |III # A. Avanced features & Configuration # 3. Get started to handle millions of votes]]
-  * B. [[Guide for a 100% advanced object oriented use|III # B. Guide for a 100% advanced object oriented use]]
-  * C. Extending Condorcet
-     * [[1. Add your own ranking algorithm|III # C. Extending Condorcet # 1. Add your own ranking algorithm]]
-     * [[2. Candidate & Vote Class|III # C. Extending Condorcet # 2. Candidate & Vote Class]]
+  * B. Extending Condorcet
+     * [[1. Add your own ranking algorithm|III # B. Extending Condorcet # 1. Add your own ranking algorithm]]
+     * [[2. Candidate & Vote Class|III # B. Extending Condorcet # 2. Candidate & Vote Class]]
 
 
 ## Class & Methods reference
 
 The precise and full documentation is not this wiki. It can be found in as Markdown in the "doc" folder for each release.    
-This wiki is a manual for the last stable version.
+This wiki is a manual for the lastest stable version.
 
 **Full documentation of the master branch :**
 * [Class & Methods documentation](https://github.com/julien-boudry/Condorcet/tree/master/doc)

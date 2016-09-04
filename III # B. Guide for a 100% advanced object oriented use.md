@@ -1,1 +1,0 @@
-III # B. Guide for a 100% advanced object oriented use
