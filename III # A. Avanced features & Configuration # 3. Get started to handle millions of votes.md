@@ -80,6 +80,9 @@ Have a look on the [example below](https://github.com/julien-boudry/Condorcet/bl
     $myElection->getResult('Schulze');
 
 
+// Optionally. You can close external driver and and retrieve data into classical internal RAM memory, if there is enough space...
+$myElection->closeHandler();
+
 print 'Success!  
 Process in: '. (microtime(true) - $start_time) . 's
 ';

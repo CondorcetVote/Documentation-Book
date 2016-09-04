@@ -3,6 +3,8 @@
 Take inspiration from the simplified example below. Read code from Condorcet\Algo\Method (abstract class) and Condorcet\Algo\MethodInterface (interface).
 You should also read Condorcet\Algo\Methods\Copeland code, it's a simple and efficient implementation.
 
+## Basic example
+
 ```php
 namespace MyNameSpace;
 
@@ -47,7 +49,7 @@ class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\Meth
     {
         $myPairwise = $this->_selfElection->getPairwise(false);
 
-        $result = [0=>$CandidateX, 1=> [$CandidateY,$CandidateZ], 2=> $CandidateR]; // Candidate must be valid Condorcet\Candidate object.
+        $result = [0=>$CandidateX, 1=> [$CandidateY,$CandidateZ], 2=> $CandidateR]; // Candidate must be valid internal candidate key.
 
         $this->_Result = $this->createResult($result);
     }
