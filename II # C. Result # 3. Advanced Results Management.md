@@ -8,7 +8,7 @@ $election->getResult('Schulze')->getMethod() ; // Return method who build this r
 
 $election->getResult('Schulze')->getCondorcetElectionGeneratorVersion() ; // Return Condorcet version at the build time.
 
-$election->getResult('Schulze')->getBuildTimeStamp() ; // Return timestamp (float) og the build time.
+$election->getResult('Schulze')->getBuildTimeStamp() ; // Return timestamp (float) of the build time.
 ```
 
 ## Get compute details
@@ -20,6 +20,9 @@ $election->getResult('Schulze')->getStats() ; // Get stats about computing resul
 
 ## Get result infos
 ```php
+$election->getResult('Schulze')->getWinner(); // Equivalent to $election->getWinner('Schulze');
+$election->getResult('Schulze')->getLoser(); // Equivalent to $election->getLoser('Schulze');
+
 $election->getResult('Schulze')->getCondorcetWinner() ; // Get the condorcet winner from the parent election at the build time (can became different. This one never change) or null if he don't exist.
 $election->getResult('Schulze')->getCondorcetLoser() ; // Get the condorcet loser from the parent election at the build time (can became different. This one never change) or null if he don't exist.
 

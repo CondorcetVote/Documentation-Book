@@ -2,8 +2,9 @@
 
 ## Make a new Election
 ```php
-// Classic way :
-$myElection = new Condorcet\Election ();
+use Condorcet/Election;
+
+$myElection = new Election ();
 ```
 
 ## Election Cycle
