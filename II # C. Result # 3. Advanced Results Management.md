@@ -4,8 +4,7 @@
 ```php
 $election->getPairwise() ; // Return an explicit array using your Candidate Name as keys.  
 
-$election->getResultStats() ; // Get stats about computing result for the default object method. (Class Default: Schulze)  
-$election->getResultStats('Schulze') ; // Same thing with a specific method.  
+$election->getResult('Schulze')->getStats() ; // Get stats about computing result for the default object method. Output vary between the methods. Should be an array.
 ```
 
 
