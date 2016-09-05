@@ -14,7 +14,7 @@
      * [[2. Manage Vote|II # B. Vote management # 2. Manage Vote]]
   * C. Result
      * [[1. Natural Condorcet Winner & Loser|II # C. Result # 1. Natural Condorcet]]
-     * [[2. Simple Ranking from Condorcet Method(s)|II # C. Result # 2. Simple Ranking from Condorcet Method(s)]]
+     * [[2. Simple Ranking from Condorcet Method(s)|II # C. Result # 2. Get Ranking from Condorcet advanced Methods]]
      * [[3. Advanced Results Management|II # C. Result # 3. Advanced Results Management]]
 * III. Advanced Use
   * A. Advanced Features
