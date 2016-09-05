@@ -1,4 +1,6 @@
-# Just get the natural Condorcet Winner
+# Get Winner / Loser
+
+## Original Condorcet method Winner / Loser
 
 ```php
 Election::getWinner ( [mixed $method = false] )
