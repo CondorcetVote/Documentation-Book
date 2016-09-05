@@ -19,11 +19,11 @@ The next option allows you to get rather than ranking, information on the existe
 ```php
 $test = $election->getResult( 'KemenyYoung', array('algoOptions' => ['noConflict' => true]) ) ;
 
-if ( is_string($test) ) // There is conflicts
+if ( !empty($result->getWarning(\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)) )
 {
-	$test = explode(";",$test);
+    $kemeny_conflicts = explode( ';', $result->getWarning(\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg'] ) ;
 
-	echo 'Arbitrary results: Kemeny-Young has '.$test[0].' possible solutions at score '.$test[1] ;
+    echo '<strong style="color:red;">Arbitrary results: Kemeny-Young has '.$kemeny_conflicts[0].' possible solutions at score '.$kemeny_conflicts[1].'</strong>' ;
 }
 else
 {

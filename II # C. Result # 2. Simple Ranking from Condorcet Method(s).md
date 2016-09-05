@@ -5,9 +5,9 @@ Election::getResult ( [mixed $method = false , array $options] )
 **method:** String name of an available advanced Condorcet method. True for default method.
 **options:** Array
 
-**Return value:** Throw an exception on error, else a nice array for ranking.
+**Return value:** Return a Condorcet/result object. He is Iterable, Countable and support array access, It behaves just like an ordered array.
 
-__Warning: Using getResult() with tags filter don't use cache engine and computing each time you call it, prefer clone object and remove votes if you need performance.__
+__Warning: Using getResult() with tags filter option don't use cache engine and computing each time you call it, prefer clone object and remove votes if you need performance.__
 
 
 ```php
