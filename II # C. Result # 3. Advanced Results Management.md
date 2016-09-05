@@ -1,5 +1,16 @@
 # Advanced Results
 
+## Get metadata
+
+```php
+$election->getResult('Schulze')->getClassGenerator() ; // Return namespace of the Schulze module. Like '/Condorcet/Algo/Methods/SchulzeWinning'
+$election->getResult('Schulze')->getMethod() ; // Return method who build this result. Like 'Schulze'.
+
+$election->getResult('Schulze')->getCondorcetElectionGeneratorVersion() ; // Return Condorcet version at the build time.
+
+$election->getResult('Schulze')->getBuildTimeStamp() ; // Return timestamp (float) og the build time.
+```
+
 ## Get compute details
 ```php
 $election->getPairwise() ; // Return an explicit array using your Candidate Name as keys.  
@@ -7,6 +18,14 @@ $election->getPairwise() ; // Return an explicit array using your Candidate Name
 $election->getResult('Schulze')->getStats() ; // Get stats about computing result for the default object method. Output vary between the methods. Should be an array.
 ```
 
+## Get result infos
+```php
+$election->getResult('Schulze')->getCondorcetWinner() ; // Get the condorcet winner from the parent election at the build time (can became different. This one never change) or null if he don't exist.
+$election->getResult('Schulze')->getCondorcetLoser() ; // Get the condorcet loser from the parent election at the build time (can became different. This one never change) or null if he don't exist.
+
+$election->getResult('Schulze')->getResultAsArray() ; // Return Result ranking as array. So, the original Result object is iterable, support array access and count... Why doing that ?
+$election->getResult('Schulze')->getResultAsArray(true) ; // Same thing. But more : that convert Candidate object into string by name.
+```
 
 ## Specials options on getResult()
 
