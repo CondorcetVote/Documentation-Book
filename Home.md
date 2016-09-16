@@ -52,8 +52,9 @@ This wiki is a manual for the lastest stable version.
 
 ### Officials examples
 
-* [Quick tour](https://github.com/julien-boudry/Condorcet#really-quick-and-simple-example)
-* [Great tour](https://github.com/julien-boudry/Condorcet/blob/master/examples/Overview.php)
+* [Quick tour](https://github.com/julien-boudry/Condorcet#really-quick-and-simple-example)  
+* [Great tour - Part I](https://github.com/julien-boudry/Condorcet/blob/master/examples/1.%20Overview.php)
+* [Great tour - Part III (Crazy objects management)](https://github.com/julien-boudry/Condorcet/blob/master/examples/2.%20AdvancedObjectManagement.php)
 * [Basic and intermediate demonstration with html](https://github.com/julien-boudry/Condorcet/tree/master/examples/examples-with-html)
 
 * [Setup Condorcet to manage up to hundred millions votes](https://github.com/julien-boudry/Condorcet/blob/master/examples/specifics_examples/use_large_election_external_database_drivers.php)
