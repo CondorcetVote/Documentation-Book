@@ -62,7 +62,7 @@ $election->getWinner('KemenyYoung') ;
 Family  | Name  | String Class Name | Default Algo.
 :-----: | :-----: | :-----:| :-----:
 | [Copeland](http://en.wikipedia.org/wiki/Copeland%27s_method) | Copland | 'Copeland'
-| [Dodgson](https://en.wikipedia.org/wiki/Dodgson%27s_method) | Dodgson | 'Dodgdson'
+| [Dodgson](https://en.wikipedia.org/wiki/Dodgson%27s_method) | Dodgson | 'Dodgson'
 | [Kemeny–Young](http://en.wikipedia.org/wiki/Kemeny-Young_method) | Kemeny–Young | 'KemenyYoung'
 | [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Winning | 'Minimax_Winning'
 | [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Margin | 'Minimax_Margin'
