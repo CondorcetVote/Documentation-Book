@@ -115,7 +115,7 @@ $myElection2 = new Election ();
 
         # 2- Vote objet
             $myVote111->getRanking(); // Return the current ranking
-            $myVote111->getContextualVote($myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
+            $myVote111->getContextualRanking($myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
 
             // Change the vote
             $myVote111->setRanking  ( [
@@ -205,7 +205,7 @@ $myElection2 = new Election ();
             // Get the vote ranking in context of each elections
             foreach ($myNewVote->getLinks() as &$link)
             {
-                $myNewVote->getContextualVote($link);
+                $myNewVote->getContextualRanking($link);
             }
 
         // Now we can change vote ranking
