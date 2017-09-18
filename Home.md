@@ -28,7 +28,8 @@ This wiki is deemed to be current on the most recent version of the library, fro
   * C. Result
      * [[1. Natural Condorcet Winner & Loser|II # C. Result # 1. Natural Condorcet]]
      * [[2. Simple Ranking from Condorcet Method(s)|II # C. Result # 2. Get Ranking from Condorcet advanced Methods]]
-     * [[3. Advanced Results Management|II # C. Result # 3. Advanced Results Management]]
+     * [[3. Ranking mode - Implicit versus Partial|II # C. Result # 3. Ranking mode - Implicit versus Partial]]
+     * [[4. Advanced Results Management|II # C. Result # 4. Advanced Results Management]]
 * III. Advanced Use
   * A. Advanced Features
      * [[1. Timer Benchmarking|III # A. Avanced features & Configuration # 1. Timer Benchmarking]]
