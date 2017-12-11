@@ -47,6 +47,7 @@ Comparative : [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Meth
 > **Family:** Copeland method  
 > **Wikipedia** : http://en.wikipedia.org/wiki/Copeland%27s_method  
 > **Variant** : *None*  
+
 > **Implementation Comments:** *None*
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Copeland"  
@@ -69,6 +70,7 @@ $election->getLoser('Copeland') ;
 > **Family:** Dodgson method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Dodgson%27s_method  
 > **Variant** : Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Dodgson Quick" / "DodgsonQuick" / "Dodgson Quick Winner"  
@@ -91,6 +93,7 @@ $election->getLoser('Dodgson Quick') ;
 > **Family:** Dodgson method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Dodgson%27s_method  
 > **Variant** : Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
@@ -113,7 +116,8 @@ $election->getLoser('Dodgson Tideman') ;
 
 > **Family:** Kemeny–Young method  
 > **Wikipedia** : http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young  
-> **Variant:** 
+> **Variant:** *None*
+
 > **Implementation Comments:** Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB.  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Kemeny–Young" / "Kemeny-Young" / "Kemeny Young" / "KemenyYoung" / "Kemeny rule" / "VoteFair popularity ranking" / "Maximum Likelihood Method" / "Median Relation"  
@@ -137,6 +141,7 @@ $election->getLoser('Kemeny-Young') ;
 > **Family:** Minimax method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Variant:** Winning *(Does not satisfy the Condorcet loser criterion)*  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Minimax Winning" / "MinimaxWinning" / "Minimax" / "Minimax_Winning" / "Simpson" / "Simpson-Kramer" / "Simpson-Kramer Method" / "Simpson Method"  
@@ -160,6 +165,7 @@ $election->getLoser('Minimax Winning') ;
 > **Family:** Minimax method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Variant:** Margin *(Does not satisfy the Condorcet loser criterion)*  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Minimax Margin" / "MinimaxMargin" / "MinimaxMargin" / "Minimax_Margin"  
@@ -183,6 +189,7 @@ $election->getLoser('Minimax Margin') ;
 > **Family:** Minimax method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Variant:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Minimax Opposition" / "MinimaxOpposition" / "Minimax_Opposition"  
@@ -206,6 +213,7 @@ $election->getLoser('Minimax Opposition') ;
 > **Family:** Schulze method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Ranked_pairs  
 > **Variant:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the best from one language to another.)*  
+
 > **Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. In case of a tie in the classification. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Ranked Pairs Margin" / "Tideman Margin" / "RP Margin" / "Ranked Pairs" / "RankedPairs" / "Tideman method"  
@@ -229,6 +237,7 @@ $election->getLoser('Ranked Pairs Margin') ;
 > **Family:** Schulze method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Ranked_pairs  
 > **Variant:** Winning  
+
 > **Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Ranked Pairs Winning" / "Tideman Winning" / "RP Winning"  
@@ -252,6 +261,7 @@ $election->getLoser('Ranked Pairs Winning') ;
 > **Family:** Schulze method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
 > **Variant:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Schulze Winning" / "Schulze" / "SchulzeWinning" / "Schulze_Winning" / "Schwartz Sequential Dropping" / "SSD" / "Cloneproof Schwartz Sequential Dropping" / "CSSD" / "Beatpath" / "Beatpath Method" / "Beatpath Winner" / "Path Voting" / "Path Winner"  
@@ -275,6 +285,7 @@ $election->getLoser('Schulze') ;
 > **Family:** Schulze method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
 > **Variant:** Margin    
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Schulze Margin" / "SchulzeMargin" / "Schulze_Margin"  
@@ -298,6 +309,7 @@ $election->getLoser('Schulze Margin') ;
 > **Family:** Schulze method  
 > **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
 > **Variant:** Ratio    
+
 > **Implementation Comments:** *None*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
