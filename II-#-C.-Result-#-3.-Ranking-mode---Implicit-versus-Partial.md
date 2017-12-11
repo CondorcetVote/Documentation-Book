@@ -11,7 +11,7 @@ You can change this mode. It will reset all computed result and provide new resu
 ## Example
 
 ```php
-    $election->getImplicitRanking(); // Return True. Your all in an explicit mode. You ranks all candidates.
+    $election->getImplicitRanking(); // Return True. Your are in an explicit mode. You ranks all candidates.
 
     $this->election->addCandidate('A');
     $this->election->addCandidate('B');
@@ -28,6 +28,7 @@ You can change this mode. It will reset all computed result and provide new resu
 
     // Supporting not ranked candidate
     $this->election->setImplicitRanking(false);
+    $election->getImplicitRanking(); // Return False.
     $this->election->getWinner('Ranked Pairs'); // Return candidate A
 
     // Rollback
