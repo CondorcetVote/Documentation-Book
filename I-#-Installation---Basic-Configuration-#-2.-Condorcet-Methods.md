@@ -44,17 +44,17 @@ Most of these methods cannot contradict the result of the original method of the
 
 ```php
 // Provide a full ranking
-$election->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning.
+$election->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning method.
 $election->getResult('Minimax Winning') ;
-$election->getResult('Kemeny-Young') ;
-$election->getResult('Schulze') ;
+$election->getResult('Kemeny–Young') ;
+$election->getResult('Schulze Winning') ;
 [...]
 
 // Just get Winner or Loser
 
 $election->getWinner() ; // Give you a winner by strict use of the original method from Marquis of Condorcet.
-$election->getLoser('Schulze Margin') ; // use the Schulze margin method, which complements the original method.
-$election->getWinner('Kemeny-Young') ;
+$election->getLoser('Schulze Margin') ; // Use the Schulze margin method, which complements the original method.
+$election->getWinner('Ranked Pairs Margin') ;
 [...]
 ```
 
