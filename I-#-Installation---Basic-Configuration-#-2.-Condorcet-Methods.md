@@ -19,7 +19,6 @@ Most of these methods cannot contradict the result of the original method of the
 
 ## Description
 
-* **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
 * **Copeland** http://en.wikipedia.org/wiki/Copeland%27s_method
 * **Dodgson Approximations** *(Not the real Dodgson method, see: [Lewis Caroll, Voting and the taxicab metric](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf))*
     * **Dodgson Quick** *(recommended)*
@@ -37,41 +36,279 @@ Most of these methods cannot contradict the result of the original method of the
     * **Schulze Margin** Variant from Markus Schulze himself.
     * **Schulze Ratio** Variant from Markus Schulze himself.
 
-### Comparative
-* [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Methods)
+Comparative : [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Methods)
 
-## Use an advanced method
+## Details
+
+### Copeland
+
+#### Characteristics
+
+> **Family:** Copeland method  
+> **Wikipedia** : http://en.wikipedia.org/wiki/Copeland%27s_method  
+> **Variant** : *None*  
+> **Implementation Comments:** *None*
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Copeland"  
+
+#### Code example
 
 ```php
-// Provide a full ranking
-$election->getResult() ; // Class default algo. Without your intervention, it is Schulze Winning method.
-$election->getResult('Minimax Winning') ;
-$election->getResult('Kemeny–Young') ;
-$election->getResult('Schulze Winning') ;
-[...]
+// Get Full Ranking
+$election->getResult('Copeland') ;
 
 // Just get Winner or Loser
-
-$election->getWinner() ; // Give you a winner by strict use of the original method from Marquis of Condorcet.
-$election->getLoser('Schulze Margin') ; // Use the Schulze margin method, which complements the original method.
-$election->getWinner('Ranked Pairs Margin') ;
-[...]
+$election->getWinner('Copeland') ;
+$election->getLoser('Copeland') ;
 ```
 
-Family  | Name  | String Class Name | Default Algo.
-:-----: | :-----: | :-----:| :-----:
-| [Copeland](http://en.wikipedia.org/wiki/Copeland%27s_method) | Copland | 'Copeland'
-| [Dodgson](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf) | Dodgson Quick | 'Dodgson Quick'
-| [Dodgson](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf) | Dodgson Tideman approximation | 'Dodgson Tideman'
-| [Kemeny–Young](http://en.wikipedia.org/wiki/Kemeny-Young_method) | Kemeny–Young | 'Kemeny-Young'
-| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Winning | 'Minimax Winning'
-| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Margin | 'Minimax Margin'
-| [Minimax](http://en.wikipedia.org/wiki/Minimax_Condorcet) | Minimax Opposition | 'Minimax Opposition'
-| [Ranked Pairs](https://en.wikipedia.org/wiki/Ranked_pairs) | Ranked Pairs | 'Ranked Pairs'
-| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Winning | 'Schulze' | X
-| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Margin | 'Schulze Margin'
-| [Schulze](http://en.wikipedia.org/wiki/Schulze_method) | Schulze Ratio | 'Schulze Ratio'
+### Dodgson Quick
+
+#### Characteristics
+
+> **Family:** Dodgson method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Dodgson%27s_method  
+> **Variant** : Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Dodgson Quick" / "DodgsonQuick" / "Dodgson Quick Winner"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Dodgson Quick') ;
+
+// Just get Winner or Loser
+$election->getWinner('Dodgson Quick') ;
+$election->getLoser('Dodgson Quick') ;
+```
+
+### Dodgson Tideman Approximation
+
+#### Characteristics
+
+> **Family:** Dodgson method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Dodgson%27s_method  
+> **Variant** : Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Dodgson Tideman') ;
+
+// Just get Winner or Loser
+$election->getWinner('Dodgson Tideman') ;
+$election->getLoser('Dodgson Tideman') ;
+```
 
 
+### Kemeny–Young
+
+#### Characteristics
+
+> **Family:** Kemeny–Young method  
+> **Wikipedia** : http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young  
+> **Variant:** 
+> **Implementation Comments:** Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB.  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Kemeny–Young" / "Kemeny-Young" / "Kemeny Young" / "KemenyYoung" / "Kemeny rule" / "VoteFair popularity ranking" / "Maximum Likelihood Method" / "Median Relation"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Kemeny-Young') ;
+
+// Just get Winner or Loser
+$election->getWinner('Kemeny-Young'') ;
+$election->getLoser('Kemeny-Young') ;
+```
 
 
+### Minixmax Winning
+
+#### Characteristics
+
+> **Family:** Minimax method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> **Variant:** Winning *(Does not satisfy the Condorcet loser criterion)*  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Minimax Winning" / "MinimaxWinning" / "Minimax" / "Minimax_Winning" / "Simpson" / "Simpson-Kramer" / "Simpson-Kramer Method" / "Simpson Method"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Minimax Winning') ;
+
+// Just get Winner or Loser
+$election->getWinner('Minimax Winning') ;
+$election->getLoser('Minimax Winning') ;
+```
+
+
+### Minixmax Margin
+
+#### Characteristics
+
+> **Family:** Minimax method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> **Variant:** Margin *(Does not satisfy the Condorcet loser criterion)*  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Minimax Margin" / "MinimaxMargin" / "MinimaxMargin" / "Minimax_Margin"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Minimax Margin') ;
+
+// Just get Winner or Loser
+$election->getWinner('Minimax Margin') ;
+$election->getLoser('Minimax Margin') ;
+```
+
+
+### Minixmax Oppositon
+
+#### Characteristics
+
+> **Family:** Minimax method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> **Variant:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Minimax Opposition" / "MinimaxOpposition" / "Minimax_Opposition"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Minimax Opposition') ;
+
+// Just get Winner or Loser
+$election->getWinner('Minimax Opposition') ;
+$election->getLoser('Minimax Opposition') ;
+```
+
+
+### Ranked Pairs Margin
+
+#### Characteristics
+
+> **Family:** Schulze method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Ranked_pairs  
+> **Variant:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the best from one language to another.)*  
+> **Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition.  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Ranked Pairs Margin" / "Tideman Margin" / "RP Margin" / "Ranked Pairs" / "RankedPairs" / "Tideman method"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Ranked Pairs Margin') ;
+
+// Just get Winner or Loser
+$election->getWinner('Ranked Pairs Margin') ;
+$election->getLoser('Ranked Pairs Margin') ;
+```
+
+
+### Ranked Pairs Winning
+
+#### Characteristics
+
+> **Family:** Schulze method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Ranked_pairs  
+> **Variant:** Winning  
+> **Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition.  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Ranked Pairs Winning" / "Tideman Winning" / "RP Winning"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Ranked Pairs Winning') ;
+
+// Just get Winner or Loser
+$election->getWinner('Ranked Pairs Winning') ;
+$election->getLoser('Ranked Pairs Winning') ;
+```
+
+
+### Schulze Winning
+
+#### Characteristics
+
+> **Family:** Schulze method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
+> **Variant:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Schulze Winning" / "Schulze" / "SchulzeWinning" / "Schulze_Winning" / "Schwartz Sequential Dropping" / "SSD" / "Cloneproof Schwartz Sequential Dropping" / "CSSD" / "Beatpath" / "Beatpath Method" / "Beatpath Winner" / "Path Voting" / "Path Winner"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Schulze') ;
+
+// Just get Winner or Loser
+$election->getWinner('Schulze') ;
+$election->getLoser('Schulze') ;
+```
+
+
+### Schulze Margin
+
+#### Characteristics
+
+> **Family:** Schulze method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
+> **Variant:** Margin    
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Schulze Margin" / "SchulzeMargin" / "Schulze_Margin"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Schulze Margin') ;
+
+// Just get Winner or Loser
+$election->getWinner('Schulze Margin') ;
+$election->getLoser('Schulze Margin') ;
+```
+
+
+### Schulze Ratio
+
+#### Characteristics
+
+> **Family:** Schulze method  
+> **Wikipedia** : https://en.wikipedia.org/wiki/Schulze_method  
+> **Variant:** Ratio    
+> **Implementation Comments:** *None*  
+
+> **Choice of character strings available for function calls (case-insensitive)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
+
+#### Code example
+
+```php
+// Get Full Ranking
+$election->getResult('Schulze Ratio') ;
+
+// Just get Winner or Loser
+$election->getWinner('Schulze Ratio') ;
+$election->getLoser('Schulze Ratio') ;
+```
