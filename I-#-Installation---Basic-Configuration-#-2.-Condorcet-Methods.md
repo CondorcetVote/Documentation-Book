@@ -1,4 +1,4 @@
-# Native Supported Condorcet Method
+# Original Condorcet Method (Winner / Loser)
 
 * **Condorcet Basic** Give you the natural winner or looser of Condorcet, if there is one.  
 *(This method is the only core method, you cannot remove it)*
@@ -12,10 +12,10 @@ $election->getLoser() ;
 
 # Advanced Condorcet Methods
 
-These advances give you methods (in some cases) alternatives to address the lack of winning or losing natural Condorcet if Condorcet paradox.   
+These advances give you methods (in some cases) alternatives to address the lack of winning or losing natural Condorcet if Condorcet paradox occur.   
 They also provide a comprehensive ranking, which does not allow the original method of Marquis de Condorcet.
 
-Unless otherwise against these advanced methods can not contradict the results of Condorcet. It is therefore essential supplements.   
+Most of these methods cannot contradict the result of the original method of the Marquis de Condorcet. It completes it, however, with a complete ranking, and an alternative if the original method does not achieve a result (Condorcet's paradox).
 
 ## Description
 
