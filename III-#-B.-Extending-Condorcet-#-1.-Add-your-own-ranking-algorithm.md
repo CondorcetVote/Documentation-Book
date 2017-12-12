@@ -58,5 +58,5 @@ class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\Meth
 
 You must register this algorithm this way:  
 ```php
-Condorcet\Condorcet::addAlgos('MyNameSpace\AlgorithmName') ;
+Condorcet\Condorcet::addMethod('MyNameSpace\AlgorithmName') ;
 ```
