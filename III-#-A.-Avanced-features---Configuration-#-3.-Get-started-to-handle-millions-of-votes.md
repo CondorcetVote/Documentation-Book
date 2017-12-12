@@ -11,7 +11,7 @@ In specific situations and mastered, disable certain controls could vastly perfo
 
 Condorcet provide a driver for PDO, that allow you to use most current Relationnal datbase. You can extend it to get more optimization. Ou work on your own driver to use - for example - noSQL database.
 
-_Note :_ Please consider this functionality as a Beta stage. Some specific uses are not tested or supported (serialize election use this driver, have votes object into multiples elections is the same time...).
+_Note :_ Please consider this functionality as a Beta stage. Some specific uses are not tested or supported (serialize election use this driver, have votes object into multiples elections at the same time...).
 
 
 ## Handle millions of votes with default PDO driver
