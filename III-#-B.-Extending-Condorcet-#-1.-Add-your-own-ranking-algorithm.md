@@ -49,7 +49,7 @@ class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\Meth
     {
         $myPairwise = $this->_selfElection->getPairwise(false);
 
-        $result = [0=>$CandidateX, 1=> [$CandidateY,$CandidateZ], 2=> $CandidateR]; // Candidate must be valid internal candidate key.
+        $result = [0=> [3], 1=> [0,4], 2 => [2]]; // Candidate must be valid internal candidate key.
 
         $this->_Result = $this->createResult($result);
     }
