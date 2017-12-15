@@ -11,6 +11,8 @@ $election->getResult('Schulze')->getCondorcetElectionGeneratorVersion() ; // Ret
 $election->getResult('Schulze')->getBuildTimeStamp() ; // Return timestamp (float) of the build time.
 
 $election->getResult('Schulze')->getOriginalArrayWithString() ; // Return the result as array with Candidate as string by name. because Candidate name can continue to change (Even if you can get the history of the changes.). This method give you serenity.
+
+$election->getResult('Schulze')->getResultAsString() ; // Return a string like "A > B = C > D > E > G = H"
 ```
 
 ## Get compute details
