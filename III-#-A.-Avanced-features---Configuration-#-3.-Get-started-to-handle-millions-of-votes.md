@@ -16,7 +16,7 @@ _Note :_ Please consider this functionality as a Beta stage. Some specific uses 
 
 ## Handle millions of votes with default PDO driver
 
-Have a look on [this example](https://github.com/julien-boudry/Condorcet/blob/master/examples/specifics_examples/use_large_election_external_database_drivers.php) !
+Have a look on [this example](https://github.com/julien-boudry/Condorcet/blob/master/Examples/Specifics_Examples/use_large_election_external_database_drivers.php) !
 
 ## Create your own driver
 
