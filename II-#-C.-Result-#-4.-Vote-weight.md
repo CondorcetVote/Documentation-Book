@@ -54,6 +54,7 @@ However, if you need to keep the information of each elector at Condorcet level,
         D > B > A > C * 3
         D > C > B > A ^2 * 1
         B > A > D > C * 1
-        D > C > B > A * 1/*
+        D > C > B > A * 1
+        */
         $election->getVotesListAsString();
 ```
