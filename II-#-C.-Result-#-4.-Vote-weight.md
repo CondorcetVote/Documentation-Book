@@ -48,7 +48,8 @@ However, if you need to keep the information of each elector at Condorcet level,
 
         $election->addVote('D > C > B');
 
-        /* Return D > C > B > A with 2 lines. one for weight ^2 and one for force ^1
+        // Return D > C > B > A with 2 lines. one for weight ^2 and one for force ^1
+        /*
         'A > C > D > B * 6
         C > B > D > A * 3
         D > B > A > C * 3
