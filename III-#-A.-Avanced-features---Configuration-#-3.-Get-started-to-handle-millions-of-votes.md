@@ -30,3 +30,8 @@ And read the relatively simple example : [Condorcet\DataManager\DataHandlerDrive
     $myElection->setExternalDataHandler($driver);
 ```
 
+## Use GetVotesListGenerator
+
+If you use an external Driver handler for managing billions of votes. And want to use Election::getVotesList() method. You'll probably blow up the available memory.
+
+Instead, use Election::getVotesListGenerator method, returning a PHP generator.
