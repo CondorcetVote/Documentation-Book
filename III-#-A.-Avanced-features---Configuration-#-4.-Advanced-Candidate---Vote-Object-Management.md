@@ -8,6 +8,7 @@ Voting may also be incomplete, and thus participate in the elections with an alt
 ```php
 <?php
 use Condorcet\Condorcet;
+use Condorcet\CondorcetUtil;
 use Condorcet\Election;
 use Condorcet\Candidate;
 use Condorcet\Vote;
@@ -156,9 +157,7 @@ $myElection2 = new Election ();
             $myElection1->getResult('Copeland'); // Do it with the Copeland method
 
             // Get an easy game outcome to read and understand (Table populated by string)
-            $easyResult = Condorcet::format($myElection1->getResult(),false);
-            // Print it directly (vardump()) :
-            # Condorcet::format($myElection1->getResult());
+            $easyResult = CondorcetUtil::format($myElection1->getResult());
 
 
 // VI - Play with Condorcet objects (Advanced)
