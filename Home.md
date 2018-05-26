@@ -15,7 +15,7 @@ This wiki is deemed to be current on the most recent version of the library, fro
 
 * I. - Installation - Basic Configuration
   * [[1. Installation|I-#-Installation---Basic-Configuration-#-1.-Installation]]
-  * [[2. Condorcet Methods|I-#-Installation---Basic-Configuration-#-2.-Condorcet-Methods]]
+  * [[2. Voting Methods|I-#-Installation---Basic-Configuration-#-2.-Voting-Methods]]
   * [[3. Configuration|I-#-Installation---Basic-Configuration-#-3.-Configuration]]
   * [[4. Condorcet Exception Code|I-#-Installation---Basic-Configuration-#-4.-Condorcet-Exception-Code]]
 * II. Use it !
@@ -43,16 +43,6 @@ This wiki is deemed to be current on the most recent version of the library, fro
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
-
-
-## Class & Methods reference
-
-The precise and full documentation is not this wiki. It can be found in as Markdown in the "doc" folder for each release.    
-This wiki is a manual for the lastest stable version.
-
-**Full documentation of the master branch :**
-* [Class & Methods documentation](https://github.com/julien-boudry/Condorcet/tree/master/doc)
-
 
 ## Examples
 

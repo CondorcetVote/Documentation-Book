@@ -2,7 +2,7 @@
 * [[Home|Home]]   
 * I. - Installation - Basic Configuration
   * [[1. Installation|I-#-Installation---Basic-Configuration-#-1.-Installation]]
-  * [[2. Condorcet Methods|I-#-Installation---Basic-Configuration-#-2.-Condorcet-Methods]]
+  * [[2. Voting Methods|I-#-Installation---Basic-Configuration-#-2.-Voting-Methods]]
   * [[3. Configuration|I-#-Installation---Basic-Configuration-#-3.-Configuration]]
   * [[4. Condorcet Exception Code|I-#-Installation---Basic-Configuration-#-4.-Condorcet-Exception-Code]]
 * II. Use it !
