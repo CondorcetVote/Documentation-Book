@@ -45,6 +45,22 @@ Some methods do not follow the Condorcet criteria.
 
 Comparative : [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Methods)
 
+## Implementation Philosophy
+### Result tie breaking
+Unless explicitly stated otherwise in the details below, no tie breaking is added to methods that would not have been foreseen by the most orthodox theory.
+
+The results are therefore likely to contain ties in some ranks. Which according to the algorithms is more or less frequent, but always tends to become less likely in proportion to the size of the election. 
+
+### Tie into a vote rank
+Unless you have prohibited ties in your own control votes or via a filter (CondorcetPHP => 1.8).  
+The votes are therefore likely to contain ties on certain ranks.
+
+In principle, this does not particularly disturb Condorcet's methods, since they are based on the Pairwise.
+
+This is more annoying for other methods like Borda, Instant-runoff or Ftpt. these methods being based on the rank assigned. How each handles these cases is specified below and varies from implementation to implementation.
+
+
+
 ## Details
 
 ### Borda Count
@@ -55,7 +71,15 @@ Comparative : [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Meth
 > **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
 > **Variant:** *Starting at 1*
 
-> **Implementation Comments:** *None*  
+> **Implementation Comments:** Count start at 1.  
+
+> In case of tie into a vote rank, follow this example:  
+> A>B=C=D=E>F  
+> A: 6 points  
+> B/C/D/E: (5+4+3+2) / 4 = 3.5 points each  
+> F: 1 point
+
+> In case of explicit voting is disable. Missing rank do not earn points, but existing rank are not penalized.
 
 > **Choice of character strings available for function calls (case-insensitive)**: "BordaCount","Borda Count","Borda","Méthode Borda"
 
@@ -81,7 +105,7 @@ $election->getResult('BordaCount')->getStats() ;
 > **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
 > **Variant:** *Dowdall System*
 
-> **Implementation Comments:** *None*  
+> **Implementation Comments:** *See comments on the original Borda method above.*  
 
 > **Choice of character strings available for function calls (case-insensitive)**: "DowdallSystem","Dowdall System","Nauru", "Borda Nauru"
 
@@ -185,7 +209,9 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 > **Wikipedia:** https://en.wikipedia.org/wiki/First-past-the-post_voting
 > **Variant:** *None*
 
-> **Implementation Comments:** *None*  
+> **Implementation Comments:** In case of tie into the first rank. The candidates into rank earn each point. But not 1 point, bu 1/(candidate-in-rank) point.  
+For example: A = B > C
+A/B earn each 0.5 points
 
 > **Choice of character strings available for function calls (case-insensitive)**: "First-past-the-post voting", "First-past-the-post", "First Choice", "FirstChoice", "FTPT"
 
@@ -212,7 +238,9 @@ $election->getResult('Ftpt')->getStats() ;
 > **Wikipedia:** https://en.wikipedia.org/wiki/Instant-runoff_voting
 > **Variant:** *None*
 
-> **Implementation Comments:** *None*  
+> **Implementation Comments:** In case of tie into a a vote rank, rank is ignored like he never existed.  
+
+> An additional tie breaking tentative is added in case of tie into preliminary result set. First, comparing candidate pairwise, in a second attempt compare the total number of pairwise wins (global context), and in a third desperate attempt, compare the balance of their victory / defeat in a global Pairwise context.
 
 > **Choice of character strings available for function calls (case-insensitive)**: "Instant-runoff", "InstantRunoff", "preferential voting", "ranked-choice voting", "alternative vote", "AlternativeVote", "transferable vote", "Vote alternatif"
 
