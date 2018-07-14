@@ -30,7 +30,8 @@ This wiki is deemed to be current on the most recent version of the library, fro
      * [[2. Simple Ranking from Condorcet Method(s)|II-#-C.-Result-#-2.-Get-Ranking-from-Condorcet-advanced-Methods]]
      * [[3. Ranking mode - Implicit versus Partial|II-#-C.-Result-#-3.-Ranking-mode---Implicit-versus-Partial]]
      * [[4. Vote weight|II-#-C.-Result-#-4.-Vote-weight]]
-     * [[5. Advanced Results Management|II-#-C.-Result-#-5.-Advanced-Results-Management]]
+     * [[5. Vote Constraints|II-#-C.-Result-#-5.-Vote-Constraints]]
+     * [[6. Advanced Results Management|II-#-C.-Result-#-6.-Advanced-Results-Management]]
 * III. Advanced Use
   * A. Advanced Features
      * [[1. Timer Benchmarking|III-#-A.-Avanced-features---Configuration-#-1.-Timer-Benchmarking]]
