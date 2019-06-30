@@ -141,12 +141,12 @@ In the previous example, all parameters are optional exept vote.
 
 ### Method
 ```php
-$election->jsonVotes($json_votes);
+$election->addVotesFromJson($json_votes);
 ```
 
 **Anti-flood:**
 
-Be applied and reset each call parseVotes() or jsonVotes()   
+Be applied and reset each call parseVotes() or addVotesFromJson()   
 
 ```php
 Election::setMaxParseIteration(500); // Will generate an exception and stop after 500 registered vote by call.

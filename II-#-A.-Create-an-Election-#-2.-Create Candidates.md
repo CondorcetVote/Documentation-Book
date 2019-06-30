@@ -52,7 +52,7 @@ json_encode( array(
 
 #### Method
 ```php
-$election->jsonCandidates($my_json_string);
+$election->addCandidatesFromJson($my_json_string);
 ```
 
 ## Removing
