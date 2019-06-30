@@ -3,7 +3,7 @@
 ## Get metadata
 
 ```php
-$election->getResult('Schulze')->getClassGenerator() ; // Return namespace of the Schulze module. Like '/Condorcet/Algo/Methods/SchulzeWinning'
+$election->getResult('Schulze')->getClassGenerator() ; // Return namespace of the Schulze module. Like 'CondorcetPHP\Condorcet\Algo\Methods\SchulzeWinning'
 $election->getResult('Schulze')->getMethod() ; // Return method who build this result. Like 'Schulze'.
 
 $election->getResult('Schulze')->getCondorcetElectionGeneratorVersion() ; // Return Condorcet version at the build time.
@@ -44,9 +44,9 @@ The next option allows you to get rather than ranking, information on the existe
 ```php
 $result = $election->getResult( 'KemenyYoung' ) ;
 
-if ( !empty($result->getWarning(\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)) )
+if ( !empty($result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)) )
 {
-    $kemeny_conflicts = explode( ';', $result->getWarning(\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg'] ) ;
+    $kemeny_conflicts = explode( ';', $result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg'] ) ;
 
     echo '<strong style="color:red;">
         Arbitrary results: Kemeny-Young has '.$kemeny_conflicts[0].

@@ -5,7 +5,7 @@ Election::getResult ( [mixed $method = false , array $options] )
 **method:** String name of an available advanced Condorcet method. True for default method.
 **options:** Array
 
-**Return value:** Return a Condorcet/Result object. He is Iterable, Countable and support array access, It behaves just like an ordered array.
+**Return value:** Return a CondorcetPHP\Condorcet\Result object. He is Iterable, Countable and support array access, It behaves just like an ordered array.
 
 
 ## Usual Use
