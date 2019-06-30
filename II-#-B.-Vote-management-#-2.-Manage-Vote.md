@@ -47,16 +47,16 @@ $election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
 
 
 ```php
-Election::removeVoteByTags( mixed $tag [, bool $with = true] ) : array
+Election::removeVotesByTags( mixed $tag [, bool $with = true] ) : array
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)    
 
 ```php
-$election->removeVote('Charlie') ; // Remove vote(s) with tag Charlie
-$election->removeVote('Charlie', false) ; // Remove votes without tag Charlie
-$election->removeVote('Charlie, Julien', false) ; // Remove votes without tag Charlie AND without tag Julien.
-$election->removeVote( ['Julien','Charlie'] ) ; // Remove votes with tag Charlie OR with tag Julien.
+$election->removeVotesByTags('Charlie') ; // Remove vote(s) with tag Charlie
+$election->removeVotesByTags('Charlie', false) ; // Remove votes without tag Charlie
+$election->removeVotesByTags('Charlie, Julien', false) ; // Remove votes without tag Charlie AND without tag Julien.
+$election->removeVotesByTags( ['Julien','Charlie'] ) ; // Remove votes with tag Charlie OR with tag Julien.
 ```
 
 _Note: You can remove a vote after the results have already been given._  
