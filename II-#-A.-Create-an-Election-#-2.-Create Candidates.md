@@ -71,17 +71,11 @@ $election->removeCandidate($myCandidateObject); // Not destroying your Candidate
 
 
 ## Verify the Candidates list
-```php
-Election::getCandidatesList ( bool $string_mode = false )
-```
-**string_mode:** If false, Candidate object are returned. Else Candidate as string name.
-
-**Return value:** Array list of registered Candidates.
 
 
 ```php
 $election->getCandidatesList(); // Will return an array with all Candidate object.
-$election->getCandidatesList(true); // Will return an array with all candidate name as string.
+$election->getCandidatesListAsString(); // Will return an array with all candidate name as string.
 ```
 
 _Note: When you start voting, you will never be able to edit the candidates list._  

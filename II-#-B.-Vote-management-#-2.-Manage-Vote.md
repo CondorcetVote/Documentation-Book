@@ -2,7 +2,7 @@
 
 ## Verify the registered votes list
 ```php
-Election::getVotesList ( [mixed $tag = null, bool $with = true] )
+Election::getVotesList ( [mixed $tag = null, bool $with = true] ) : array
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)   
@@ -22,7 +22,7 @@ __Note: Make a test, and look the return format. For each vote, you can get as a
 ## Count registered votes
 
 ```php
-Election::countVotes ( [mixed $tag = null, bool $with = true] )
+Election::countVotes ( [mixed $tag = null, bool $with = true] ) : int
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)    
@@ -36,7 +36,18 @@ $election->countVotes (array('Julien','Charlie'), false); // Count vote without 
 
 ## Remove vote
 ```php
-Election::removeVote( mixed $tag [, bool $with = true] )
+Election::removeVote( Vote $vote ) : bool
+```
+**vote:** A vote      
+
+```php
+$election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
+```
+
+
+
+```php
+Election::removeVoteByTags( mixed $tag [, bool $with = true] ) : array
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)    
@@ -45,8 +56,7 @@ Election::removeVote( mixed $tag [, bool $with = true] )
 $election->removeVote('Charlie') ; // Remove vote(s) with tag Charlie
 $election->removeVote('Charlie', false) ; // Remove votes without tag Charlie
 $election->removeVote('Charlie, Julien', false) ; // Remove votes without tag Charlie AND without tag Julien.
-$election->removeVote(array('Julien','Charlie')) ; // Remove votes with tag Charlie OR with tag Julien.
-$election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
+$election->removeVote( ['Julien','Charlie'] ) ; // Remove votes with tag Charlie OR with tag Julien.
 ```
 
 _Note: You can remove a vote after the results have already been given._  

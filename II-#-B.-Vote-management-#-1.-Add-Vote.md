@@ -149,6 +149,6 @@ $election->addVotesFromJson($json_votes);
 Be applied and reset each call parseVotes() or addVotesFromJson()   
 
 ```php
-Election::setMaxParseIteration(500); // Will generate an exception and stop after 500 registered vote by call.
+Election::setMaxParseIteration(500); // Will generate an exception and stop after 500 registered vote by call. Not any vote will be registered.
 Election::setMaxParseIteration(null); // No limit (default mode)
 ```  

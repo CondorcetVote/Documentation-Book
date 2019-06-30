@@ -3,10 +3,10 @@
 ## Original Condorcet method Winner / Loser
 
 ```php
-Election::getWinner ( [mixed $method = false] )
-Election::getLoser ( [mixed $method = false] )
+Election::getWinner ( [?string $method = null] ) : mixed
+Election::getLoser ( [?string $method = null] ) : mixed
 ```
-**method:** String name of an available advanced Condorcet method. True for default method.
+**method:** String name of an available advanced Condorcet method. NULL for natural Condorcet Winner.
 
 **Return value:** \CondorcetPHP\Condorcet\Candidate object, null if there are no available winner or loser. Advanced method can return multiples winner, an array will be returned.
 
