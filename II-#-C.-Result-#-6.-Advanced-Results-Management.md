@@ -3,7 +3,7 @@
 ## Get metadata
 
 ```php
-$election->getResult('Schulze')->getClassGenerator() ; // Return namespace of the Schulze module. Like '/Condorcet/Algo/Methods/SchulzeWinning'
+$election->getResult('Schulze')->getClassGenerator() ; // Return namespace of the Schulze module. Like '\Condorcet\Algo\Methods\SchulzeWinning'
 $election->getResult('Schulze')->getMethod() ; // Return method who build this result. Like 'Schulze'.
 
 $election->getResult('Schulze')->getCondorcetElectionGeneratorVersion() ; // Return Condorcet version at the build time.

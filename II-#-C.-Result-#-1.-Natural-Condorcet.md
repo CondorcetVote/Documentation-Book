@@ -22,7 +22,7 @@ else :
 endif;
 
 if ($loser !== null) :
-    echo 'My loser is ' . (string) $loser ; // Little tips : /Condorcet/Candidat implement __toString() magic method.
+    echo 'My loser is ' . (string) $loser ; // Little tips : \Condorcet\Candidat implement __toString() magic method.
 else :
     echo 'There is no loser. Cause of Condorcet paradox.'
 endif;
