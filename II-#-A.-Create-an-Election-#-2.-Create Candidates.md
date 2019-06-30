@@ -14,7 +14,7 @@ Election::addCandidate ( [mixed $name = automatic] )
 Enter (or not) a Candidate Name 
 
 ```php
-use Condorcet/Candidate;
+use CondorcetPHP\Condorcet\Candidate;
 
 $election->addCandidate('Wagner') ; // mb_strlen(Candidate Name) <= Election::MAX_LENGTH_CANDIDATE_ID, Default: 30
 

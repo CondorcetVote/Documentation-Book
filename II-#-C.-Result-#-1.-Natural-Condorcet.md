@@ -8,7 +8,7 @@ Election::getLoser ( [mixed $method = false] )
 ```
 **method:** String name of an available advanced Condorcet method. True for default method.
 
-**Return value:** \Condorcet\Candidate object, null if there are no available winner or loser. Advanced method can return multiples winner, an array will be returned.
+**Return value:** \CondorcetPHP\Condorcet\Candidate object, null if there are no available winner or loser. Advanced method can return multiples winner, an array will be returned.
 
 ## Just orthodox Condorcet Winner / Loser
 ```php

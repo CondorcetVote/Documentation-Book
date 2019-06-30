@@ -1,14 +1,14 @@
 # Link your algorithm
 
-Take inspiration from the simplified example below. Read code from Condorcet\Algo\Method (abstract class) and Condorcet\Algo\MethodInterface (interface).
-You should also read Condorcet\Algo\Methods\Copeland code, it's a simple and efficient implementation.
+Take inspiration from the simplified example below. Read code from CondorcetPHP\Condorcet\Algo\Method (abstract class) and CondorcetPHP\Condorcet\Algo\MethodInterface (interface).
+You should also read CondorcetPHP\Condorcet\Algo\Methods\Copeland code, it's a simple and efficient implementation.
 
 ## Basic example
 
 ```php
 namespace MyNameSpace;
 
-class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\MethodInterface
+class AlgorithmName extends CondorcetPHP\Condorcet\Algo\Method implements CondorcetPHP\Condorcet\Algo\MethodInterface
 {
     const METHOD_NAME = ['FirstMethodName','Alias1','Alias_2','Alias 3'];
 
@@ -58,5 +58,5 @@ class AlgorithmName extends Condorcet\Algo\Method implements Condorcet\Algo\Meth
 
 You must register this algorithm this way:  
 ```php
-Condorcet\Condorcet::addMethod('MyNameSpace\AlgorithmName') ;
+CondorcetPHP\Condorcet\Condorcet::addMethod('MyNameSpace\AlgorithmName') ;
 ```

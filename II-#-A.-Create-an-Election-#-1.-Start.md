@@ -2,7 +2,7 @@
 
 ## Make a new Election
 ```php
-use Condorcet/Election;
+use CondorcetPHP\Condorcet\Election;
 
 $myElection = new Election ();
 ```

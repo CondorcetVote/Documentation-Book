@@ -5,7 +5,7 @@
 
 ## Vanilla PHP
 require_once 'Condorcet/__CondorcetAutoload.php' ; 
-use Condorcet\Election ;
+use CondorcetPHP\Condorcet\Election ;
 
 $election = new Election () ;
 ``

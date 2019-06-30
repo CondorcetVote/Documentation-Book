@@ -3,9 +3,9 @@
  Vote & Candidate class are ready to be extend.
 
  ```php
-use Condorcet/Candidate;
-use Condorcet/Vote;
-use Condorcet/Election;
+use CondorcetPHP\Condorcet\Candidate;
+use CondorcetPHP\Condorcet\Vote;
+use CondorcetPHP\Condorcet\Election;
 
 class yourVoteClass extends Vote {
     // ...

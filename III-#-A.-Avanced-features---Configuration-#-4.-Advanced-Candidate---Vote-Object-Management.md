@@ -7,11 +7,11 @@ Voting may also be incomplete, and thus participate in the elections with an alt
 
 ```php
 <?php
-use Condorcet\Condorcet;
-use Condorcet\CondorcetUtil;
-use Condorcet\Election;
-use Condorcet\Candidate;
-use Condorcet\Vote;
+use CondorcetPHP\Condorcet\Condorcet;
+use CondorcetPHP\Condorcet\CondorcetUtil;
+use CondorcetPHP\Condorcet\Election;
+use CondorcetPHP\Condorcet\Candidate;
+use CondorcetPHP\Condorcet\Vote;
 
 // II - Create Election
 

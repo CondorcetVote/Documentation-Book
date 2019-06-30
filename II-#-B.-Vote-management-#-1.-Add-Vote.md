@@ -66,7 +66,7 @@ $vote = 'A>BC>D' ; // It's not correct
 Well, let be a little more powerful:
 
 ```php
-use Condorcet/Vote;
+use CondorcetPHP\Condorcet\Vote;
 
 $vote1 = new Vote ('A>B=C=H>G=T>Q');
 $vote2 = new Vote ( array( 1 => 'A',
