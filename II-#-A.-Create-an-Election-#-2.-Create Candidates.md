@@ -57,7 +57,7 @@ $election->addCandidatesFromJson($my_json_string);
 
 ## Removing
 ```php
-Election::removeCandidate ( mixed $name )
+Election::removeCandidates ( mixed $name )
 ```
 **name:** Alphanumeric string or Condorcet\Candidate object.   
 
@@ -65,8 +65,8 @@ Election::removeCandidate ( mixed $name )
 
 
 ```php
-$election->removeCandidate('Wagner') ;
-$election->removeCandidate($myCandidateObject); // Not destroying your Candidate object. But just unlink it from this Election.
+$election->removeCandidates('Wagner') ;
+$election->removeCandidates($myCandidateObject); // Not destroying your Candidate object. But just unlink it from this Election.
 ```
 
 
