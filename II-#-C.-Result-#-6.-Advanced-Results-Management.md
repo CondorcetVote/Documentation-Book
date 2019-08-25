@@ -44,7 +44,7 @@ The next option allows you to get rather than ranking, information on the existe
 ```php
 $result = $election->getResult( 'KemenyYoung' ) ;
 
-if ( !empty($result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)) )
+if ( !empty($result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung\KemenyYoung::CONFLICT_WARNING_CODE)) )
 {
     $kemeny_conflicts = explode( ';', $result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg'] ) ;
 
