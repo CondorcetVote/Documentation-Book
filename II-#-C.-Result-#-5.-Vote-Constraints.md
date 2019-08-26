@@ -13,7 +13,7 @@ For example, vote with tie are invalid. It is the only basic one supplied by Con
 ```php
         $this->expectExceptionCode(29);
 
-        $constraintClass = 'CondorcetPHP\\Condorcet\\Constraints\\NoTie';
+        $constraintClass = 'CondorcetPHP\Condorcet\Constraints\NoTie';
 
         $this->election->addConstraint($constraintClass); // Return True
 
@@ -41,7 +41,7 @@ For example, vote with tie are invalid. It is the only basic one supplied by Con
 ```php
         $this->expectExceptionCode(29);
 
-        $constraintClass = 'CondorcetPHP\\Condorcet\\Constraints\\NoTie';
+        $constraintClass = 'CondorcetPHP\Condorcet\Constraints\NoTie';
 
         $this->election->addConstraint($class); // Return True
 
