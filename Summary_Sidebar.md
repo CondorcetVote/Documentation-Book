@@ -28,6 +28,6 @@
      * [[1. Add your own ranking algorithm|III-#-B.-Extending-Condorcet-#-1.-Add-your-own-ranking-algorithm]]
      * [[2. Candidate - Vote Class|III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class]]
 
-## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation)
+## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
