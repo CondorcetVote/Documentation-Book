@@ -1,4 +1,4 @@
-> **[Presentation](https://github.com/julien-boudry/Condorcet/) | Manual | [Methods References](Documentation/README.md) | [Tests](../Tests)**  
+> **[Presentation](https://github.com/julien-boudry/Condorcet/) | Manual | [Methods References](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/README.md) | [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**  
 
 ## Manual Summary
 * [[Home|Home]]   
