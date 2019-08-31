@@ -1,4 +1,4 @@
-> **[Presentation](https://github.com/julien-boudry/Condorcet/) | Manual | [Methods References](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/README.md) | [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**  
+> **[Presentation](https://github.com/julien-boudry/Condorcet/blob/master/README.md) | Manual | [Methods References](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/README.md) | [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**  
 
 # Manual - Condorcet PHP
 
