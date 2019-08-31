@@ -1,3 +1,5 @@
+> **[Presentation](https://github.com/julien-boudry/Condorcet/) | Manual | [Methods References](Documentation/README.md) | [Tests](../Tests)**  
+
 ## Manual Summary
 * [[Home|Home]]   
 * I. - Installation - Basic Configuration
