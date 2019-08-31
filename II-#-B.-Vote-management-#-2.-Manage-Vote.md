@@ -36,12 +36,12 @@ $election->countVotes (array('Julien','Charlie'), false); // Count vote without 
 
 ## Remove vote
 ```php
-Election::removeVotes( Vote $vote ) : bool
+Election::removeVote( Vote $vote ) : bool
 ```
 **vote:** A vote      
 
 ```php
-$election->removeVotes($myVoteObject) ; // Remove a specific registered Vote.
+$election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
 ```
 
 
