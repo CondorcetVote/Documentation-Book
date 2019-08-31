@@ -1,6 +1,6 @@
 > **[Presentation](https://github.com/julien-boudry/Condorcet/) | Manual | [Methods References](Documentation/README.md) | [Tests](../Tests)**  
 
-# Manual PHP Condorcet Class
+# Manual - Condorcet PHP
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/julien-boudry/Condorcet/master/condorcet-logo.png" alt="Condorcet Class" width="25%">
@@ -43,7 +43,7 @@ This wiki is deemed to be current on the most recent version of the library. How
      * [[1. Add your own ranking algorithm|III-#-B.-Extending-Condorcet-#-1.-Add-your-own-ranking-algorithm]]
      * [[2. Candidate - Vote Class|III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class]]
 
-## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation)
+## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
 
@@ -65,4 +65,4 @@ _This example of implementation in others project can very nice or strange... Th
 
 * [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.    
   * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
-* [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet)
+* [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet) _(very old Condorcet v0.13)
