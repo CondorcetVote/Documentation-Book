@@ -23,8 +23,8 @@ endforeach;
 
 echo 'Schulze loser is : ' . $election->getLoser('Schulze') .'\n\n'; // Optionally, use __toString magic method
 
-echo 'Condorcet winner is : ' . ($election->getWinner() ?? 'No Condorcet winner') .'\n';
-echo 'Condorcet loser is : ' . ($election->getLoser() ?? 'No Condorcet Loser') .'\n';
+echo 'Condorcet winner is : ' . ($election->getCondorcetWinner() ?? 'No Condorcet winner') .'\n';
+echo 'Condorcet loser is : ' . ($election->getCondorcetLoser() ?? 'No Condorcet Loser') .'\n';
 
 
 /* Output can be :

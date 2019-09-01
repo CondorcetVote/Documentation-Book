@@ -12,8 +12,8 @@ Election::getLoser ( [?string $method = null] ) : mixed
 
 ## Just orthodox Condorcet Winner / Loser
 ```php
-$winner = $election->getWinner() ; // Will return a string with the Condorcet Winner candidate name
-$loser = $election->getLoser() ; // Will return a string with the Condorcet loser candidate name
+$winner = $election->getCondorcetWinner() ;
+$loser = $election->getCondorcetLoser() ;
 
 if ($winner !== null) :
     echo 'My winner is ' . $winner->getName() ;
