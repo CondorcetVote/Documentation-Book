@@ -8,7 +8,7 @@
 
 ## Condorcet Manual
 
-This wiki contains examples and tutorials for common use of the possibility of Condorcet Class.   
+This wiki contains examples and tutorials for common use of the possibility of Condorcet PHP.   
 
 This wiki is deemed to be current on the most recent version of the library. However, most of information may be valid for lower versions.  
 

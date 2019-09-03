@@ -17,8 +17,7 @@ Look https://packagist.org/packages/julien-boudry/condorcet
 You can use the composer autoloader.
 
 
-## With Frameworks
-*Read the doc! The Condorcet folder inside the lib directory can be move into your solution lib directory*
+## Others loaders
 
 Condorcet library is compliant with PSR-4 autoloader.
 

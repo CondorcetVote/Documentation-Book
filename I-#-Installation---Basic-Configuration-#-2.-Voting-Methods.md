@@ -21,7 +21,7 @@ Some methods do not follow the Condorcet criteria.
 ## Description
 
 * **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
-* **Borda Count** https://en.wikipedia.org/wiki/Borda_count
+* **Borda count** https://en.wikipedia.org/wiki/Borda_count
     * **Borda System** *(starting at 1)*
     * **Dowdall system (Nauru)**
 * **Copeland** http://en.wikipedia.org/wiki/Copeland%27s_method
@@ -52,16 +52,15 @@ Unless explicitly stated otherwise in the details below, no tie breaking is adde
 The results are therefore likely to contain ties in some ranks. Which according to the algorithms is more or less frequent, but always tends to become less likely in proportion to the size of the election. 
 
 ### Tie into a vote rank
-Unless you have prohibited ties in your own control votes or via a filter (CondorcetPHP => 1.8).  
+Unless you have prohibited ties in your own control votes or via a filter (CondorcetPHP >= 1.8).  
 The votes are therefore likely to contain ties on certain ranks.
 
 In principle, this does not particularly disturb Condorcet's methods, since they are based on the Pairwise.
 
-This is more annoying for other methods like Borda, Instant-runoff or Ftpt. these methods being based on the rank assigned. How each handles these cases is specified below and varies from implementation to implementation.
+This is more annoying for other methods like Borda, Instant-runoff or Ftpt. these methods being based on the rank assigned. How each handles these cases is specified below. Keep in ming that it can varies depending on the implementations. Some choices had to be made for this one.
 
 
-
-## Details
+## Implementation comments
 
 ### Borda Count
 
@@ -209,7 +208,7 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 > **Wikipedia:** https://en.wikipedia.org/wiki/First-past-the-post_voting
 > **Variant:** *None*
 
-> **Implementation Comments:** In case of tie into the first rank. The candidates into rank earn each point. But not 1 point, bu 1/(candidate-in-rank) point.  
+> **Implementation Comments:** In case of tie into the first rank. The candidates into rank earn each point. But not 1 point, the result of this computation: 1/(candidate-in-rank). 
 For example: A = B > C
 A/B earn each 0.5 points
 
@@ -237,6 +236,7 @@ $election->getResult('Ftpt')->getStats() ;
 > **Family:** Instant-runoff 
 > **Wikipedia:** https://en.wikipedia.org/wiki/Instant-runoff_voting
 > **Variant:** *None*
+> _**Variant:**_ *Instant-Runoff is not a condorcet method.*
 
 > **Implementation Comments:** In case of tie into a a vote rank, rank is ignored like he never existed.  
 
