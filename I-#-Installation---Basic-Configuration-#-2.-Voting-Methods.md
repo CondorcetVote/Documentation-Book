@@ -64,10 +64,10 @@ This is more annoying for other methods like Borda, Instant-runoff or Ftpt. thes
 
 ## Borda Count
 
-> **Family:** Borda Count
-> **Variant used:** *Starting at 1*
-> **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
-> **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"
+> **Family:** Borda Count  
+> **Variant used:** *Starting at 1*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count  
+> **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"  
 
 ### Implementation Comments:
 Count start at 1.  
