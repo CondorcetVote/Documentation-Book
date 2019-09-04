@@ -17,3 +17,9 @@ They also provide a comprehensive ranking, which does not allow the original met
 
 Most of these methods cannot contradict the result of the original method of the Marquis de Condorcet. It completes it, however, with a complete ranking, and an alternative if the original method does not achieve a result (Condorcet's paradox).
 Some methods do not follow the Condorcet criteria.
+
+```php
+$election->getWinner('Schulze Winning') ; 
+$election->getLoser('Copeland') ;
+$election->getResult('Ranked Pairs Winning') ;
+```
