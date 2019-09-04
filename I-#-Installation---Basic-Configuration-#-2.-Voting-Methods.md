@@ -35,7 +35,7 @@ Some methods do not follow the Condorcet criteria.
     * **[Minimax Winning](#minimax-winning)**
     * **[Minimax Margin](#minimax-margin)**
     * **[Minimax Opposition](#minimax-opposition)**
-* **Ranked Pairs Family***(Tideman method)*
+* **Ranked Pairs Family** *(Tideman method)*
     * **[Ranked Pairs Margin](#ranked-pairs-margin)**
     * **[Ranked Pairs Winning](#ranked-pairs-winning)**
 * **Schulze Method**
