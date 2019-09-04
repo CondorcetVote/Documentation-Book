@@ -5,9 +5,9 @@
 
 ```php
 // Will return the strict natural Condorcet Winner candidate. Or Null if there is not.
-$election->getWinner() ; 
+$election->getCondorcetWinner() ; 
 // Will return the strict natural Condorcet Loser candidate. Or Null if there is not.
-$election->getLoser() ;
+$election->getCondorcetLoser() ;
 ```
 
 # Advanced Voting Methods
