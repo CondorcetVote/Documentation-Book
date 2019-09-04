@@ -67,6 +67,7 @@ This is more annoying for other methods like Borda, Instant-runoff or Ftpt. thes
 > **Family:** Borda Count  
 > **Variant used:** *Starting at 1*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count  
+> ---  
 > **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"  
 
 ### Implementation Comments
@@ -100,6 +101,7 @@ $election->getResult('BordaCount')->getStats() ;
 > **Family:** Borda Count  
 > **Variant used:** *Dowdall System*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count  
+> ---  
 > **Methods alias available (for function call)**: "DowdallSystem","Dowdall System","Nauru", "Borda Nauru"  
 
 
@@ -126,6 +128,7 @@ $election->getResult('DowdallSystem')->getStats() ;
 > **Family:** Copeland method  
 > **Variant used:** *None*  
 > **Wikipedia:** http://en.wikipedia.org/wiki/Copeland%27s_method  
+> ---  
 > **Methods alias available (for function call)**: "Copeland"  
 
 
@@ -152,6 +155,7 @@ $election->getResult('Copeland')->getStats() ;
 > **Family:** Dodgson method  
 > **Variant used:** Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
+> ---  
 > **Methods alias available (for function call)**: "Dodgson Quick" / "DodgsonQuick" / "Dodgson Quick Winner"  
 
 
@@ -176,8 +180,9 @@ $election->getResult('Dodgson Quick')->getStats() ;
 ## Dodgson Tideman Approximation
 
 > **Family:** Dodgson method  
-> **Variant used:** Approximation for Dodgson method called "Tideman approximation" from _[LEWIS  CARROLL,  VOTING,  AND  THE  TAXICAB  METRIC](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf)_  
+> **Variant used:** Approximation for Dodgson method called "Tideman approximation" from _[Lewis  Carroll,  voting,  and  the  taxicab  metric](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf)_  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
+> ---  
 > **Methods alias available (for function call)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
 
 
@@ -204,6 +209,7 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 > **Family:** FTPT  
 > **Variant used:** *See implementation comment*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/First-past-the-post_voting  
+> ---  
 > **Methods alias available (for function call)**: "First-past-the-post voting", "First-past-the-post", "First Choice", "FirstChoice", "FTPT"  
 
 
@@ -233,6 +239,7 @@ $election->getResult('Ftpt')->getStats() ;
 > **Family:** Instant-runoff  
 > **Variant used:** *None*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Instant-runoff_voting  
+> ---  
 > **Methods alias available (for function call)**: "Instant-runoff", "InstantRunoff", "preferential voting", "ranked-choice voting", "alternative vote", "AlternativeVote", "transferable vote", "Vote alternatif"  
 
 
@@ -262,6 +269,7 @@ $election->getResult('Instant-runoff')->getStats() ;
 > **Family:** Kemeny–Young method  
 > **Variant used:** *None*  
 > **Wikipedia:** http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young  
+> ---  
 > **Methods alias available (for function call)**: "Kemeny–Young" / "Kemeny-Young" / "Kemeny Young" / "KemenyYoung" / "Kemeny rule" / "VoteFair popularity ranking" / "Maximum Likelihood Method" / "Median Relation"  
 
 
@@ -289,6 +297,7 @@ $election->getResult('Kemeny-Young')->getStats() ;
 > **Family:** Minimax method  
 > **Variant used:** Winning *(Does not satisfy the Condorcet loser criterion)*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> ---  
 > **Methods alias available (for function call)**: "Minimax Winning" / "MinimaxWinning" / "Minimax" / "Minimax_Winning" / "Simpson" / "Simpson-Kramer" / "Simpson-Kramer Method" / "Simpson Method"  
 
 
@@ -316,6 +325,7 @@ $election->getResult('Minimax Winning')->getStats() ;
 > **Family:** Minimax method  
 > **Variant used:** Margin *(Does not satisfy the Condorcet loser criterion)*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> ---  
 > **Methods alias available (for function call)**: "Minimax Margin" / "MinimaxMargin" / "MinimaxMargin" / "Minimax_Margin"  
 
 
@@ -343,6 +353,7 @@ $election->getResult('Minimax Margin')->getStats() ;
 > **Family:** Minimax method  
 > **Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
+> ---  
 > **Methods alias available (for function call)**: "Minimax Opposition" / "MinimaxOpposition" / "Minimax_Opposition"  
 
 
@@ -370,6 +381,7 @@ $election->getResult('Minimax Opposition')->getStats() ;
 > **Family:** Ranked Pairs  
 > **Variant used:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the different from one language to another.)*  
 **Wikipedia:** https://en.wikipedia.org/wiki/Ranked_pairs  
+> ---  
 > **Methods alias available (for function call)**: "Ranked Pairs Margin" / "Tideman Margin" / "RP Margin" / "Ranked Pairs" / "RankedPairs" / "Tideman method"  
 
 
@@ -397,6 +409,7 @@ $election->getResult('Ranked Pairs Margin')->getStats() ;
 > **Family:** Ranked Pairs  
 > **Variant used:** Winning  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Ranked_pairs  
+> ---  
 > **Methods alias available (for function call)**: "Ranked Pairs Winning" / "Tideman Winning" / "RP Winning"  
 
 
@@ -424,6 +437,7 @@ $election->getResult('Ranked Pairs Winning')->getStats() ;
 > **Family:** Schulze method  
 > **Variant used:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
+> ---  
 > **Methods alias available (for function call)**: "Schulze Winning" / "Schulze" / "SchulzeWinning" / "Schulze_Winning" / "Schwartz Sequential Dropping" / "SSD" / "Cloneproof Schwartz Sequential Dropping" / "CSSD" / "Beatpath" / "Beatpath Method" / "Beatpath Winner" / "Path Voting" / "Path Winner"  
 
 
@@ -451,6 +465,7 @@ $election->getResult('Schulze')->getStats() ;
 > **Family:** Schulze method  
 > **Variant used:** Margin    
 > **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
+> ---  
 > **Methods alias available (for function call)**: "Schulze Margin" / "SchulzeMargin" / "Schulze_Margin"  
 
 
@@ -477,6 +492,7 @@ $election->getResult('Schulze Margin')->getStats() ;
 > **Family:** Schulze method  
 > **Variant used:** Ratio    
 > **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
+> ---  
 > **Methods alias available (for function call)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
 
 
