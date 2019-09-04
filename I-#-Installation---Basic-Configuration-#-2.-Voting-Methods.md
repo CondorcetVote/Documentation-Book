@@ -23,3 +23,5 @@ $election->getWinner('Schulze Winning') ;
 $election->getLoser('Copeland') ;
 $election->getResult('Ranked Pairs Winning') ;
 ```
+
+**=> [View Methods List & Explanations](https://github.com/julien-boudry/Condorcet/blob/master/VOTING_METHODS.md)**
