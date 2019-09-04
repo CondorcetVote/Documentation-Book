@@ -344,7 +344,7 @@ $election->getResult('Minimax Margin')->getStats() ;
 ```
 
 
-## Minimax Oppositon
+## Minimax Opposition
 
 > **Family:** Minimax method  
 > **Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
