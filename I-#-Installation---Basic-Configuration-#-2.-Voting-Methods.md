@@ -60,17 +60,17 @@ In principle, this does not particularly disturb Condorcet's methods, since they
 This is more annoying for other methods like Borda, Instant-runoff or Ftpt. these methods being based on the rank assigned. How each handles these cases is specified below. Keep in mind that it can varies depending on the implementations. Some choices had to be made for each of them.
 
 
-## Implementation comments
+# Implementation comments
 
-### Borda Count
+## Borda Count
 
-#### Characteristics
+> **Family:** Borda Count
+> **Variant used:** *Starting at 1*
+> **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
+> **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"
 
-**Family:** Borda Count
-**Variant used:** *Starting at 1*
-**Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
-
-**Implementation Comments:** Count start at 1.  
+### Implementation Comments:
+Count start at 1.  
 
 In case of tie into a vote rank, follow this example:  
 A>B=C=D=E>F  
@@ -80,9 +80,8 @@ F: 1 point
 
 In case of explicit voting is disable. Missing rank do not earn points, but existing rank are not penalized.
 
-> **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -96,9 +95,7 @@ $election->getLoser('BordaCount') ;
 $election->getResult('BordaCount')->getStats() ;
 ```
 
-### Dowdall system (Nauru)
-
-#### Characteristics
+## Dowdall system (Nauru)
 
 **Family:** Borda Count
 **Variant used:** *Dowdall System*
@@ -108,7 +105,7 @@ $election->getResult('BordaCount')->getStats() ;
 
 > **Methods alias available (for function call)**: "DowdallSystem","Dowdall System","Nauru", "Borda Nauru"
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -122,9 +119,7 @@ $election->getLoser('DowdallSystem') ;
 $election->getResult('DowdallSystem')->getStats() ;
 ```
 
-### Copeland
-
-#### Characteristics
+## Copeland
 
 **Family:** Copeland method  
 **Variant used:** *None*  
@@ -134,7 +129,7 @@ $election->getResult('DowdallSystem')->getStats() ;
 
 > **Methods alias available (for function call)**: "Copeland"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -148,9 +143,7 @@ $election->getLoser('Copeland') ;
 $election->getResult('Copeland')->getStats() ;
 ```
 
-### Dodgson Quick
-
-#### Characteristics
+## Dodgson Quick
 
 **Family:** Dodgson method  
 **Variant used:** Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
@@ -160,7 +153,7 @@ $election->getResult('Copeland')->getStats() ;
 
 > **Methods alias available (for function call)**: "Dodgson Quick" / "DodgsonQuick" / "Dodgson Quick Winner"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -174,9 +167,7 @@ $election->getLoser('Dodgson Quick') ;
 $election->getResult('Dodgson Quick')->getStats() ;
 ```
 
-### Dodgson Tideman Approximation
-
-#### Characteristics
+## Dodgson Tideman Approximation
 
 **Family:** Dodgson method  
 **Variant used:** Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
@@ -186,7 +177,7 @@ $election->getResult('Dodgson Quick')->getStats() ;
 
 > **Methods alias available (for function call)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -200,9 +191,7 @@ $election->getLoser('Dodgson Tideman') ;
 $election->getResult('Dodgson Tideman')->getStats() ;
 ```
 
-### First-past-the-post
-
-#### Characteristics
+## First-past-the-post
 
 **Family:** FTPT
 **Variant used:** *See implementation comment*
@@ -214,7 +203,7 @@ A/B earn each 0.5 points
 
 > **Methods alias available (for function call)**: "First-past-the-post voting", "First-past-the-post", "First Choice", "FirstChoice", "FTPT"
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -229,9 +218,7 @@ $election->getResult('Ftpt')->getStats() ;
 ```
 
 
-### Instant-runoff (Alternative Vote)
-
-#### Characteristics
+## Instant-runoff (Alternative Vote)
 
 **Family:** Instant-runoff 
 **Variant used:** *None*
@@ -243,7 +230,7 @@ An additional tie breaking tentative is added in case of tie into preliminary re
 
 > **Methods alias available (for function call)**: "Instant-runoff", "InstantRunoff", "preferential voting", "ranked-choice voting", "alternative vote", "AlternativeVote", "transferable vote", "Vote alternatif"
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -258,9 +245,7 @@ $election->getResult('Instant-runoff')->getStats() ;
 ```
 
 
-### Kemeny–Young
-
-#### Characteristics
+## Kemeny–Young
 
 **Family:** Kemeny–Young method  
 **Variant used:** *None*
@@ -270,7 +255,7 @@ $election->getResult('Instant-runoff')->getStats() ;
 
 > **Methods alias available (for function call)**: "Kemeny–Young" / "Kemeny-Young" / "Kemeny Young" / "KemenyYoung" / "Kemeny rule" / "VoteFair popularity ranking" / "Maximum Likelihood Method" / "Median Relation"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -285,9 +270,7 @@ $election->getResult('Kemeny-Young')->getStats() ;
 ```
 
 
-### Minixmax Winning
-
-#### Characteristics
+## Minixmax Winning
 
 **Family:** Minimax method  
 **Variant used:** Winning *(Does not satisfy the Condorcet loser criterion)*  
@@ -297,7 +280,7 @@ $election->getResult('Kemeny-Young')->getStats() ;
 
 > **Methods alias available (for function call)**: "Minimax Winning" / "MinimaxWinning" / "Minimax" / "Minimax_Winning" / "Simpson" / "Simpson-Kramer" / "Simpson-Kramer Method" / "Simpson Method"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -312,9 +295,7 @@ $election->getResult('Minimax Winning')->getStats() ;
 ```
 
 
-### Minixmax Margin
-
-#### Characteristics
+## Minixmax Margin
 
 **Family:** Minimax method  
 **Variant used:** Margin *(Does not satisfy the Condorcet loser criterion)*  
@@ -324,7 +305,7 @@ $election->getResult('Minimax Winning')->getStats() ;
 
 > **Methods alias available (for function call)**: "Minimax Margin" / "MinimaxMargin" / "MinimaxMargin" / "Minimax_Margin"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -339,9 +320,7 @@ $election->getResult('Minimax Margin')->getStats() ;
 ```
 
 
-### Minixmax Oppositon
-
-#### Characteristics
+## Minixmax Oppositon
 
 **Family:** Minimax method  
 **Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
@@ -351,7 +330,7 @@ $election->getResult('Minimax Margin')->getStats() ;
 
 > **Methods alias available (for function call)**: "Minimax Opposition" / "MinimaxOpposition" / "Minimax_Opposition"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -366,9 +345,7 @@ $election->getResult('Minimax Opposition')->getStats() ;
 ```
 
 
-### Ranked Pairs Margin
-
-#### Characteristics
+## Ranked Pairs Margin
 
 **Family:** Ranked Pairs  
 **Variant used:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the different from one language to another.)*  
@@ -379,7 +356,7 @@ $election->getResult('Minimax Opposition')->getStats() ;
 
 > **Methods alias available (for function call)**: "Ranked Pairs Margin" / "Tideman Margin" / "RP Margin" / "Ranked Pairs" / "RankedPairs" / "Tideman method"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -394,9 +371,7 @@ $election->getResult('Ranked Pairs Margin')->getStats() ;
 ```
 
 
-### Ranked Pairs Winning
-
-#### Characteristics
+## Ranked Pairs Winning
 
 **Family:** Ranked Pairs  
 **Variant used:** Winning  
@@ -406,7 +381,7 @@ $election->getResult('Ranked Pairs Margin')->getStats() ;
 
 > **Methods alias available (for function call)**: "Ranked Pairs Winning" / "Tideman Winning" / "RP Winning"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -421,9 +396,7 @@ $election->getResult('Ranked Pairs Winning')->getStats() ;
 ```
 
 
-### Schulze Winning
-
-#### Characteristics
+## Schulze Winning
 
 **Family:** Schulze method  
 **Variant used:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
@@ -433,7 +406,7 @@ $election->getResult('Ranked Pairs Winning')->getStats() ;
 
 > **Methods alias available (for function call)**: "Schulze Winning" / "Schulze" / "SchulzeWinning" / "Schulze_Winning" / "Schwartz Sequential Dropping" / "SSD" / "Cloneproof Schwartz Sequential Dropping" / "CSSD" / "Beatpath" / "Beatpath Method" / "Beatpath Winner" / "Path Voting" / "Path Winner"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -448,9 +421,7 @@ $election->getResult('Schulze')->getStats() ;
 ```
 
 
-### Schulze Margin
-
-#### Characteristics
+## Schulze Margin
 
 **Family:** Schulze method  
 **Variant used:** Margin    
@@ -460,7 +431,7 @@ $election->getResult('Schulze')->getStats() ;
 
 > **Methods alias available (for function call)**: "Schulze Margin" / "SchulzeMargin" / "Schulze_Margin"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
@@ -475,9 +446,7 @@ $election->getResult('Schulze Margin')->getStats() ;
 ```
 
 
-### Schulze Ratio
-
-#### Characteristics
+## Schulze Ratio
 
 **Family:** Schulze method  
 **Variant used:** Ratio    
@@ -489,7 +458,7 @@ We don't know how to manage dision by zero when it's happen, wich is very unlike
 
 > **Methods alias available (for function call)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
 
-#### Code example
+### Code example
 
 ```php
 // Get Full Ranking
