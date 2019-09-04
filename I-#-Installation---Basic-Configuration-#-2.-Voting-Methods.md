@@ -26,11 +26,11 @@ Some methods do not follow the Condorcet criteria.
     * **[Dowdall system (Nauru)](#dowdall-system-nauru)**
 * **[Copeland](#copeland)**
 * **Dodgson Approximations**
-    * **[Dodgson Quick](#dodgson-quick)***(recommended)*
+    * **[Dodgson Quick](#dodgson-quick)**
     * **[Dodgson Tideman approximation](#dodgson-tideman-approximation)**
 * **[First-past-the-post](#first-past-the-post)**
 * **[Instant-runoff](#instant-runoff)** *(Alternative Vote / Preferential Voting)*
-* **[Kemeny–Young](#kemenyyoung)** http://en.wikipedia.org/wiki/Kemeny-Young_method
+* **[Kemeny–Young](#kemenyyoung)**
 * **Minimax Family**
     * **[Minimax Winning](#minimax-winning)**
     * **[Minimax Margin](#minimax-margin)**
@@ -39,7 +39,7 @@ Some methods do not follow the Condorcet criteria.
     * **[Ranked Pairs Margin](#ranked-pairs-margin)**
     * **[Ranked Pairs Winning](#ranked-pairs-winning)**
 * **Schulze Method**
-    * **[Schulze Winning](#schulze-winning)**
+    * **[Schulze Winning](#schulze-winning)** *(recommended)*
     * **[Schulze Margin](#schulze-margin)**
     * **[Schulze Ratio](#schulze-ratio)**
 
