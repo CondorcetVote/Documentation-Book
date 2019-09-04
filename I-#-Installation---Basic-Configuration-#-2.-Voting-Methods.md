@@ -20,28 +20,28 @@ Some methods do not follow the Condorcet criteria.
 
 ## Description
 
-* **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
-* **Borda count** https://en.wikipedia.org/wiki/Borda_count
-    * **Borda System** *(starting at 1)*
-    * **Dowdall system (Nauru)**
-* **Copeland** http://en.wikipedia.org/wiki/Copeland%27s_method
-* **Dodgson Approximations** *(Not the real Dodgson method, see: [Lewis Caroll, Voting and the taxicab metric](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf))*
-    * **Dodgson Quick** *(recommended)*
-    * **Dodgson Tideman approximation**
-* **First-past-the-post** https://en.wikipedia.org/wiki/First-past-the-post_voting
-* **Instant-runoff** *(Alternative Vote / Preferential Voting)* https://en.wikipedia.org/wiki/Instant-runoff_voting
-* **Kemeny–Young** http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB._
-* **Minimax Family** http://en.wikipedia.org/wiki/Minimax_Condorcet
-    * **Minimax Winning**
-    * **Minimax Margin**
-    * **Minimax Opposition**
-* **Ranked Pairs Family** *(Tideman method)* https://en.wikipedia.org/wiki/Ranked_pairs
-    * **Ranked Pairs Margin** Margin variant is recommended by Nicolaus Tideman himself.
-    * **Ranked Pairs Winning** Widely used variant, maybe more than the original.
-* **Schulze Method** http://en.wikipedia.org/wiki/Schulze_method
-    * **Schulze Winning** Schulze Winning is recommended by Markus Schulze himself.
-    * **Schulze Margin** Variant from Markus Schulze himself.
-    * **Schulze Ratio** Variant from Markus Schulze himself.
+* **[Condorcet Basic]**Give you the natural winner or loser of Condorcet, if there is one.  
+* **Borda count**https://en.wikipedia.org/wiki/Borda_count
+    * **[Borda System](#borda-count)***(starting at 1)*
+    * **[Dowdall system (Nauru)](#dowdall-system-nauru)**
+* **[Copeland](#copeland)**http://en.wikipedia.org/wiki/Copeland%27s_method
+* **Dodgson Approximations***(Not the real Dodgson method, see: [Lewis Caroll, Voting and the taxicab metric](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf))*
+    * **[Dodgson Quick](#dodgson-quick)***(recommended)*
+    * **[Dodgson Tideman approximation](#dodgson-tideman-approximation)**
+* **[First-past-the-post](#first-past-the-post)**https://en.wikipedia.org/wiki/First-past-the-post_voting
+* **[Instant-runoff](#instant-runoff)** *(Alternative Vote / Preferential Voting)* https://en.wikipedia.org/wiki/Instant-runoff_voting
+* **[Kemeny–Young](#kemenyyoung)**http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB._
+* **Minimax Family**http://en.wikipedia.org/wiki/Minimax_Condorcet
+    * **[Minimax Winning](#minimax-winning)**
+    * **[Minimax Margin](#minimax-margin)**
+    * **[Minimax Opposition](#minimax-opposition)**
+* **Ranked Pairs Family***(Tideman method)* https://en.wikipedia.org/wiki/Ranked_pairs
+    * **[Ranked Pairs Margin](#ranked-pairs-margin)**Margin variant is recommended by Nicolaus Tideman himself.
+    * **[Ranked Pairs Winning](#ranked-pairs-winning)**Widely used variant, maybe more than the original.
+* **Schulze Method**http://en.wikipedia.org/wiki/Schulze_method
+    * **[Schulze Winning](#schulze-winning)(#ranked-pairs-margin)**Schulze Winning is recommended by Markus Schulze himself.
+    * **[Schulze Margin](#schulze-margin)**Variant from Markus Schulze himself.
+    * **[Schulze Ratio](#schulze-ratio)**Variant from Markus Schulze himself.
 
 Comparative : [Table on Condorcet.Vote](http://www.condorcet.vote/Condorcet_Methods)
 
