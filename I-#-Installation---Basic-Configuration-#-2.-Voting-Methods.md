@@ -69,7 +69,7 @@ This is more annoying for other methods like Borda, Instant-runoff or Ftpt. thes
 > **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count  
 > **Methods alias available (for function call)**: "BordaCount","Borda Count","Borda","Méthode Borda"  
 
-### Implementation Comments:
+### Implementation Comments
 Count start at 1.  
 
 In case of tie into a vote rank, follow this example:  
@@ -97,13 +97,15 @@ $election->getResult('BordaCount')->getStats() ;
 
 ## Dowdall system (Nauru)
 
-**Family:** Borda Count
-**Variant used:** *Dowdall System*
-**Wikipedia:** https://en.wikipedia.org/wiki/Borda_count
+> **Family:** Borda Count  
+> **Variant used:** *Dowdall System*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Borda_count  
+> **Methods alias available (for function call)**: "DowdallSystem","Dowdall System","Nauru", "Borda Nauru"  
 
-**Implementation Comments:** *See comments on the original Borda method above.*  
 
-> **Methods alias available (for function call)**: "DowdallSystem","Dowdall System","Nauru", "Borda Nauru"
+### Implementation Comments  
+ *See comments on the original Borda method above.*  
+
 
 ### Code example
 
@@ -121,13 +123,15 @@ $election->getResult('DowdallSystem')->getStats() ;
 
 ## Copeland
 
-**Family:** Copeland method  
-**Variant used:** *None*  
-**Wikipedia:** http://en.wikipedia.org/wiki/Copeland%27s_method  
-
-**Implementation Comments:** *None*
-
+> **Family:** Copeland method  
+> **Variant used:** *None*  
+> **Wikipedia:** http://en.wikipedia.org/wiki/Copeland%27s_method  
 > **Methods alias available (for function call)**: "Copeland"  
+
+
+### Implementation Comments  
+ *None*
+
 
 ### Code example
 
@@ -145,13 +149,15 @@ $election->getResult('Copeland')->getStats() ;
 
 ## Dodgson Quick
 
-**Family:** Dodgson method  
-**Variant used:** Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
-**Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Dodgson method  
+> **Variant used:** Approximation for Dodgson method called "Dodgson Quick" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
 > **Methods alias available (for function call)**: "Dodgson Quick" / "DodgsonQuick" / "Dodgson Quick Winner"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -169,13 +175,15 @@ $election->getResult('Dodgson Quick')->getStats() ;
 
 ## Dodgson Tideman Approximation
 
-**Family:** Dodgson method  
-**Variant used:** Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
-**Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Dodgson method  
+> **Variant used:** Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
 > **Methods alias available (for function call)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -193,15 +201,17 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 
 ## First-past-the-post
 
-**Family:** FTPT
-**Variant used:** *See implementation comment*
-**Wikipedia:** https://en.wikipedia.org/wiki/First-past-the-post_voting
+> **Family:** FTPT  
+> **Variant used:** *See implementation comment*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/First-past-the-post_voting  
+> **Methods alias available (for function call)**: "First-past-the-post voting", "First-past-the-post", "First Choice", "FirstChoice", "FTPT"  
 
-**Implementation Comments:** In case of tie into the first rank. All non-commissioned candidates earn points, but only a fraction. But not 1 point, the result of this computation: 1/(candidate-in-rank). 
+
+### Implementation Comments  
+ In case of tie into the first rank. All non-commissioned candidates earn points, but only a fraction. But not 1 point, the result of this computation: 1/(candidate-in-rank). 
 For example: A = B C
 A/B earn each 0.5 points
 
-> **Methods alias available (for function call)**: "First-past-the-post voting", "First-past-the-post", "First Choice", "FirstChoice", "FTPT"
 
 ### Code example
 
@@ -220,15 +230,17 @@ $election->getResult('Ftpt')->getStats() ;
 
 ## Instant-runoff (Alternative Vote)
 
-**Family:** Instant-runoff 
-**Variant used:** *None*
-**Wikipedia:** https://en.wikipedia.org/wiki/Instant-runoff_voting
+> **Family:** Instant-runoff  
+> **Variant used:** *None*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Instant-runoff_voting  
+> **Methods alias available (for function call)**: "Instant-runoff", "InstantRunoff", "preferential voting", "ranked-choice voting", "alternative vote", "AlternativeVote", "transferable vote", "Vote alternatif"  
 
-**Implementation Comments:** In case of tie into a vote rank, rank is ignored like he never existed.  
+
+### Implementation Comments  
+ In case of tie into a vote rank, rank is ignored like he never existed.  
 
 An additional tie breaking tentative is added in case of tie into preliminary result set. First, comparing candidate pairwise, in a second attempt compare the total number of pairwise wins (global context), and in a third desperate attempt, compare the balance of their victory / defeat in a global Pairwise context.
 
-> **Methods alias available (for function call)**: "Instant-runoff", "InstantRunoff", "preferential voting", "ranked-choice voting", "alternative vote", "AlternativeVote", "transferable vote", "Vote alternatif"
 
 ### Code example
 
@@ -247,13 +259,15 @@ $election->getResult('Instant-runoff')->getStats() ;
 
 ## Kemeny–Young
 
-**Family:** Kemeny–Young method  
-**Variant used:** *None*
-**Wikipedia:** http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young  
-
-**Implementation Comments:** Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB.  
-
+> **Family:** Kemeny–Young method  
+> **Variant used:** *None*  
+> **Wikipedia:** http://en.wikipedia.org/wiki/Kemeny-Young_method _Kemeny-Young  
 > **Methods alias available (for function call)**: "Kemeny–Young" / "Kemeny-Young" / "Kemeny Young" / "KemenyYoung" / "Kemeny rule" / "VoteFair popularity ranking" / "Maximum Likelihood Method" / "Median Relation"  
+
+
+### Implementation Comments  
+ Kemeny-Young is currently limited up to 8 candidats. Note that, for 8 candidates, you must provide into php.ini a memory_limit upper than 160MB.  
+
 
 ### Code example
 
@@ -272,13 +286,15 @@ $election->getResult('Kemeny-Young')->getStats() ;
 
 ## Minixmax Winning
 
-**Family:** Minimax method  
-**Variant used:** Winning *(Does not satisfy the Condorcet loser criterion)*  
-**Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Minimax method  
+> **Variant used:** Winning *(Does not satisfy the Condorcet loser criterion)*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Methods alias available (for function call)**: "Minimax Winning" / "MinimaxWinning" / "Minimax" / "Minimax_Winning" / "Simpson" / "Simpson-Kramer" / "Simpson-Kramer Method" / "Simpson Method"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -297,13 +313,15 @@ $election->getResult('Minimax Winning')->getStats() ;
 
 ## Minixmax Margin
 
-**Family:** Minimax method  
-**Variant used:** Margin *(Does not satisfy the Condorcet loser criterion)*  
-**Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Minimax method  
+> **Variant used:** Margin *(Does not satisfy the Condorcet loser criterion)*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Methods alias available (for function call)**: "Minimax Margin" / "MinimaxMargin" / "MinimaxMargin" / "Minimax_Margin"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -322,13 +340,15 @@ $election->getResult('Minimax Margin')->getStats() ;
 
 ## Minixmax Oppositon
 
-**Family:** Minimax method  
-**Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
-**Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Minimax method  
+> **Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Minimax_Condorcet  
 > **Methods alias available (for function call)**: "Minimax Opposition" / "MinimaxOpposition" / "Minimax_Opposition"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -347,14 +367,15 @@ $election->getResult('Minimax Opposition')->getStats() ;
 
 ## Ranked Pairs Margin
 
-**Family:** Ranked Pairs  
-**Variant used:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the different from one language to another.)*  
-
+> **Family:** Ranked Pairs  
+> **Variant used:** Margin *(Ranked Pairs Margin is used by Nicolaus Tideman himself from originals papers. But it's not necessarily the most common. Most other documentation preferring the Winning variant. Even Wikipedia is the different from one language to another.)*  
 **Wikipedia:** https://en.wikipedia.org/wiki/Ranked_pairs  
-
-**Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. In case of a tie in the classification. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
-
 > **Methods alias available (for function call)**: "Ranked Pairs Margin" / "Tideman Margin" / "RP Margin" / "Ranked Pairs" / "RankedPairs" / "Tideman method"  
+
+
+### Implementation Comments  
+ In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. In case of a tie in the classification. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
+
 
 ### Code example
 
@@ -373,13 +394,15 @@ $election->getResult('Ranked Pairs Margin')->getStats() ;
 
 ## Ranked Pairs Winning
 
-**Family:** Ranked Pairs  
-**Variant used:** Winning  
-**Wikipedia:** https://en.wikipedia.org/wiki/Ranked_pairs  
-
-**Implementation Comments:** In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
-
+> **Family:** Ranked Pairs  
+> **Variant used:** Winning  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Ranked_pairs  
 > **Methods alias available (for function call)**: "Ranked Pairs Winning" / "Tideman Winning" / "RP Winning"  
+
+
+### Implementation Comments  
+ In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
+
 
 ### Code example
 
@@ -398,13 +421,15 @@ $election->getResult('Ranked Pairs Winning')->getStats() ;
 
 ## Schulze Winning
 
-**Family:** Schulze method  
-**Variant used:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
-**Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Schulze method  
+> **Variant used:** Winning *(Schulze Winning is recommended by Markus Schulze himself. This is the default choice. This variant is also known as Schulze Method.)*  
+> **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
 > **Methods alias available (for function call)**: "Schulze Winning" / "Schulze" / "SchulzeWinning" / "Schulze_Winning" / "Schwartz Sequential Dropping" / "SSD" / "Cloneproof Schwartz Sequential Dropping" / "CSSD" / "Beatpath" / "Beatpath Method" / "Beatpath Winner" / "Path Voting" / "Path Winner"  
+
+
+### Implementation Comments  
+ *None*  
+
 
 ### Code example
 
@@ -423,13 +448,14 @@ $election->getResult('Schulze')->getStats() ;
 
 ## Schulze Margin
 
-**Family:** Schulze method  
-**Variant used:** Margin    
-**Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
-
-**Implementation Comments:** *None*  
-
+> **Family:** Schulze method  
+> **Variant used:** Margin    
+> **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
 > **Methods alias available (for function call)**: "Schulze Margin" / "SchulzeMargin" / "Schulze_Margin"  
+
+
+### Implementation Comments  
+ *None*  
 
 ### Code example
 
@@ -448,15 +474,17 @@ $election->getResult('Schulze Margin')->getStats() ;
 
 ## Schulze Ratio
 
-**Family:** Schulze method  
-**Variant used:** Ratio    
-**Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
+> **Family:** Schulze method  
+> **Variant used:** Ratio    
+> **Wikipedia:** https://en.wikipedia.org/wiki/Schulze_method  
+> **Methods alias available (for function call)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
 
-**Implementation Comments:** The original specification is incomplete. She say to compute the ratio as follow:  
+
+### Implementation Comments  
+ The original specification is incomplete. She say to compute the ratio as follow:  
 _$candidateA_versus_CandidateB['pairwaise_win'] / $candidateA_versus_CandidateB ['pairwaise_lose'] = Ratio_
 We don't know how to manage dision by zero when it's happen, wich is very unlikely on large election, but can happen. Actually, but it can change to a better solution, we add 1 on left and right, only in this case.  
 
-> **Methods alias available (for function call)**: "Schulze Ratio" / "SchulzeRatio" / "Schulze_Ratio"  
 
 ### Code example
 
