@@ -290,7 +290,7 @@ $election->getResult('Kemeny-Young')->getStats() ;
 ```
 
 
-## Minixmax Winning
+## Minimax Winning
 
 > **Family:** Minimax method  
 > **Variant used:** Winning *(Does not satisfy the Condorcet loser criterion)*  
@@ -317,7 +317,7 @@ $election->getResult('Minimax Winning')->getStats() ;
 ```
 
 
-## Minixmax Margin
+## Minimax Margin
 
 > **Family:** Minimax method  
 > **Variant used:** Margin *(Does not satisfy the Condorcet loser criterion)*  
@@ -344,7 +344,7 @@ $election->getResult('Minimax Margin')->getStats() ;
 ```
 
 
-## Minixmax Oppositon
+## Minimax Oppositon
 
 > **Family:** Minimax method  
 > **Variant used:** Opposition *(By nature, this alternative does not meet any criterion of Condorcet)*  
