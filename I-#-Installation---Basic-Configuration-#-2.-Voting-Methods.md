@@ -1,6 +1,6 @@
 # Original Condorcet Method (Winner / Loser)
 
-* **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
+**Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
 *(This method is the only core method, you cannot remove it)*
 
 ```php
