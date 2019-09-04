@@ -74,16 +74,18 @@ This is more annoying for other methods like Borda, Instant-runoff or Ftpt. thes
 Count start at 1.  
 
 In case of tie into a vote rank, follow this example:  
+```
 A>B=C=D=E>F  
 A: 6 points  
 B/C/D/E: (5+4+3+2) / 4 = 3.5 points each  
 F: 1 point
+```
+
 
 In case of explicit voting is disable. Missing rank do not earn points, but existing rank are not penalized.
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('BordaCount') ;
@@ -110,7 +112,6 @@ $election->getResult('BordaCount')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('DowdallSystem') ;
@@ -164,7 +165,6 @@ $election->getResult('Copeland')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Dodgson Quick') ;
@@ -191,7 +191,6 @@ $election->getResult('Dodgson Quick')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Dodgson Tideman') ;
@@ -214,13 +213,13 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 
 
 ### Implementation Comments  
- In case of tie into the first rank. All non-commissioned candidates earn points, but only a fraction. But not 1 point, the result of this computation: 1/(candidate-in-rank). 
+ In case of tie into the first rank. All non-commissioned candidates earn points, but only a fraction. But not 1 point, the result of this computation: 1/(candidate-in-rank).  
+
 For example: ```A = B > C```
 A/B earn each 0.5 points
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Ftpt') ;
@@ -278,7 +277,6 @@ $election->getResult('Instant-runoff')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Kemeny-Young') ;
@@ -306,7 +304,6 @@ $election->getResult('Kemeny-Young')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Minimax Winning') ;
@@ -334,7 +331,6 @@ $election->getResult('Minimax Winning')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Minimax Margin') ;
@@ -362,7 +358,6 @@ $election->getResult('Minimax Margin')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Minimax Opposition') ;
@@ -386,11 +381,11 @@ $election->getResult('Minimax Opposition')->getStats() ;
 
 
 ### Implementation Comments  
- In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. In case of a tie in the classification. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
+ In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition.  
+ In case of a tie in the ranking result. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Markus Schulze advice a tie-breaking method, but it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Ranked Pairs Margin') ;
@@ -414,11 +409,11 @@ $election->getResult('Ranked Pairs Margin')->getStats() ;
 
 
 ### Implementation Comments  
- In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition. It is therefore an implementation in accordance with the first paper published in 1987. Without advanced tie-breaking, because it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
+ In the event of impossibility of ordering a pair by their margin of victory. Try to separate them when possible by their smaller minority opposition.  
+ In case of a tie in the ranking result. No advanced methods are used. It is therefore an implementation in accordance with the first paper published in 1987. Markus Schulze advice a tie-breaking method, but it brings unnecessary complexity and is partly based on randomness. this method can therefore come out ties on some ranks. Even if that is very unlikely on an honest election of good size.  
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Ranked Pairs Winning') ;
@@ -446,7 +441,6 @@ $election->getResult('Ranked Pairs Winning')->getStats() ;
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Schulze') ;
@@ -473,7 +467,6 @@ $election->getResult('Schulze')->getStats() ;
  *None*  
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Schulze Margin') ;
@@ -498,12 +491,11 @@ $election->getResult('Schulze Margin')->getStats() ;
 
 ### Implementation Comments  
  The original specification is incomplete. She say to compute the ratio as follow:  
-_$candidateA_versus_CandidateB['pairwise_win'] / $candidateA_versus_CandidateB ['pairwise_lose'] = Ratio_
-We don't know how to manage dision by zero when it's happen, wich is very unlikely on large election, but can happen. Actually, but it can change to a better solution, we add 1 on left and right, only in this case.  
+```$candidateA_versus_CandidateB['pairwise_win'] / $candidateA_versus_CandidateB ['pairwise_lose'] = Ratio```  
+We don't know how to manage divion by zero when it's happen, wich is very unlikely on large election, but can happen. Actually, but it can change to a better solution, we add 1 on left and right, only in this case.  
 
 
 ### Code example
-
 ```php
 // Get Full Ranking
 $election->getResult('Schulze Ratio') ;
