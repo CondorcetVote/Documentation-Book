@@ -176,7 +176,7 @@ $election->getResult('Dodgson Quick')->getStats() ;
 ## Dodgson Tideman Approximation
 
 > **Family:** Dodgson method  
-> **Variant used:** Approximation for Dodgson method called "Tideman approximation" from https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf  
+> **Variant used:** Approximation for Dodgson method called "Tideman approximation" from _[LEWIS  CARROLL,  VOTING,  AND  THE  TAXICAB  METRIC](https://www.maa.org/sites/default/files/pdf/cmj_ftp/CMJ/September%202010/3%20Articles/6%2009-229%20Ratliff/Dodgson_CMJ_Final.pdf)_  
 > **Wikipedia:** https://en.wikipedia.org/wiki/Dodgson%27s_method  
 > **Methods alias available (for function call)**: "Dodgson Tideman Approximation" / "DodgsonTidemanApproximation" / "Dodgson Tideman" / "DodgsonTideman"  
 
@@ -209,7 +209,7 @@ $election->getResult('Dodgson Tideman')->getStats() ;
 
 ### Implementation Comments  
  In case of tie into the first rank. All non-commissioned candidates earn points, but only a fraction. But not 1 point, the result of this computation: 1/(candidate-in-rank). 
-For example: A = B C
+For example: ```A = B > C```
 A/B earn each 0.5 points
 
 
@@ -482,7 +482,7 @@ $election->getResult('Schulze Margin')->getStats() ;
 
 ### Implementation Comments  
  The original specification is incomplete. She say to compute the ratio as follow:  
-_$candidateA_versus_CandidateB['pairwaise_win'] / $candidateA_versus_CandidateB ['pairwaise_lose'] = Ratio_
+_$candidateA_versus_CandidateB['pairwise_win'] / $candidateA_versus_CandidateB ['pairwise_lose'] = Ratio_
 We don't know how to manage dision by zero when it's happen, wich is very unlikely on large election, but can happen. Actually, but it can change to a better solution, we add 1 on left and right, only in this case.  
 
 
