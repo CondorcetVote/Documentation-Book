@@ -22,7 +22,7 @@ Some methods do not follow the Condorcet criteria.
 
 * **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
 * **Borda count**
-    * **[Borda System](#borda-count)***(starting at 1)*
+    * **[Borda System](#borda-count)**
     * **[Dowdall system (Nauru)](#dowdall-system-nauru)**
 * **[Copeland](#copeland)**
 * **Dodgson Approximations**
