@@ -7,9 +7,6 @@ _Note: By default, there is no limit_
 ```php
 Condorcet::setMaxVoteNumber(2042); // All election, new or wake up, will be limit at this maximum vote number.
 Condorcet::setMaxVoteNumber(null); // No limit for evrybody. (Default)
-
-$election->ignoreMaxVote(true); // Ho well, I'm a rebel. This Class limit do not apply to me.
-$election->ignoreMaxVote(false); // Ok, ok, it apply to me.
 ```
 
 ## Add a vote
