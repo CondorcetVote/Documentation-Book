@@ -7,8 +7,6 @@ Condorcet::setDefaultMethod('Schulze'); // Argument: A supported method
 
 ## Get information 
 ```php
-$election->getConfig (); // Will return an explicit array about the object and Class Constant.  
-
 Condorcet::getDefaultMethod(); // Return a string with the name of the default method in used.
 
 Condorcet::getAuthMethods(); // Get an array of authorized methods to use with the correct string to use as parameter.  
