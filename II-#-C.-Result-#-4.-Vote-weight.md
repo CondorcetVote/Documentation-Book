@@ -27,12 +27,12 @@ However, if you need to keep the information of each elector at Condorcet level,
         ');
 
         $voteWithWeight = $election->addVote('D > C > B');
-        $voteWithWeight->setWeight(2); // You put a weight, bu weight still no allow at election level.
+        $voteWithWeight->setWeight(2); // You put a weight, but weight still no allowes at election level.
 
         // Return 'A > C > D > B'
         $election->getResult('Schulze Winning')->getResultAsString();
 
-        $election->allowVoteWeight(true);
+        $election->allowsVoteWeight(true);
 
         // Return 'A = D > C > B'
         $election->getResult('Schulze Winning')->getResultAsString();
