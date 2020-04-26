@@ -28,7 +28,7 @@ You can change this mode. It will reset all computed result and provide new resu
 
     // Supporting not ranked candidate
     $this->election->setImplicitRanking(false);
-    $election->getImplicitRanking(); // Return False.
+    $election->getImplicitRankingRule(); // Return False.
     $this->election->getWinner('Ranked Pairs'); // Return candidate A
 
     // Rollback
