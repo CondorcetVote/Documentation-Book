@@ -124,11 +124,11 @@ $election->parseVotes($my_big_string); // Just my big string.
 
 ### Syntax
 ```php
-$json_votes = json_encode( array(
-	array('vote' => 'A>B=D>C', 'tag' => 'ben,jerry'),
-	array('vote' => array('D', 'B,A', 'C'), 'tag' => array('bela','bartok'), 'multi' => 5),
-	array('vote' => array('A', array('B','C'), 'D'))
-) );
+$json_votes = json_encode( [
+	['vote' => 'A>B=D>C', 'tag' => 'ben,jerry'],
+	['vote' => ['D', 'B,A', 'C'], 'tag' => ['bela','bartok'], 'multi' => 5],
+	['vote' => ['A', ['B','C'], 'D']]
+] );
 ``` 
 
 In the previous example, all parameters are optional exept vote.
