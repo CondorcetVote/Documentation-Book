@@ -32,8 +32,8 @@
       * [[1. Add your own ranking algorithm|library_III-#-B.-Extending-Condorcet-#-1.-Add-your-own-ranking-algorithm]]
       * [[2. Candidate - Vote Class|library_III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class]]
 * Condorcet as a Command Line Application
-  * [[I. - Installation|command_line_I-Installation]]
-  * [[II. - Usage|command_line_II-Usage]]
+  * [[I. - Installation|I-#-Installation-(command-line)]]
+  * [[II. - Usage|II-#-Usage-(command-line)]]
 
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
