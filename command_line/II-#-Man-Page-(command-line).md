@@ -1,11 +1,6 @@
-### Install as an application
-
-#### Option 1: Build it yourself with composer
-***(you must have PHP >= 8.1 and composer)***  
-
 ```shell
 condorcet election --help  
-                                                           
+
 Description:
   Process an election
 
