@@ -1,0 +1,44 @@
+### Install as an application
+
+#### Option 1: Build it yourself with composer
+***(you must have PHP >= 8.1 and composer)***  
+
+```shell
+condorcet election --help  
+                                                           
+Description:
+  Process an election
+
+Usage:
+  election [options] [--] [<methods>...]
+  condorcet
+
+Arguments:
+  methods                            Methods to output
+
+Options:
+  -c, --candidates=CANDIDATES        Candidates list file path or direct input
+  -w, --votes=VOTES                  Votes list file path or direct input
+  -s, --stats                        Get detailed stats (equivalent to --show-pairwise and --method-stats)
+      --method-stats                 Get detailed stats per method
+  -p, --show-pairwise                Get pairwise computation
+  -l, --list-votes                   List registered votes
+  -r, --natural-condorcet            Print natural Condorcet winner / loser
+  -i, --deactivate-implicit-ranking  Deactivate implicit ranking
+  -g, --allows-votes-weight          Allows vote weight
+  -t, --no-tie                       Add no-tie constraint for vote
+      --seats=SEATS                  Specify the number of seats for proportional methods
+      --quota=QUOTA                  Quota to be used for STV compatible methods
+      --deactivate-file-cache        Don't use a disk cache for very large elections. Forces to work exclusively in RAM.
+      --votes-per-mb=VOTES-PER-MB    Adjust memory in case of failure. Default is 100. Try to lower it.
+  -h, --help                         Display help for the given command. When no command is given display help for the election command
+  -q, --quiet                        Do not output any message
+  -V, --version                      Display this application version
+      --ansi|--no-ansi               Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction               Do not ask any interactive question
+  -v|vv|vvv, --verbose               Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command takes candidates and votes as input. The output is the result of that election.
+```
+

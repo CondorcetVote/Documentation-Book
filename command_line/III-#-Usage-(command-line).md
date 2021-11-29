@@ -1,0 +1,314 @@
+### Command Line - Some Quick Examples
+
+_See your installation method upside for main call. Below from the official docker image with command condorcet._
+
+#### A simple and short election
+```shell
+condorcet election --candidates="A;B;C" --votes="A>B ; myTag1||C=B>A ; A>C ; B>C;A" -lr Schulze Borda Minimax
+
+Summary
+=======
+
+3 candidates(s) registered  ||  5 vote(s) registered
+==========================
+ ------------------------------------------------------------- -------
+  Is vote weight allowed?                                       FALSE
+ ------------------------------------------------------------- -------
+  Votes are evaluated according to the implicit ranking rule?   TRUE
+ ------------------------------------------------------------- -------
+  Is vote tie in rank allowed?                                  FALSE
+ ------------------------------------------------------------- -------
+
++-------------- Stats - votes registration -------+-------+
+|                                           Stats | Value |
++-------------------------------------------------+-------+
+|                          Count registered votes | 5     |
+|   Count valid registered votes with constraints | 5     |
+| Count invalid registered votes with constraints | 0     |
+|                                 Sum vote weight | 5     |
+|         Sum valid votes weight with constraints | 5     |
++-------------------------------------------------+-------+
++-----------+- Registered votes list -+-----------+
+| Vote Num. | Vote      | Vote Weight | Vote Tags |
++-----------+-----------+-------------+-----------+
+| 1         | A > B > C | 1           |           |
+| 2         | B = C > A | 1           | myTag1    |
+| 3         | A > C > B | 1           |           |
+| 4         | B > C > A | 1           |           |
+| 5         | A > B = C | 1           |           |
++-----------+-----------+-------------+-----------+
+
+Condorcet natural winner & loser
+--------------------------------
+
++------ Natural Condorcet -------+
+| Type               | Candidate |
++--------------------+-----------+
+| * Condorcet winner | A         |
+| # Condorcet loser  | C         |
++--------------------+-----------+
+
+Results per methods
+===================
+
+
+Schulze Winning Method:
+-----------------------
+
++--------- Results: Schulze Winning ----------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | A*                   |
+|          2           | B                    |
+|          3           | C#                   |
++----------------------+----------------------+
+
+BordaCount Method:
+------------------
+
++- Configuration: BordaCount --+
+|       Variable       | Value |
++----------------------+-------+
+|      Starting:       | 1     |
++----------------------+-------+
++------------ Results: BordaCount ------------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | A*                   |
+|          2           | B                    |
+|          3           | C#                   |
++----------------------+----------------------+
+
+Minimax Winning Method:
+-----------------------
+
++--------- Results: Minimax Winning ----------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | A*                   |
+|          2           | B,C                  |
++----------------------+----------------------+
+```
+
+#### From Files / With Stats
+You can print stats. And load candidates or votes from file. See [Condorcet Manual](https://github.com/julien-boudry/Condorcet/wiki) for more  details.
+
+```shell
+condorcet election --stats --candidates /path/to/myCandidates.text --votes /path/to/myVotes.txt Kemeny-Young
+
+Summary
+=======
+
+3 candidates(s) registered  ||  10 vote(s) registered
+==========================
+ ------------------------------------------------------------- -------
+  Is vote weight allowed?                                       FALSE
+ ------------------------------------------------------------- -------
+  Votes are evaluated according to the implicit ranking rule?   TRUE
+ ------------------------------------------------------------- -------
+  Is vote tie in rank allowed?                                  FALSE
+ ------------------------------------------------------------- -------
+
++-------------------- Pairwise --------------------+
+| For each candidate, show their win, null or lose |
++--------------------------------------------------+
+| A:                                               |
+|     win:                                         |
+|         B: 10                                    |
+|         C: 10                                    |
+|     'null':                                      |
+|         B: 0                                     |
+|         C: 0                                     |
+|     lose:                                        |
+|         B: 0                                     |
+|         C: 0                                     |
+| B:                                               |
+|     win:                                         |
+|         A: 0                                     |
+|         C: 10                                    |
+|     'null':                                      |
+|         A: 0                                     |
+|         C: 0                                     |
+|     lose:                                        |
+|         A: 10                                    |
+|         C: 0                                     |
+| C:                                               |
+|     win:                                         |
+|         A: 0                                     |
+|         B: 0                                     |
+|     'null':                                      |
+|         A: 0                                     |
+|         B: 0                                     |
+|     lose:                                        |
+|         A: 10                                    |
+|         B: 10                                    |
+|                                                  |
++--------------------------------------------------+
+Results per methods
+===================
+
+
+Kemeny–Young Method:
+--------------------
+
++----------- Results: Kemeny–Young -----------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | A*                   |
+|          2           | B                    |
+|          3           | C#                   |
++----------------------+----------------------+
++------------ Stats: Kemeny–Young ------------+
+| Stats                                       |
++---------------------------------------------+
+| bestScore: 30                               |
+| rankingScore:                               |
+|     -                                       |
+|         1: A                                |
+|         2: B                                |
+|         3: C                                |
+|         score: 30                           |
+|     -                                       |
+|         1: A                                |
+|         2: C                                |
+|         3: B                                |
+|         score: 20                           |
+|     -                                       |
+|         1: B                                |
+|         2: A                                |
+|         3: C                                |
+|         score: 20                           |
+|     -                                       |
+|         1: B                                |
+|         2: C                                |
+|         3: A                                |
+|         score: 10                           |
+|     -                                       |
+|         1: C                                |
+|         2: A                                |
+|         3: B                                |
+|         score: 10                           |
+|     -                                       |
+|         1: C                                |
+|         2: B                                |
+|         3: A                                |
+|         score: 0                            |
+|                                             |
++---------------------------------------------+
+```
+
+#### Votes Weight / Implicit Ranking Mode / No-Tie constraint
+```shell
+condorcet election --candidates="A;B;C" --votes="A>B ^10 ; B>A ; B>A" -lr --allows-votes-weight
+
+Summary
+=======
+
+3 candidates(s) registered  ||  3 vote(s) registered
+==========================
+ ------------------------------------------------------------- ------- 
+  Is vote weight allowed?                                       TRUE   
+ ------------------------------------------------------------- ------- 
+  Votes are evaluated according to the implicit ranking rule?   TRUE   
+ ------------------------------------------------------------- ------- 
+  Is vote tie in rank allowed?                                  FALSE  
+ ------------------------------------------------------------- ------- 
+
++-------------- Stats - votes registration -------+-------+
+|                                           Stats | Value |
++-------------------------------------------------+-------+
+|                          Count registered votes | 3     |
+|   Count valid registered votes with constraints | 3     |
+| Count invalid registered votes with constraints | 0     |
+|                                 Sum vote weight | 12    |
+|         Sum valid votes weight with constraints | 12    |
++-------------------------------------------------+-------+
++-----------+- Registered votes list -+-----------+
+| Vote Num. | Vote      | Vote Weight | Vote Tags |
++-----------+-----------+-------------+-----------+
+| 1         | A > B > C | 10          |           |
+| 2         | B > A > C | 1           |           |
+| 3         | B > A > C | 1           |           |
++-----------+-----------+-------------+-----------+
+
+Condorcet natural winner & loser
+--------------------------------
+
++------ Natural Condorcet -------+
+| Type               | Candidate |
++--------------------+-----------+
+| * Condorcet winner | A         |
+| # Condorcet loser  | C         |
++--------------------+-----------+
+
+Results per methods
+===================
+
+
+Schulze Winning Method:
+-----------------------
+
++--------- Results: Schulze Winning ----------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | A*                   |
+|          2           | B                    |
+|          3           | C#                   |
++----------------------+----------------------+
+```
+
+```shell
+condorcet election --candidates="A;B;C" --votes="A>B ; B>C=A ; C=B>A ; B" -lr --no-tie
+
+Summary
+=======
+
+3 candidates(s) registered  ||  4 vote(s) registered
+==========================
+ ------------------------------------------------------------- ------- 
+  Is vote weight allowed?                                       FALSE  
+ ------------------------------------------------------------- ------- 
+  Votes are evaluated according to the implicit ranking rule?   TRUE   
+ ------------------------------------------------------------- ------- 
+  Is vote tie in rank allowed?                                  TRUE   
+ ------------------------------------------------------------- ------- 
+
++-------------- Stats - votes registration -------+-------+
+|                                           Stats | Value |
++-------------------------------------------------+-------+
+|                          Count registered votes | 1     |
+|   Count valid registered votes with constraints | 1     |
+| Count invalid registered votes with constraints | 3     |
+|                                 Sum vote weight | 4     |
+|         Sum valid votes weight with constraints | 1     |
++-------------------------------------------------+-------+
++-----------+- Registered votes list -+-----------+
+| Vote Num. | Vote      | Vote Weight | Vote Tags |
++-----------+-----------+-------------+-----------+
+| 1         | A > B > C | 1           |           |
++-----------+-----------+-------------+-----------+
+
+Condorcet natural winner & loser
+--------------------------------
+
++------ Natural Condorcet -------+
+| Type               | Candidate |
++--------------------+-----------+
+| * Condorcet winner | B         |
+| # Condorcet loser  | NULL      |
++--------------------+-----------+
+
+Results per methods
+===================
+
+
+Schulze Winning Method:
+-----------------------
+
++--------- Results: Schulze Winning ----------+
+|         Rank         | Candidates           |
++----------------------+----------------------+
+|          1           | B*                   |
+|          2           | A,C                  |
++----------------------+----------------------+
+```

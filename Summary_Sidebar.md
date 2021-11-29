@@ -33,7 +33,8 @@
       * [[2. Candidate - Vote Class|III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class-(library)]]
 * Condorcet as a Command Line Application
   * [[I. - Installation|I-#-Installation-(command-line)]]
-  * [[II. - Usage|II-#-Usage-(command-line)]]
+  * [[II. - Man page|II-#-Man-Page-(command-line)]]
+  * [[III. - Usage|III-#-Usage-(command-line)]]
 
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
