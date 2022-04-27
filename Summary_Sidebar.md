@@ -39,3 +39,5 @@
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
+
+## [[.CVOTES - Condorcet Format Specifications|Condorcet-Format]]
