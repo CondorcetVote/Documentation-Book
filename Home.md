@@ -51,7 +51,7 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 ## [Methods References](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
-## [[.CVOTES - Condorcet Election Format Specifications](https://github.com/CondorcetPHP/CondorcetElectionFormat/blob/main/README.md)
+## [.CVOTES - Condorcet Election Format Specifications](https://github.com/CondorcetPHP/CondorcetElectionFormat/blob/main/README.md)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
 
