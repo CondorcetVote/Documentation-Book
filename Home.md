@@ -51,6 +51,8 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 ## [Methods References](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
+## [[.CVOTES - Condorcet Format Specifications|Condorcet-Format]]
+
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
 
 ## Examples
