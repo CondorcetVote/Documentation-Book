@@ -40,4 +40,4 @@
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
 
-## [[.CVOTES - Condorcet Format Specifications|Condorcet-Format]]
+## [.CVOTES - Condorcet Election Format Specifications](https://github.com/CondorcetPHP/CondorcetElectionFormat/blob/main/README.md)
