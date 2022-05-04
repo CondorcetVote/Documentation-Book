@@ -2,7 +2,7 @@
 
 ## Verify the registered votes list
 ```php
-Election::getVotesList ( [mixed $tag = null, bool $with = true] ) : array
+$Election::getVotesList ( [mixed $tag = null, bool $with = true] ) : array
 ```
 **tag:** List of tags   
 **with:** With or without one a this tag(s)   
