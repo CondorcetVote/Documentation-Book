@@ -1,6 +1,6 @@
 # Cryptographic checksum
 ```php
-Election::getChecksum ()
+public Election->getChecksum (): string
 ```
 **Return value:** SHA-2 256 checksum of following internal data:
 * Candidates
