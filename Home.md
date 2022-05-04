@@ -8,9 +8,9 @@
 
 ## Condorcet Manual
 
-This wiki contains examples and tutorials for common use of the possibility of Condorcet PHP.   
+This wiki contains examples and tutorials for the common use of the possibility of Condorcet PHP.   
 
-This wiki is deemed to be current on the most recent version of the library. However, most of information may be valid for lower versions.  
+This wiki is deemed to be current on the most recent version of the library. However, most of the information may be valid for lower versions.  
 
 **Look at the summary >>>>**
 
@@ -31,16 +31,12 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 * [Setup Condorcet to manage up to hundred millions votes](https://github.com/julien-boudry/Condorcet/blob/master/Examples/Specifics_Examples/use_large_election_external_database_drivers.php)
 
+* Understand everything in evry subjects: **[Read the test](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**!
 
 ### Condorcet PHP Implementation
 
-_This example of implementation in others project can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
+_This example of implementation in other projects can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
 
 * [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.    
   * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
 * [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet) _(very old Condorcet v0.13)
-
-
-### Tests
-
-* [Read the tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)
