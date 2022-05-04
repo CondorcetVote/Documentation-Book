@@ -4,7 +4,7 @@
 
 ```php
 Election->getWinner ( ?string method = null ): CondorcetPHP\Condorcet\Candidate|array|null
-Election->getLoser ([?string method = null ): CondorcetPHP\Condorcet\Candidate|array|null
+Election->getLoser ( ?string method = null ): CondorcetPHP\Condorcet\Candidate|array|null
 ```
 **method:** String name of an available advanced Condorcet method. NULL for natural Condorcet Winner.
 
