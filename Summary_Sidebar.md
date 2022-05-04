@@ -1,14 +1,14 @@
 > **[Presentation](https://github.com/julien-boudry/Condorcet/blob/master/README.md) | Manual | [Methods References](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/README.md) | [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**  
 
 ## Manual Summary
-* [[Home|Home]]   
-* Condorcet as a Command Line Application
+* [[**Home**|Home]]   
+* **Condorcet as a Command Line Application**
   * [[I. - Installation|I-#-Installation-(command-line)]]
   * [[II. - Man page|II-#-Man-Page-(command-line)]]
   * [[III. - Simple Usage|III-#-Simple-Usage-(command-line)]]
   * [[IV. - Import from Election files formats (command line)|IV-#-Import-from-Election-files-formats-(command-line)]]
 
-* Condorcet as a PHP library
+* **Condorcet as a PHP library**
   * I. - Installation - Basic Configuration
     * [[1. Installation|I-#-Installation---Basic-Configuration-#-1.-Installation-(library)]]
     * [[2. Voting Methods|I-#-Installation---Basic-Configuration-#-2.-Voting-Methods-(library)]]
