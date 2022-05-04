@@ -1,3 +1,7 @@
+**Look at the following wiki page for more details and code example:**
+* [[1. Natural Condorcet Winner - Loser|II-#-C.-Result-#-1.-Natural-Condorcet-(library)]]
+* [[2. Simple Ranking from Condorcet Method(s)|II-#-C.-Result-#-2.-Get-Ranking-from-Condorcet-advanced-Methods-(library)]]
+
 # Original Condorcet Method (Winner / Loser)
 
 **Condorcet Basic** Give you the natural winner or loser of Condorcet, if there is one.  
@@ -24,4 +28,4 @@ $election->getLoser('Copeland') ;
 $election->getResult('Ranked Pairs Winning') ;
 ```
 
-**=> [View Methods List & Explanations](https://github.com/julien-boudry/Condorcet/blob/master/VOTING_METHODS.md)**
+**=> [Methods List & Explanations](https://github.com/julien-boudry/Condorcet/blob/master/VOTING_METHODS.md)**
