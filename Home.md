@@ -31,7 +31,7 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 * [Setup Condorcet to manage up to hundred millions votes](https://github.com/julien-boudry/Condorcet/blob/master/Examples/Specifics_Examples/use_large_election_external_database_drivers.php)
 
-* Understand everything in evry subjects: **[Read the test](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**!
+* Understand everything in evry subjects: **[Read the tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**
 
 ### Condorcet PHP Implementation
 
