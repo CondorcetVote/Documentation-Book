@@ -4,9 +4,9 @@
 
 
 By default, if you not ranking all election candidates into a vote. We assume that all missing candidates are implicitly ranked last.
-Optionally, you can prefer to allow voters to not rank all candidate.
+Optionally, you can prefer to allow voters to not rank all candidates.
 
-You can change this mode. It will reset all computed result and provide new result, they can be different.
+You can change this mode. It will reset all computed results and provide a new result, they can be different.
 
 ## Example
 
