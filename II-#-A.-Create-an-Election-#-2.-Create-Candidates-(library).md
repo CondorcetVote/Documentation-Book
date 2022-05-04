@@ -57,11 +57,11 @@ $election->addCandidatesFromJson($my_json_string);
 
 ## Removing
 ```php
-Election::removeCandidates ( mixed $name )
+$Election->removeCandidates ( CondorcetPHP\Condorcet\Candidate|array|string candidates_input ): array
 ```
 **name:** Alphanumeric string or Condorcet\Candidate object.   
 
-**Return value:** True on success. Throw an exception if candidate name can't be found or if the vote has began.
+**Return value:** True on success. Throw an exception if the candidate's name can't be found or if the vote has begun.
 
 
 ```php
@@ -78,4 +78,4 @@ $election->getCandidatesList(); // Will return an array with all Candidate objec
 $election->getCandidatesListAsString(); // Will return an array with all candidate name as string.
 ```
 
-_Note: When you start voting, you will never be able to edit the candidates list._  
+_Note: When you start voting, you will never be able to edit the candidate's list._  
