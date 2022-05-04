@@ -1,6 +1,8 @@
 ## Import from Election files formats (command line)
 
-_From [Condorcet Election Format](https://github.com/CondorcetPHP/CondorcetElectionFormat), from [Debian Tally Format](https://www.debian.org/vote/2021/vote_001_tally.txt), from [David Hill Format](https://rangevoting.org/TidemanData.html).
+From [Condorcet Election Format](https://github.com/CondorcetPHP/CondorcetElectionFormat), from [Debian Tally Format](https://www.debian.org/vote/2021/vote_001_tally.txt), from [David Hill Format](https://rangevoting.org/TidemanData.html).
+
+The file path can be absolute or relative.
 
 ### From Conforcet Election Format
 Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat
