@@ -39,4 +39,3 @@ _This example of implementation in other projects can very nice or strange... Th
 
 * [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.    
   * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)
-* [Gustav Mahler fans, making comparative blind test](https://github.com/julien-boudry/Mahler-S2-BlindTest-Condorcet) _(very old Condorcet v0.13)
