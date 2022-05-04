@@ -1,7 +1,7 @@
 # Link your algorithm
 
-Take inspiration from the simplified example below. Read code from CondorcetPHP\Condorcet\Algo\Method (abstract class) and CondorcetPHP\Condorcet\Algo\MethodInterface (interface).
-You should also read CondorcetPHP\Condorcet\Algo\Methods\Copeland code, it's a simple and efficient implementation.
+Take inspiration from the simplified example below. Read code from ```CondorcetPHP\Condorcet\Algo\Method``` (abstract class) and ```CondorcetPHP\Condorcet\Algo\MethodInterfacev (interface).
+You should also read ```CondorcetPHP\Condorcet\Algo\Methods\Copeland``` code, it's a simple and efficient implementation.
 
 ## Basic example
 
@@ -35,7 +35,7 @@ class AlgorithmName extends CondorcetPHP\Condorcet\Algo\Method implements Condor
     // Compute the Stats
     protected function getStats () : array
     {
-        return []; // You are free to do all you wants. Must be an array.;
+        return []; // You are free to do all you want. Must be an array.;
     }
 
 
