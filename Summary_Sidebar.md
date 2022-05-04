@@ -2,6 +2,12 @@
 
 ## Manual Summary
 * [[Home|Home]]   
+* Condorcet as a Command Line Application
+  * [[I. - Installation|I-#-Installation-(command-line)]]
+  * [[II. - Man page|II-#-Man-Page-(command-line)]]
+  * [[III. - Simple Usage|III-#-Simple-Usage-(command-line)]]
+  * [[IV. - Import from Election files formats (command line)|IV-#-Import-from-Election-files-formats-(command-line)]]
+
 * Condorcet as a PHP library
   * I. - Installation - Basic Configuration
     * [[1. Installation|I-#-Installation---Basic-Configuration-#-1.-Installation-(library)]]
@@ -32,11 +38,6 @@
     * B. Extending Condorcet
       * [[1. Add your own ranking algorithm|III-#-B.-Extending-Condorcet-#-1.-Add-your-own-ranking-algorithm-(library)]]
       * [[2. Candidate - Vote Class|III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class-(library)]]
-* Condorcet as a Command Line Application
-  * [[I. - Installation|I-#-Installation-(command-line)]]
-  * [[II. - Man page|II-#-Man-Page-(command-line)]]
-  * [[III. - Simple Usage|III-#-Simple-Usage-(command-line)]]
-  * [[IV. - Import from Election files formats (command line)|IV-#-Import-from-Election-files-formats-(command-line)]]
 
 ## [Methods Reference (library)](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
