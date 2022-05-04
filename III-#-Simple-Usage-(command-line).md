@@ -1,6 +1,6 @@
 ### Command Line - Some Quick Examples
 
-_See your installation method upside for main call. Below from the official docker image with command condorcet._
+_See your installation method upside for the main call. Below from the official docker image with the command ```condorcet```._
 
 #### A simple and short election
 ```shell
@@ -91,7 +91,7 @@ Minimax Winning Method:
 ```
 
 #### From Files / With Stats
-You can print stats. And load candidates or votes from file. See [Condorcet Manual](https://github.com/julien-boudry/Condorcet/wiki) for more  details.
+You can print stats. And load candidates or votes from a file. See [Condorcet Manual](https://github.com/julien-boudry/Condorcet/wiki) for more  details.
 
 ```shell
 condorcet election --stats --candidates /path/to/myCandidates.text --votes /path/to/myVotes.txt Kemeny-Young
