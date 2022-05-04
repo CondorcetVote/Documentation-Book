@@ -1,6 +1,6 @@
 # Extending Candidate & Vote Class
 
- Vote & Candidate class are ready to be extend.
+ Vote & Candidate classes are ready to be extended.
 
  ```php
 use CondorcetPHP\Condorcet\Candidate;
@@ -28,4 +28,4 @@ $election->addVote(new yourVoteClass(//...));
 //...
 ```
 
-Please read the class. And ask support if needed.
+Please read the class. And ask for support if needed.
