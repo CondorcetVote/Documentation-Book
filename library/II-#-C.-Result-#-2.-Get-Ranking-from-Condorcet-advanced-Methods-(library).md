@@ -1,12 +1,8 @@
 # Get a complete ranking from advanced methods
 ```php
-Election::getResult ( [mixed $method = false , array $options] )
+Election->getResult ( [?string method = null , array options = []] ): CondorcetPHP\Condorcet\Result
 ```
-**method:** String name of an available advanced Condorcet method. True for default method.
-**options:** Array
-
-**Return value:** Return a CondorcetPHP\Condorcet\Result object. He is Iterable, Countable and support array access, It behaves just like an ordered array.
-
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getResult.md)   
 
 ## Usual Use
 
@@ -29,17 +25,17 @@ echo 'Condorcet loser is : ' . ($election->getCondorcetLoser() ?? 'No Condorcet 
 
 /* Output can be :
 
-Schulze Winner is : Candidate 3
+Schulze Winner is: Candidate 3
 
 Rank 1: Candidate 3
 Rank 2: Candidate 1,Candidate 4
 Rank 3: Candidate 5
 Rank 4: Candidate 2
 
-Schulze Loser is : Candidate 2
+Schulze Loser is: Candidate 2
 
-Condorcet winner is : Candidate 3
-Condorcet winner is : No Condorcet Loser
+Condorcet winner is: Candidate 3
+Condorcet winner is: No Condorcet Loser
 */
 
 ```
@@ -47,7 +43,7 @@ Condorcet winner is : No Condorcet Loser
 
 ## Use with tag filter option
 
-__Warning: Using getResult() with tags filter option don't use cache engine and computing each time you call it.__
+__Warning: Using getResult() with tags filter option doesn't use cache engine and computing each time you call it.__
 
 
 ```php
@@ -56,7 +52,7 @@ $election->getResult(   'Schulze',
                         ['tags' => array('Julien', 'Beethoven'), 'withTag' => true]
                     ); 
 
-// Use the Copeland methodd, no special parameters to it, but only compute with vote without tag 'Julien' and without tag 'Beethoven'.
+// Use the Copeland method, no special parameters to it, but only compute with a vote without tag 'Julien' and without tag 'Beethoven'.
 $election->getResult(   'Copeland',
                         ['tags' => array('Julien', 'Beethoven'), 'withTag' => false]
                     ) ; 
