@@ -38,7 +38,7 @@
   * [[III. - Simple Usage|III-#-Simple-Usage-(command-line)]]
   * [[IV. - Import from Election files formats (command line)|IV-#-Import-from-Election-files-formats-(command-line)]]
 
-## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
+## [Methods Reference (library)](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
 ## [Examples of implementation](https://github.com/julien-boudry/Condorcet/wiki#examples)
 
