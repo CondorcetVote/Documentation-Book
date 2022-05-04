@@ -14,7 +14,6 @@
     * [[2. Voting Methods|I-#-Installation---Basic-Configuration-#-2.-Voting-Methods-(library)]]
       * [[List of Voting Methods|https://github.com/julien-boudry/Condorcet/blob/master/VOTING_METHODS.md]]
     * [[3. Configuration|I-#-Installation---Basic-Configuration-#-3.-Configuration-(library)]]
-    * [[4. Condorcet Exception Code|I-#-Installation---Basic-Configuration-#-4.-Condorcet-Exception-Code-(library)]]
   * II. Use it !
     * A. Create an Election
       * [[1. Start|II-#-A.-Create-an-Election-#-1.-Start-(library)]] 
