@@ -3,12 +3,9 @@ These two methods can be useful in estimating the computation time of each call 
 
 ## Last timer
 ```php
-Election::getLastTimer (bool $float = false)
+Election->getLastTimer (): float
 ```
-**float:** If true, return a float number. Else, it return number_format($result, 5).
-
-**Return value:** Returns the CPU time measured during the last arithmetic operation results with getResult() getWinner() getLoser() OR the Pairwise with getPairwise().    
-
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getLastTimer.md)  
 
 ```php
 $election->getPairwise();
@@ -26,11 +23,9 @@ $election->getLastTimer(true); // Return 0.00010030 (float) . But Copeland is re
 
 ## Global timer
 ```php
-Election::getGlobalTimer (bool $float = false)
+public Election->getGlobalTimer (): float
 ```
-**float:** If true, return a float number. Else, it return number_format($result, 5).
-
-**Return value:** Returns the CPU time measured in the overall operations of calculation results with getResult () getWinner () getLoser () AND the Pairwise. Since the creation of the object.    
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getGlobalTimer.md)   
 
 
 ```php
