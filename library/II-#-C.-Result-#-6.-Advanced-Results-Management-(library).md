@@ -37,16 +37,18 @@ $election->getResult('Schulze')->getResultAsArray(true) ; // Same thing. But mor
 ## Specials options on getResult()
 
 ### Kemeny-Young
-Currently Kemeny-Young is potentially subject to conflict leading to a relatively arbitrary final choice. Very likely thing in the case of a very small number of voters. The current implementation does not include any trick to the resolver.   
+Currently, Kemeny-Young is potentially subject to conflict leading to a relatively arbitrary final choice. Very likely thing in the case of a very small number of voters. The current implementation does not include any trick to the resolver.   
 
 The next option allows you to get rather than ranking, information on the existence or the absence of these conflicts. The following example mounts how to you use it.   
 
 ```php
+use \CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung\KemenyYoung;
+
 $result = $election->getResult( 'KemenyYoung' ) ;
 
-if ( !empty($result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung\KemenyYoung::CONFLICT_WARNING_CODE)) )
+if ( !empty($result->getWarning(KemenyYoung::CONFLICT_WARNING_CODE)) )
 {
-    $kemeny_conflicts = explode( ';', $result->getWarning(\CondorcetPHP\Condorcet\Algo\Methods\KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg'] ) ;
+    $kemeny_conflicts = explode( ';', $result->getWarning(KemenyYoung::CONFLICT_WARNING_CODE)[0]['msg']) ;
 
     echo '<strong style="color:red;">
         Arbitrary results: Kemeny-Young has '.$kemeny_conflicts[0].
