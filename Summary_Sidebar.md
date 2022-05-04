@@ -35,6 +35,7 @@
   * [[I. - Installation|I-#-Installation-(command-line)]]
   * [[II. - Man page|II-#-Man-Page-(command-line)]]
   * [[III. - Simple Usage|III-#-Simple-Usage-(command-line)]]
+  * [[Editing IV # Import from Election files formats (command line)|IV-#-import-from-election-files-formats-(command-line)]]
 
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
