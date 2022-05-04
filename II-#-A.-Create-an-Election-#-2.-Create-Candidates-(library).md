@@ -7,11 +7,8 @@
 ```php
 $Election->addCandidate ( [CondorcetPHP\Condorcet\Candidate|string|null candidate = null] ): CondorcetPHP\Condorcet\Candidate
 ```
-**name:** Alphanumeric string or Condorcet\Candidate objet. Your candidate name will be trim()    
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--addCandidate.md)  
 
-**Return value:** The new candidate object. Throw an exception on error (existing candidate...)    
-
-Enter (or not) a Candidate Name 
 
 ```php
 use CondorcetPHP\Condorcet\Candidate;
@@ -59,9 +56,7 @@ $election->addCandidatesFromJson($my_json_string);
 ```php
 $Election->removeCandidates ( CondorcetPHP\Condorcet\Candidate|array|string candidates_input ): array
 ```
-**name:** Alphanumeric string or Condorcet\Candidate object.   
-
-**Return value:** True on success. Throw an exception if the candidate's name can't be found or if the vote has begun.
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--removeCandidates.md)  
 
 
 ```php
