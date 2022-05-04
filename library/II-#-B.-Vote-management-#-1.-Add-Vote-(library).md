@@ -14,7 +14,7 @@ _Note: You can add new votes after the results have already been given_
 
 
 ```php
-$Election->addVote ( CondorcetPHP\Condorcet\Vote|array|string vote [, array|string|null tags = null] ): CondorcetPHP\Condorcet\Vote
+Election->addVote ( CondorcetPHP\Condorcet\Vote|array|string vote [, array|string|null tags = null] ): CondorcetPHP\Condorcet\Vote
 ```
 [>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--addVote.md)  
 
