@@ -16,8 +16,7 @@ _Note: You can add new votes after the results have already been given_
 ```php
 $Election->addVote ( CondorcetPHP\Condorcet\Vote|array|string vote [, array|string|null tags = null] ): CondorcetPHP\Condorcet\Vote
 ```
-**data:** The vote ranking or vote object   
-**tag:** add tag(s) to this vote for further actions
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--addVote.md)  
 
 
 
@@ -37,7 +36,7 @@ $vote[2] = [$myRegisteredCandidateObject,'Varese'] ;
 $election->addVote($vote) ; 
 ```
 
-*The last rank is optionnal, it will be automatically deducted.*  
+*The last rank is optional, it will be automatically deducted.*  
 
 ### With a string
 You can do like this:
@@ -56,11 +55,11 @@ $vote = 'A<B<C' ; // It's not correct
 $vote = 'A>BC>D' ; // It's not correct
 ```
 
-*The last rank is optionnal too, it will be automatically deducted.* 
+*The last rank is optional too, it will be automatically deducted.* 
 
 
 ### With Vote object
-Well, let be a little more powerful:
+Well, let's be a little more powerful:
 
 ```php
 use CondorcetPHP\Condorcet\Vote;
@@ -85,7 +84,7 @@ $election->addVote($vote3);
 ### Add a tag
 You can add the same or different tag for each vote:  
 ```php
-// Directly with addVote method (will add it to the Vote object)
+// Directly with ```addVote``` method (will add it to the Vote object)
 
 $election->addVote($vote, 'Charlie') ; // Please note that a single tag is always created for each vote. 
 $election->addVote($vote, 'Charlie,Claude') ; // You can also add multiple tags, separated by commas. 
@@ -100,7 +99,7 @@ $vote1->addTags('Charlie');
 ```   
 
 ## Add multiple votes from string or text file
-Once your list of candidates previously recorded. You can parse a text file or as a PHP string character to record a large number of votes at once.   
+Once your list of candidates was previously recorded. You can parse a text file or as a PHP string character to record a large number of votes at once.   
 
 *You can simultaneously combine this method with traditional PHP calls above.*  
 
