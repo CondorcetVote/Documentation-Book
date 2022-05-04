@@ -5,7 +5,7 @@
 ### Regular
 
 ```php
-Election::addCandidate ( [mixed $name = automatic] ) 
+$Election->addCandidate ( [CondorcetPHP\Condorcet\Candidate|string|null candidate = null] ): CondorcetPHP\Condorcet\Candidate
 ```
 **name:** Alphanumeric string or Condorcet\Candidate objet. Your candidate name will be trim()    
 
