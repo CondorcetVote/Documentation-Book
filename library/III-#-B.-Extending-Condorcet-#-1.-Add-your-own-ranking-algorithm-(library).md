@@ -1,6 +1,6 @@
 # Link your algorithm
 
-Take inspiration from the simplified example below. Read code from ```CondorcetPHP\Condorcet\Algo\Method``` (abstract class) and ```CondorcetPHP\Condorcet\Algo\MethodInterfacev (interface).
+Take inspiration from the simplified example below. Read code from ```CondorcetPHP\Condorcet\Algo\Method``` (abstract class) and ```CondorcetPHP\Condorcet\Algo\MethodInterface``` (interface).  
 You should also read ```CondorcetPHP\Condorcet\Algo\Methods\Copeland``` code, it's a simple and efficient implementation.
 
 ## Basic example
