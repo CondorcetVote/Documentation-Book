@@ -24,7 +24,7 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 ### Officials examples
 
-* [Quick tour](https://github.com/julien-boudry/Condorcet#really-quick-and-simple-example)  
+
 * [Great tour - Part I](https://github.com/julien-boudry/Condorcet/blob/master/Examples/1.%20Overview.php)
 * [Great tour - Part II (Crazy objects management)](https://github.com/julien-boudry/Condorcet/blob/master/Examples/2.%20AdvancedObjectManagement.php)
 * [Basic and intermediate demonstration with html](https://github.com/julien-boudry/Condorcet/tree/master/Examples/Examples-with-html)
