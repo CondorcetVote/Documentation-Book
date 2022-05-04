@@ -3,12 +3,12 @@
 ## Original Condorcet method Winner / Loser
 
 ```php
-Election->getWinner ( ?string method = null ): CondorcetPHP\Condorcet\Candidate|array|null
+Election->getWinner ( [?string method = null] ): CondorcetPHP\Condorcet\Candidate|array|null
 ```
 [>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getWinner.md)   
 
 ```php
-Election->getLoser ( ?string method = null ): CondorcetPHP\Condorcet\Candidate|array|null
+Election->getLoser ( [?string method = null] ): CondorcetPHP\Condorcet\Candidate|array|null
 ```
 [>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getLoser.md)   
 
