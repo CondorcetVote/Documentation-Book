@@ -34,7 +34,7 @@
 * Condorcet as a Command Line Application
   * [[I. - Installation|I-#-Installation-(command-line)]]
   * [[II. - Man page|II-#-Man-Page-(command-line)]]
-  * [[III. - Usage|III-#-Usage-(command-line)]]
+  * [[III. - Usage|III-#-Simple-Usage-(command-line)]]
 
 ## [Class - Methods Reference](https://github.com/julien-boudry/Condorcet/tree/master/Documentation/README.md)
 
