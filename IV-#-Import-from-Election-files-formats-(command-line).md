@@ -5,7 +5,7 @@ From [Condorcet Election Format](https://github.com/CondorcetPHP/CondorcetElecti
 The file path can be absolute or relative.
 
 ### From Conforcet Election Format
-Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat
+**Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat
 
 The number of seats, vote weight, and implicit rules will be set up by the file unless you overload this with the corresponding arguments, which will then take priority. Candidates must be specified in the file, otherwise, an error will occur.
 ```shell
@@ -13,7 +13,7 @@ condorcet election --import-condorcet-election-format=/path/to/file -lr Schulze 
 ```
 
 ### From Debian Tally Format
-Specifications:** https://www.debian.org/vote/2021/vote_001_tally.txt
+**Specifications:** https://www.debian.org/vote/2021/vote_001_tally.txt
 
 The number of seats will be set to ```1``` unless you overload this with the corresponding arguments, which will then take priority. Other parameters are as default. Candidates must be specified in the file, otherwise, an error will occur.
 
@@ -113,7 +113,7 @@ Schulze Margin Method:
 ```
 
 ### From Debian Tally Format
-Specifications:** https://rangevoting.org/TidemanData.html
+**Specifications:** https://rangevoting.org/TidemanData.html
 
 The number of seats will be set up by the file unless you overload this with the corresponding arguments, which will then take priority. Other parameters are as default. Candidates must be specified in the file, otherwise, an error will occur.
 ```shell
