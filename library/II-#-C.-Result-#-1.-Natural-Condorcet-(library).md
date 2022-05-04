@@ -35,10 +35,10 @@ If there is not a regular Condorcet Winner or Loser, process to a special winner
 Have a look to [Condorcet Methods manual chapter](https://github.com/julien-boudry/Condorcet/wiki/I-%23-Installation-%26-Basic-Configuration-%23-2.-Condorcet-Methods)
 
 ```php
-$election->getWinner(true) ; // With the default object method (Class Default: Schulze Winning)  
+$election->getWinner() ; // With the default object method (Class Default: Schulze Winning)  
 $election->getWinner('Copeland') ; // Name of a valid method  
 
-$election->getLoser(true) // With the default object method (Class Default: Schulze Winning)  
+$election->getLoser() // With the default object method (Class Default: Schulze Winning)  
 $election->getLoser('Kemeny-Young') ; // Name of a valid method  
 ```
 
