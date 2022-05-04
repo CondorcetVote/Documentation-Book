@@ -28,6 +28,7 @@
       * [[1. Timer Benchmarking|III-#-A.-Avanced-features---Configuration-#-1.-Timer-Benchmarking-(library)]]
       * [[2. Cryptographic Checksum|III-#-A.-Avanced-features---Configuration-#-2.-Cryptographic-Checksum-(library)]]
       * [[3. Get started to handle millions of votes |III-#-A.-Avanced-features---Configuration-#-3.-Get-started-to-handle-millions-of-votes-(library)]]
+      * [[4. Create an Election from an Election Format Convert to a Condorcet Election Format|III-#-A.-Avanced-features-#-4.-Create-an-Election-from-an-Election-Format-Convert-to-a-Condorcet-Election-Format-(library)]]
     * B. Extending Condorcet
       * [[1. Add your own ranking algorithm|III-#-B.-Extending-Condorcet-#-1.-Add-your-own-ranking-algorithm-(library)]]
       * [[2. Candidate - Vote Class|III-#-B.-Extending-Condorcet-#-2.-Candidate---Vote-Class-(library)]]
