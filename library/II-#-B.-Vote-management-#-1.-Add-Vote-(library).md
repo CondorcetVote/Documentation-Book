@@ -14,7 +14,7 @@ _Note: You can add new votes after the results have already been given_
 
 
 ```php
-Election::addVote ( mixed $vote [, mixed $tag = null] )
+$Election->addVote ( CondorcetPHP\Condorcet\Vote|array|string vote [, array|string|null tags = null] ): CondorcetPHP\Condorcet\Vote
 ```
 **data:** The vote ranking or vote object   
 **tag:** add tag(s) to this vote for further actions
