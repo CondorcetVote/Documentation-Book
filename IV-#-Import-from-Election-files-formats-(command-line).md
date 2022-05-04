@@ -16,8 +16,100 @@ condorcet election --import-condorcet-election-format=/path/to/file -lr Schulze 
 Specifications:** https://www.debian.org/vote/2021/vote_001_tally.txt
 
 The number of seats will be set to ```1``` unless you overload this with the corresponding arguments, which will then take priority. Other parameters are as default. Candidates must be specified in the file, otherwise, an error will occur.
+
+Following example, take the Debian Election leader 2021 file as example ( https://www.debian.org/vote/2021/vote_001 )
 ```shell
-condorcet election --import-debian-format=/path/to/file -lr Schulze Borda Minimax
+condorcet election --import-debian-format=tallyFiles/D21.debian_votes -sr SchulzeMargin
+
+Summary
+=======
+
+3 candidates(s) registered  ||  455 vote(s) registered
+==========================
+ ------------------------------------------------------------- -------
+  Is vote weight allowed?                                       FALSE
+ ------------------------------------------------------------- -------
+  Votes are evaluated according to the implicit ranking rule?   TRUE
+ ------------------------------------------------------------- -------
+  Is vote tie in rank allowed?                                  TRUE
+ ------------------------------------------------------------- -------
+
++-------------------- Pairwise --------------------+
+| For each candidate, show their win, null, or lose |
++--------------------------------------------------+
+| 'Jonathan Carter':                               |
+|     win:                                         |
+|         'Sruthi Chandran': 312                   |
+|         'None Of The Above': 421                 |
+|     'null':                                      |
+|         'Sruthi Chandran': 41                    |
+|         'None Of The Above': 4                   |
+|     lose:                                        |
+|         'Sruthi Chandran': 102                   |
+|         'None Of The Above': 30                  |
+| 'Sruthi Chandran':                               |
+|     win:                                         |
+|         'Jonathan Carter': 102                   |
+|         'None Of The Above': 341                 |
+|     'null':                                      |
+|         'Jonathan Carter': 41                    |
+|         'None Of The Above': 33                  |
+|     lose:                                        |
+|         'Jonathan Carter': 312                   |
+|         'None Of The Above': 81                  |
+| 'None Of The Above':                             |
+|     win:                                         |
+|         'Jonathan Carter': 30                    |
+|         'Sruthi Chandran': 81                    |
+|     'null':                                      |
+|         'Jonathan Carter': 4                     |
+|         'Sruthi Chandran': 33                    |
+|     lose:                                        |
+|         'Jonathan Carter': 421                   |
+|         'Sruthi Chandran': 341                   |
+|                                                  |
++--------------------------------------------------+
+Condorcet natural winner & loser
+--------------------------------
+
++---------- Natural Condorcet -----------+
+| Type               | Candidate         |
++--------------------+-------------------+
+| * Condorcet winner | Jonathan Carter   |
+| # Condorcet loser  | None Of The Above |
++--------------------+-------------------+
+
+Results per methods
+===================
+
+
+Schulze Margin Method:
+----------------------
+
++----- Results: Schulze Margin -----+
+|    Rank    | Candidates           |
++------------+----------------------+
+|     1      | Jonathan Carter*     |
+|     2      | Sruthi Chandran      |
+|     3      | None Of The Above#   |
++------------+----------------------+
++----------- Stats: Schulze Margin -----------+
+| Stats                                       |
++---------------------------------------------+
+| 'Jonathan Carter':                          |
+|     'Sruthi Chandran': 210                  |
+|     'None Of The Above': 391                |
+| 'Sruthi Chandran':                          |
+|     'Jonathan Carter': 0                    |
+|     'None Of The Above': 260                |
+| 'None Of The Above':                        |
+|     'Jonathan Carter': 0                    |
+|     'Sruthi Chandran': 0                    |
+|                                             |
++---------------------------------------------+
+
+                                                                                                                        
+ [OK] Success       
 ```
 
 ### From Debian Tally Format
