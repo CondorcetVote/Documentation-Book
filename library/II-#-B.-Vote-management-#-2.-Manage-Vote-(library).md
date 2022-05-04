@@ -2,10 +2,9 @@
 
 ## Verify the registered votes list
 ```php
-$Election::getVotesList ( [mixed $tag = null, bool $with = true] ) : array
+Election::getVotesList ( [mixed $tag = null, bool $with = true] ) : array
 ```
-**tag:** List of tags   
-**with:** With or without one a this tag(s)   
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--getVotesList.md)  
 
 ```php
 $election->getVotesList (); // Will return an array where key is the internal numeric vote_id and value an other array like your input.   
@@ -16,7 +15,7 @@ $election->getVotesList (array('Julien', 'Charlie'), true); // Or do it like thi
 $election->getVotesList (array('Julien', 'Charlie'), false); // Without this tag AND without this tag ...   
 ```
 
-__Note: Make a test, and look the return format. For each vote, you can get as a tag an unique ID and registered timestamp.__
+__Note: Make a test, and look at the return format. For each vote, you can get as a tag a unique ID and registered timestamp.__
 
 
 ## Count registered votes
@@ -24,21 +23,19 @@ __Note: Make a test, and look the return format. For each vote, you can get as a
 ```php
 Election::countVotes ( [mixed $tag = null, bool $with = true] ) : int
 ```
-**tag:** List of tags   
-**with:** With or without one a this tag(s)    
-
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--countVotes.md)  
 ```php
 $election->countVotes (); // Return a numeric value about the number of registered votes.  
 $election->countVotes ('Julien,Charlie'); // Count vote with this tag OR this tag.   
-$election->countVotes (array('Julien','Charlie'), false); // Count vote without this tag AND without this tag.   
+$election->countVotes (['Julien','Charlie'], false); // Count vote without this tag AND without this tag.   
 ```
 
 
 ## Remove vote
 ```php
-Election::removeVote( Vote $vote ) : bool
+Election->removeVote ( CondorcetPHP\Condorcet\Vote vote ): bool
 ```
-**vote:** A vote      
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--removeVote.md)   
 
 ```php
 $election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
@@ -47,10 +44,9 @@ $election->removeVote($myVoteObject) ; // Remove a specific registered Vote.
 
 
 ```php
-Election::removeVotesByTags( mixed $tag [, bool $with = true] ) : array
+Election::removeVotesByTags( mixed $tag [, bool $with = true] ): array
 ```
-**tag:** List of tags   
-**with:** With or without one a this tag(s)    
+[>>>>>>> Method Reference](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Election%20Class/public%20Election--removeVotesByTags.md)     
 
 ```php
 $election->removeVotesByTags('Charlie') ; // Remove vote(s) with tag Charlie
