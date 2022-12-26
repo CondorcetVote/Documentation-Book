@@ -1,9 +1,9 @@
-## Import from Election files formats
+# Import from Election files formats
 
 From [Condorcet Election Format](https://github.com/CondorcetPHP/CondorcetElectionFormat), from [Debian Tally Format](https://www.debian.org/vote/2021/vote_001_tally.txt), from [David Hill Format](https://rangevoting.org/TidemanData.html).
 
 
-### From Condorcet Election Format
+## From Condorcet Election Format
 **Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat
 
 ```$file``` can be a string file path, or a ```\SplFileInfo``` (or ```\SplFileObject```, ```\SplTempFileObject```
@@ -13,7 +13,7 @@ $condorcetFormat = new CondorcetElectionFormat($file); # CondorcetPHP\Condorcet\
 $election = $condorcetFormat->setDataToAnElection(); # CondorcetPHP\Condorcet\Election
 ```
 
-### From Debian Format
+## From Debian Format
 **Specifications:** https://www.debian.org/vote/2021/vote_001_tally.txt
 
 ```php
@@ -31,7 +31,7 @@ $debianFormat = new DebianFormat(__DIR__.'/DebianData/leader2020_tally.txt') # C
 $election = $debianFormat->setDataToAnElection($election); # CondorcetPHP\Condorcet\Election
 ```
 
-### From David Hill Format
+## From David Hill Format
 **Specifications:** https://rangevoting.org/TidemanData.html
 
 ```php
@@ -48,9 +48,9 @@ $davidFormat = new DavidHillFormat(__DIR__.'/DebianData/leader2020_tally.txt') #
 $election = $davidFormat->setDataToAnElection($election); # CondorcetPHP\Condorcet\Election
 ```
 
-## Convert an election (or another format) to Condorcet Election Format  
+## Convert an election (or another format) to Condorcet Election Format
 
-**Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat  
+**Specifications:** https://github.com/CondorcetPHP/CondorcetElectionFormat
 => [**Full method documentation**](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/Tools_Converters_CondorcetElectionFormat%20Class/public%20static%20Tools_Converters_CondorcetElectionFormat--exportElectionToCondorcetElectionFormat.md)
 
 ```php

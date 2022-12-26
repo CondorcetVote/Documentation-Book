@@ -1,16 +1,14 @@
-> **[Presentation](https://github.com/julien-boudry/Condorcet/blob/master/README.md) | Manual | [Methods References](https://github.com/julien-boudry/Condorcet/blob/master/Documentation/README.md) | [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)**  
-
 # Manual - Condorcet PHP
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/julien-boudry/Condorcet/master/condorcet-logo.png" alt="Condorcet Class" width="25%">
-</p>   
+</p>
 
 ## Condorcet Manual
 
-This wiki contains examples and tutorials for the common use of the possibility of Condorcet PHP.   
+This wiki contains examples and tutorials for the common use of the possibility of Condorcet PHP.
 
-This wiki is deemed to be current on the most recent version of the library. However, most of the information may be valid for lower versions.  
+This wiki is deemed to be current on the most recent version of the library. However, most of the information may be valid for lower versions.
 
 **[Look at the summary >>>>>](Summary_Sidebar)**
 
@@ -35,7 +33,7 @@ This wiki is deemed to be current on the most recent version of the library. How
 
 ### Condorcet PHP Implementation
 
-_This example of implementation in other projects can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._   
+_This example of implementation in other projects can very nice or strange... They can be current, or otherwise affect older versions of Condorcet._
 
-* [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.    
+* [www.Condorcet.Vote](https://www.Condorcet.Vote) Online free election.
   * [And it source Code](https://github.com/julien-boudry/Condorcet.Vote)

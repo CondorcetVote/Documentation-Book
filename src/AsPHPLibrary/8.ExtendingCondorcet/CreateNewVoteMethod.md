@@ -1,6 +1,8 @@
-# Link your algorithm
+# Create a new Vote Method
 
-Take inspiration from the simplified example below. Read code from ```CondorcetPHP\Condorcet\Algo\Method``` (abstract class) and ```CondorcetPHP\Condorcet\Algo\MethodInterface``` (interface).  
+## Link your algorithm
+
+Take inspiration from the simplified example below. Read code from ```CondorcetPHP\Condorcet\Algo\Method``` (abstract class) and ```CondorcetPHP\Condorcet\Algo\MethodInterface``` (interface).
 You should also read ```CondorcetPHP\Condorcet\Algo\Methods\Copeland``` code, it's a simple and efficient implementation.
 
 ## Basic example
@@ -54,9 +56,9 @@ class AlgorithmName extends CondorcetPHP\Condorcet\Algo\Method implements Condor
         $this->_Result = $this->createResult($result);
     }
 }
-```  
+```
 
-You must register this algorithm this way:  
+You must register this algorithm this way:
 ```php
 CondorcetPHP\Condorcet\Condorcet::addMethod('MyNameSpace\AlgorithmName') ;
 ```

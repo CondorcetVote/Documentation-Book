@@ -1,4 +1,4 @@
-# Ranking mode - Implicit versus Partial
+# Ranking mode - Implicit versus Explicit
 
 ## Description
 
