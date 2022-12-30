@@ -1,4 +1,4 @@
-# Add a vote
+# Add Votes
 _Note: You can add new votes after the results have already been given_
 
 

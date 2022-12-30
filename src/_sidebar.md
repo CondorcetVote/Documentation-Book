@@ -1,34 +1,36 @@
+* [<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>](1.Start.md) 
 
-- AsCommandLineApplication
-  - [ImportFromelectionFormat](AsCommandLineApplication/ImportFromelectionFormat.md)
-  - [Installation](AsCommandLineApplication/Installation.md)
-  - [ManPage](AsCommandLineApplication/ManPage.md)
-  - [SimpleUsageExample](AsCommandLineApplication/SimpleUsageExample.md)
+* As Command Line Application 
 
-- AsPHPLibrary
-  - [1.Installation](AsPHPLibrary/1.Installation.md)
-  - [2.WorkflowPrincipes](AsPHPLibrary/2.WorkflowPrincipes.md)
-  - [3.BuildAnElection](AsPHPLibrary/3.BuildAnElection.md)
-  - [4.Candidates](AsPHPLibrary/4.Candidates.md)
-  - [AddVotes](AsPHPLibrary/5.Votes/AddVotes.md)
-  - [ManageVotes](AsPHPLibrary/5.Votes/ManageVotes.md)
-  - [AdvancedResultsManagement](AsPHPLibrary/6.Results/AdvancedResultsManagement.md)
-  - [FullRankingFtomAdvancedMethods](AsPHPLibrary/6.Results/FullRankingFtomAdvancedMethods.md)
-  - [ImplicitOrExplicitMod](AsPHPLibrary/6.Results/ImplicitOrExplicitMod.md)
-  - [VoteConstraints](AsPHPLibrary/6.Results/VoteConstraints.md)
-  - [VoteWeight](AsPHPLibrary/6.Results/VoteWeight.md)
-  - [VotingMethods](AsPHPLibrary/6.Results/VotingMethods.md)
-  - [WinnerAndLoser](AsPHPLibrary/6.Results/WinnerAndLoser.md)
-  - [CryptographicChecksum](AsPHPLibrary/7.GoFurther/CryptographicChecksum.md)
-  - [DealWithStandardsElectionFormats](AsPHPLibrary/7.GoFurther/DealWithStandardsElectionFormats.md)
-  - [GetStarteToHandleMillionsOfVotes](AsPHPLibrary/7.GoFurther/GetStarteToHandleMillionsOfVotes.md)
-  - [PlayWithObjects](AsPHPLibrary/7.GoFurther/PlayWithObjects.md)
-  - [TimerBenchMarking](AsPHPLibrary/7.GoFurther/TimerBenchMarking.md)
-  - [CreateNewVoteMethod](AsPHPLibrary/8.ExtendingCondorcet/CreateNewVoteMethod.md)
-  - [ExtendingCandidateAndVotes](AsPHPLibrary/8.ExtendingCondorcet/ExtendingCandidateAndVotes.md)
-  - [WriteNewExternalHandlerDriver](AsPHPLibrary/8.ExtendingCondorcet/WriteNewExternalHandlerDriver.md)
+  * [Installation](2.AsCommandLineApplication/1.Installation.md) 
+  * [Quick Examples](2.AsCommandLineApplication/2.QuickExample.md) 
+  * [Import from Election files formats (command line)](2.AsCommandLineApplication/3.ImportFromElectionFormat.md) 
+  * [Man Page](2.AsCommandLineApplication/4.ManPage.md) 
 
-- [README](README.md)
-- [SUMMARY](SUMMARY.md)
-- [SUMMARY manual](SUMMARY_manual.md)
-- [ Footer](_Footer.md)
+* As Php Library 
+
+  * [Installation](3.AsPhpLibrary/1.Installation.md) 
+  * [Understanding the workflow](3.AsPhpLibrary/2.UnderstandingTheFlow.md) 
+  * [Create an Election](3.AsPhpLibrary/3.CreateAnElection.md) 
+  * [Manage Candidates](3.AsPhpLibrary/4.Candidates.md) 
+  * Votes 
+    * [Add Votes](3.AsPhpLibrary/5.Votes/AddVotes.md) 
+    * [Manage Votes](3.AsPhpLibrary/5.Votes/ManageVotes.md) 
+    * [Vote Constraints](3.AsPhpLibrary/5.Votes/VoteConstraints.md) 
+    * [Vote weight](3.AsPhpLibrary/5.Votes/VoteWeight.md) 
+  * Results 
+    * [Get Winner / Loser](3.AsPhpLibrary/6.Results/1.WinnerAndLoser.md) 
+    * [Full Ranking](3.AsPhpLibrary/6.Results/2.FullRanking.md) 
+    * [Advanced Results](3.AsPhpLibrary/6.Results/3.AdvancedResults.md) 
+    * [Ranking mode - Implicit versus Explicit](3.AsPhpLibrary/6.Results/4.ImplicitOrExplicitMod.md) 
+    * [Voting Methods](3.AsPhpLibrary/6.Results/5.VotingMethods.md) 
+  * Go Further 
+    * [Cryptographic checksum](3.AsPhpLibrary/7.GoFurther/CryptographicChecksum.md) 
+    * [Import from Election files formats](3.AsPhpLibrary/7.GoFurther/DealWithStandardsElectionFormats.md) 
+    * [Get started to handle millions of votes](3.AsPhpLibrary/7.GoFurther/GetStarteToHandleMillionsOfVotes.md) 
+    * [Play with Election, Candidate & Vote objects](3.AsPhpLibrary/7.GoFurther/PlayWithObjects.md) 
+    * [Timer benchmarking](3.AsPhpLibrary/7.GoFurther/TimerBenchMarking.md) 
+  * Extending Condorcet 
+    * [Create a new Vote Method](3.AsPhpLibrary/8.ExtendingCondorcet/CreateNewVoteMethod.md) 
+    * [Extending Candidate & Vote Class](3.AsPhpLibrary/8.ExtendingCondorcet/ExtendingCandidateAndVotes.md) 
+    * [Write New External Handler Driver](3.AsPhpLibrary/8.ExtendingCondorcet/WriteNewExternalHandlerDriver.md) 
