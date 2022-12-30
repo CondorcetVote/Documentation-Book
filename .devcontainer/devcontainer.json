@@ -5,6 +5,6 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 
-	"initializeCommand": "npm i docsify-cli -g && composer update",
+	"initializeCommand": "npm i docsify-cli -g && composer update"
 	// "postStartCommand": "docsify serve src"
 }
