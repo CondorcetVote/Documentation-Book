@@ -57,11 +57,10 @@ foreach ($listing as $file) {
     } else {
         throw new Exception($file->path() . " have no title");
     }
-
-    var_dump($summaryMD);
-    $filesystem->write('_sidebar.md', $summaryMD);
-
 }
+
+var_dump($summaryMD);
+$filesystem->write('_sidebar.md', $summaryMD);
 
 function removeIndex(string $title): string {
     $title = trim($title);

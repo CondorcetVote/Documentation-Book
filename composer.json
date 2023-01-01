@@ -2,7 +2,8 @@
     "name": "condorcet/book",
     "type": "project",
     "require": {
-        "league/flysystem": "^3.12"
+        "league/flysystem": "^3.12",
+        "symfony/polyfill-mbstring": "^1.27"
     },
     "require-dev": {
         "laravel/pint": "^1.3"
