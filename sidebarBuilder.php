@@ -34,8 +34,6 @@ foreach ($listing as $file) {
     $title = is_array($firstMatch) ? $firstMatch[1] : false;
 
     if(is_string($title)) {
-        $title = removeIndex(trim($title));
-        $title === 'Start' && $title = '<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>';
         $path = explode(DIRECTORY_SEPARATOR,$file->path());
         $fileName = array_pop($path);
         $folder = end($path);
@@ -43,10 +41,15 @@ foreach ($listing as $file) {
         $depth = count($path);
         $depth < 0 && $depth = 0;
 
+        $title = removeIndex(trim($title));
+        $depth === 0 && $title =  '**' . $title . '**';
+        $title === '**Start**' && $title = '<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>';
+
         if ($folder !== $lastPath && is_string($folder)) {
             $lastPath = $folder;
             $pathTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $folder);
             $pathTitle = removeIndex($pathTitle);
+            ($depth > 0 ? $depth - 1 : 0) === 0 && $pathTitle = '**' . $pathTitle . '**';
 
             count($path) < 2 && $summaryMD .= "\n";
             $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0) . "* {$pathTitle} \n";

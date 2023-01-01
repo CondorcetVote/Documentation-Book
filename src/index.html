@@ -7,18 +7,30 @@
   <link rel="icon" type="image/png" href="condorcet-logo-without-text.png" />
   <meta name="description" content="Condorcet PHP official documentation book">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <!-- Theme: Simple (light + dark) -->
   <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
-  <!-- <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <style>
+    :root {
+      --sidebar-width: 20rem;
+      --condorcet-primary-color: #f57255;
+      --condorcet-secondary-color: #8892bf;
+
+    }
+
     .condorcet_primary {
-      color:#f57255 !important;
+      color:var(--condorcet-primary-color) !important;
     }
 
     .condorcet_secondary {
-      color:#8892bf !important;
+      color:var(--condorcet-secondary-color) !important;
+    }
+
+    .sidebar > .app-name {
+      margin-left:10%;
+      margin-right:10%;
     }
   </style>
 
@@ -27,11 +39,11 @@
 <body>
   <div id="app"></div>
   <script>
-    window.repo = 'https://github.com/julien-boudry/Condorcet';
 
     window.$docsify = {
       name: 'Condorcet PHP',
-      repo: window.repo,
+      logo: 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/Assets/Logos/condorcet-logo.png',
+      repo: 'https://github.com/julien-boudry/Condorcet',
       themeColor: '#f57255',
 
       coverpage: true,
@@ -39,10 +51,15 @@
       loadSidebar: true,
       subMaxLevel: 4,
       homepage: '1.Start.md',
+      // routerMode: 'history',
 
-      mergeNavbar: true,
+      // mergeNavbar: true,
       tabs: {
         theme: 'material'
+      },
+      pagination: {
+        crossChapter: true,
+        crossChapterText: true
       },
 
       gtag: 'G-0XP3SB9GG4',
@@ -57,7 +74,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
   <!-- Themable -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script> -->
+  <sript src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
@@ -65,7 +82,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 
   <script src="ga4.js"></script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 # **<span class="condorcet_primary">Condorcet</span> <span class="condorcet_secondary">PHP</span>** <small>4.3</small>
 
-> The election calculator
+> The election processor
 
 - Manage an election process _(candidates, votes, results, stats)_
 - Natively implements dozens of advanced voting methods

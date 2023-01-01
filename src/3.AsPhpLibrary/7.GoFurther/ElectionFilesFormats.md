@@ -1,4 +1,4 @@
-# Import from Election files formats
+# Election files formats
 
 From [Condorcet Election Format](https://github.com/CondorcetPHP/CondorcetElectionFormat), from [Debian Tally Format](https://www.debian.org/vote/2021/vote_001_tally.txt), from [David Hill Format](https://rangevoting.org/TidemanData.html).
 
@@ -69,3 +69,4 @@ CondorcetElectionFormat::exportElectionToCondorcetElectionFormat($election) # Re
 # Write to a file
 $myFile = new \SplFileObject($pathToFile);
 CondorcetElectionFormat::exportElectionToCondorcetElectionFormat(election:$election, file: $myFile) # Return null
+```
