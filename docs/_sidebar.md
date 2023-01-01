@@ -4,7 +4,7 @@
 
   * [Installation](2.AsCommandLineApplication/1.Installation.md) 
   * [Quick Examples](2.AsCommandLineApplication/2.QuickExample.md) 
-  * [Import from Election files formats (command line)](2.AsCommandLineApplication/3.ImportFromElectionFormat.md) 
+  * [Import from Election files formats](2.AsCommandLineApplication/3.ImportFromElectionFormat.md) 
   * [Man Page](2.AsCommandLineApplication/4.ManPage.md) 
 
 * **As Php Library** 

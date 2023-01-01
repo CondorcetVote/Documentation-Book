@@ -6,7 +6,7 @@ use League\Flysystem\StorageAttributes;
 
 require_once 'vendor/autoload.php';
 
-$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/src');
+$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
 $listing = $filesystem->listContents('.', true)
@@ -22,7 +22,7 @@ $summaryMD = '';
 $lastPath = false;
 
 foreach ($listing as $file) {
-    $fileContent = file_get_contents(__DIR__.'/src/'.$file->path());
+    $fileContent = file_get_contents(__DIR__.'/docs/'.$file->path());
 
     $re = '/#(.*)\n/m';
 
