@@ -10,9 +10,9 @@
 * **As Php Library** 
 
   * [Installation](3.AsPhpLibrary/1.Installation.md) 
-  * [Understanding the workflow](3.AsPhpLibrary/2.UnderstandingTheFlow.md) 
+  * [The workflow](3.AsPhpLibrary/2.WorkFlow.md) 
   * [Create an Election](3.AsPhpLibrary/3.CreateAnElection.md) 
-  * [Manage Candidates](3.AsPhpLibrary/4.Candidates.md) 
+  * [Candidates](3.AsPhpLibrary/4.Candidates.md) 
   * Votes 
     * [Add Votes](3.AsPhpLibrary/5.Votes/1.AddVotes.md) 
     * [Votes Tags](3.AsPhpLibrary/5.Votes/2.VotesTags.md) 
