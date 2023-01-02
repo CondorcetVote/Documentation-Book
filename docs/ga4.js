@@ -17,7 +17,7 @@ function appendScript(id) {
 
     gtag('config', id, {
         send_page_view: false, // Disable automatic pageview
-        debug_mode: (location.hostname === 'localhost') ? true : false
+        debug_mode: (location.hostname === 'localhost' || location.hostname.includes('github.dev')) ? true : false
     });
   }
 
