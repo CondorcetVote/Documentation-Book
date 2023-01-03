@@ -6,6 +6,8 @@ use League\Flysystem\StorageAttributes;
 
 require_once 'vendor/autoload.php';
 
+const LIST_SYMBOL = '*';
+
 $adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
@@ -52,15 +54,20 @@ foreach ($listing as $file) {
             ($depth > 0 ? $depth - 1 : 0) === 0 && $pathTitle = '**' . $pathTitle . '**';
 
             count($path) < 2 && $summaryMD .= "\n";
-            $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0) . "* {$pathTitle} \n";
+            $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0) . LIST_SYMBOL." {$pathTitle} \n";
             count($path) < 2 && $summaryMD .= "\n";
         }
 
-        $summaryMD .= str_repeat('  ', $depth) . "* [{$title}]({$file->path()}) \n";
+        $summaryMD .= str_repeat('  ', $depth) . LIST_SYMBOL." [{$title}]({$file->path()}) \n";
     } else {
         throw new Exception($file->path() . " have no title");
     }
 }
+
+$summaryMD .= "\n";
+$summaryMD .= "* [**Voting Methods**](VotingMethods)\n";
+$summaryMD .= "* [**Methods References**](MethodsReferences)\n";
+$summaryMD .= "* [**Changelog**](Changelog)\n";
 
 var_dump($summaryMD);
 $filesystem->write('_sidebar.md', $summaryMD);

@@ -39,10 +39,11 @@
 <body>
   <div id="app"></div>
   <script>
+    window.githubRawSource = 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/';
 
     window.$docsify = {
       name: 'Condorcet PHP',
-      logo: 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/Assets/Logos/condorcet-logo.png',
+      logo: window.githubRawSource+'Assets/Logos/condorcet-logo.png',
       repo: 'https://github.com/julien-boudry/Condorcet',
       themeColor: '#f57255',
 
@@ -70,8 +71,10 @@
       ],
 
       alias: {
-        '/VotingMethods': 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/VOTING_METHODS.md',
-        '/MethodsReferences': 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/Documentation/README.md',
+        '/VotingMethods': window.githubRawSource+'VOTING_METHODS.md',
+        '/MethodsReferences': window.githubRawSource+'Docs/MethodsReferences/README.md',
+        '/MethodsReferences/(.*)': window.githubRawSource+'Docs/MethodsReferences/$1',
+        '/Changelog': window.githubRawSource+'CHANGELOG.md',
 
         '/Candidates': '/3.AsPhpLibrary/4.Candidates.md',
       }

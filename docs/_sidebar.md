@@ -35,3 +35,7 @@
     * [Create a new Vote Method](3.AsPhpLibrary/8.ExtendingCondorcet/CreateNewVoteMethod.md) 
     * [Extending Candidate & Vote Class](3.AsPhpLibrary/8.ExtendingCondorcet/ExtendingCandidateAndVotes.md) 
     * [Write New External Handler Driver](3.AsPhpLibrary/8.ExtendingCondorcet/WriteNewExternalHandlerDriver.md) 
+
+* [**Voting Methods**](VotingMethods)
+* [**Methods References**](MethodsReferences)
+* [**Changelog**](Changelog)
