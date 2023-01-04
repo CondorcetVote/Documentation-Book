@@ -1,4 +1,4 @@
-* [Presentation](https://github.com/julien-boudry/Condorcet/blob/master/README.md)
+* [Presentation](/Readme)
 * <span class="condorcet_primary">Documentation Book</span>
 * [Methods References](MethodsReferences)
 * [Voting Methods](VotingMethods)

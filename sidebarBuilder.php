@@ -21,6 +21,8 @@ $listing = $filesystem->listContents('.', true)
 // var_dump($listing->toArray());
 
 $summaryMD = '';
+$summaryMD .= "* [**Readme - Presentation**](/Readme)\n";
+
 $lastPath = false;
 
 foreach ($listing as $file) {
