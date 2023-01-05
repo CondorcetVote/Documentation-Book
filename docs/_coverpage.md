@@ -8,8 +8,9 @@
 - Natively implements dozens of advanced voting methods
 - Modular architecture
 -
-- **<span style="color:#8892bf;">Power usage as PHP library</span>**
-- **<span style="color:#8892bf;">Simple usage as command line application</span>**
+- **<span class="condorcet_secondary">Power usage as PHP library</span>**
+- **<span class="condorcet_secondary">Simple usage as command line application</span>**
 
 [GitHub](https://github.com/julien-boudry/Condorcet)
-[Get Started](#start)
+[Readme & Project](/Readme)
+[Get Started →](#start)

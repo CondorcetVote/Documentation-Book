@@ -1,11 +1,11 @@
 # Write New External Handler Driver
 
-****Implement Interface [Condorcet\DataManager\DataHandlerDrivers\DataHandlerDriverInterface](https://github.com/julien-boudry/Condorcet/blob/master/lib/DataManager/DataHandlerDrivers/DataHandlerDriverInterface.php)**
+**Implement Interface:** [`Condorcet\DataManager\DataHandlerDrivers\DataHandlerDriverInterface`](https://github.com/julien-boudry/Condorcet/blob/master/src/DataManager/DataHandlerDrivers/DataHandlerDriverInterface.php)
 
-And read the relatively simple example : [Condorcet\DataManager\DataHandlerDrivers\PdoHandlerDriver](https://github.com/julien-boudry/Condorcet/blob/master/lib/DataManager/DataHandlerDrivers/PdoDriver/PdoHandlerDriver.php)
+And read the relatively simple example: [Condorcet\DataManager\DataHandlerDrivers\PdoHandlerDriver](https://github.com/julien-boudry/Condorcet/blob/master/src/DataManager/DataHandlerDrivers/PdoDriver/PdoHandlerDriver.php)
 
+?> [`Election->setExternalDataHandler()`](/Docs/MethodsReferences/Election%20Class/public%20Election--setExternalDataHandler)
 ```php
     $driver = new yourDriverClass (); // Must be ready to use (connection, access etc..)
-
-    $myElection->setExternalDataHandler($driver);
+    $election->setExternalDataHandler($driver);
 ```
