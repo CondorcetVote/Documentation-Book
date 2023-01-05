@@ -27,6 +27,7 @@
     * [Ranking mode - Implicit versus Explicit](3.AsPhpLibrary/6.Results/4.ImplicitOrExplicitMod.md) 
     * [Voting Methods](3.AsPhpLibrary/6.Results/5.VotingMethods.md) 
     * [Stats](3.AsPhpLibrary/6.Results/6.Stats.md) 
+    * [Vote Methods Warnings & Options](3.AsPhpLibrary/6.Results/7.VoteMethodsWarnings&Options.md) 
   * Go Further 
     * [Play with Election, Candidate & Vote objects](3.AsPhpLibrary/7.GoFurther/1.PlayWithObjects.md) 
     * [Cryptographic checksum](3.AsPhpLibrary/7.GoFurther/2.CryptographicChecksum.md) 
@@ -34,6 +35,9 @@
     * [Election files formats](3.AsPhpLibrary/7.GoFurther/4.ElectionFilesFormats.md) 
     * [Get started to handle millions of votes](3.AsPhpLibrary/7.GoFurther/5.GetStartedToHandleMillionsOfVotes.md) 
     * [Objects mutability](3.AsPhpLibrary/7.GoFurther/6.Mutability.md) 
+    * [Exceptions & Errors](3.AsPhpLibrary/7.GoFurther/7.Exceptions&Errors.md) 
+    * [Generators & Iterators](3.AsPhpLibrary/7.GoFurther/8.Generator&Iterators.md) 
+    * [Vote Random Generator](3.AsPhpLibrary/7.GoFurther/9.VoteRandomGenerator.md) 
   * Extending Condorcet 
     * [Create a new Vote Method](3.AsPhpLibrary/8.ExtendingCondorcet/CreateNewVoteMethod.md) 
     * [Extending Candidate & Vote Class](3.AsPhpLibrary/8.ExtendingCondorcet/ExtendingCandidateAndVotes.md) 
