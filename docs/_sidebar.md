@@ -27,7 +27,7 @@
     * [Ranking mode - Implicit versus Explicit](3.AsPhpLibrary/6.Results/4.ImplicitOrExplicitMod.md) 
     * [Voting Methods](3.AsPhpLibrary/6.Results/5.VotingMethods.md) 
     * [Stats](3.AsPhpLibrary/6.Results/6.Stats.md) 
-    * [Vote Methods Warnings & Options](3.AsPhpLibrary/6.Results/7.VoteMethodsWarnings&Options.md) 
+    * [Vote Methods Options & Warning](3.AsPhpLibrary/6.Results/7.VoteMethodsOptions&Warnings.md) 
   * Go Further 
     * [Play with Election, Candidate & Vote objects](3.AsPhpLibrary/7.GoFurther/1.PlayWithObjects.md) 
     * [Cryptographic checksum](3.AsPhpLibrary/7.GoFurther/2.CryptographicChecksum.md) 
