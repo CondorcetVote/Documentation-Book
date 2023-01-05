@@ -37,8 +37,8 @@ foreach ($listing as $file) {
     $firstMatch = reset($matches);
     $title = is_array($firstMatch) ? $firstMatch[1] : false;
 
-    if(is_string($title)) {
-        $path = explode(DIRECTORY_SEPARATOR,$file->path());
+    if (is_string($title)) {
+        $path = explode(DIRECTORY_SEPARATOR, $file->path());
         $fileName = array_pop($path);
         $folder = end($path);
 
@@ -46,23 +46,23 @@ foreach ($listing as $file) {
         $depth < 0 && $depth = 0;
 
         $title = removeIndex(trim($title));
-        $depth === 0 && $title =  '**' . $title . '**';
+        $depth === 0 && $title = '**'.$title.'**';
         $title === '**Start**' && $title = '<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>';
 
         if ($folder !== $lastPath && is_string($folder)) {
             $lastPath = $folder;
             $pathTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $folder);
             $pathTitle = removeIndex($pathTitle);
-            ($depth > 0 ? $depth - 1 : 0) === 0 && $pathTitle = '**' . $pathTitle . '**';
+            ($depth > 0 ? $depth - 1 : 0) === 0 && $pathTitle = '**'.$pathTitle.'**';
 
             count($path) < 2 && $summaryMD .= "\n";
-            $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0) . LIST_SYMBOL." {$pathTitle} \n";
+            $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0).LIST_SYMBOL." {$pathTitle} \n";
             count($path) < 2 && $summaryMD .= "\n";
         }
 
-        $summaryMD .= str_repeat('  ', $depth) . LIST_SYMBOL." [{$title}]({$file->path()}) \n";
+        $summaryMD .= str_repeat('  ', $depth).LIST_SYMBOL." [{$title}]({$file->path()}) \n";
     } else {
-        throw new Exception($file->path() . " have no title");
+        throw new Exception($file->path().' have no title');
     }
 }
 
@@ -74,7 +74,9 @@ $summaryMD .= "* [**Changelog**](Changelog)\n";
 var_dump($summaryMD);
 $filesystem->write('_sidebar.md', $summaryMD);
 
-function removeIndex(string $title): string {
+function removeIndex(string $title): string
+{
     $title = trim($title);
+
     return preg_replace('/^([0-9]\.)/m', '', $title) ?? $title;
 }
