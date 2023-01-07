@@ -39,7 +39,7 @@
     * [Objects mutability](3.AsPhpLibrary/8.GoFurther/6.Mutability.md) 
     * [Exceptions & Errors](3.AsPhpLibrary/8.GoFurther/7.Exceptions&Errors.md) 
     * [Generators & Iterators](3.AsPhpLibrary/8.GoFurther/8.Generator&Iterators.md) 
-    * [Vote Random Generator](3.AsPhpLibrary/8.GoFurther/9.VoteRandomGenerator.md) 
+    * [Votes Random Generator](3.AsPhpLibrary/8.GoFurther/9.VotesRandomGenerator.md) 
   * Extending Condorcet 
     * [Create a new Vote Method](3.AsPhpLibrary/9.ExtendingCondorcet/CreateNewVoteMethod.md) 
     * [Extending Candidate & Vote Class](3.AsPhpLibrary/9.ExtendingCondorcet/ExtendingCandidateAndVotes.md) 
