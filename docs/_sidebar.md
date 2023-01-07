@@ -19,7 +19,7 @@
     * [Votes Tags](3.AsPhpLibrary/5.Votes/2.VotesTags.md) 
     * [Manage Votes](3.AsPhpLibrary/5.Votes/3.ManageVotes.md) 
     * [Vote weight](3.AsPhpLibrary/5.Votes/4.VoteWeight.md) 
-    * [Vote Constraints](3.AsPhpLibrary/5.Votes/5.VoteConstraints.md) 
+    * [Votes Constraints](3.AsPhpLibrary/5.Votes/5.VotesConstraints.md) 
   * Results 
     * [Get Winner / Loser](3.AsPhpLibrary/6.Results/1.WinnerAndLoser.md) 
     * [Full Ranking](3.AsPhpLibrary/6.Results/2.FullRanking.md) 
@@ -41,8 +41,9 @@
     * [Generators & Iterators](3.AsPhpLibrary/8.GoFurther/8.Generator&Iterators.md) 
     * [Votes Random Generator](3.AsPhpLibrary/8.GoFurther/9.VotesRandomGenerator.md) 
   * Extending Condorcet 
-    * [Create a new Vote Method](3.AsPhpLibrary/9.ExtendingCondorcet/CreateNewVoteMethod.md) 
-    * [Extending Candidate & Vote Class](3.AsPhpLibrary/9.ExtendingCondorcet/ExtendingCandidateAndVotes.md) 
+    * [Create a new Vote Method](3.AsPhpLibrary/9.ExtendingCondorcet/1.CreateNewVoteMethod.md) 
+    * [Extending Candidate & Vote Class](3.AsPhpLibrary/9.ExtendingCondorcet/2.ExtendingCandidateAndVotes.md) 
+    * [Create a new Votes Constraints](3.AsPhpLibrary/9.ExtendingCondorcet/3.CreateNewVoteConstraints.md) 
     * [Write New External Handler Driver](3.AsPhpLibrary/9.ExtendingCondorcet/WriteNewExternalHandlerDriver.md) 
 
 * [**Voting Methods**](VotingMethods)
