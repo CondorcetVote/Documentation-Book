@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Mirror 404
-        run: cp docs/index.html docs/405.html
+        run: cp docs/index.html docs/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
