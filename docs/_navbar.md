@@ -1,5 +1,5 @@
 * [Presentation](/Readme)
 * <span class="condorcet_primary">Documentation Book</span>
-* [Methods References](MethodsReferences)
+* [API References](ApiReferences)
 * [Voting Methods](VotingMethods)
 * [Tests](https://github.com/julien-boudry/Condorcet/tree/master/Tests)

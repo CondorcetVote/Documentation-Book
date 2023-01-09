@@ -68,7 +68,7 @@ foreach ($listing as $file) {
 
 $summaryMD .= "\n";
 $summaryMD .= "* [**Voting Methods**](VotingMethods)\n";
-$summaryMD .= "* [**Methods References**](MethodsReferences)\n";
+$summaryMD .= "* [**API References**](ApiReferences)\n";
 $summaryMD .= "* [**Changelog**](Changelog)\n";
 
 var_dump($summaryMD);

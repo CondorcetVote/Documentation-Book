@@ -127,6 +127,8 @@
               document.title = 'As Command Line Application: ' + document.title;
             } else if (location.href.includes('AsPhpLibrary')) {
               document.title = 'As PHP Library: ' + document.title;
+            } else if (location.href.includes('ApiReferences')) {
+              document.title = 'API References: ' + document.title;
             }
 
             // console.log(`Update Title`);
@@ -137,8 +139,9 @@
       alias: {
         '/VotingMethods': window.githubRawSource+'Docs/VotingMethods.md',
         '/Docs/VotingMethods': '/VotingMethods',
-        '/MethodsReferences': window.githubRawSource+'Docs/MethodsReferences/README.md',
+        '/ApiReferences': window.githubRawSource+'Docs/MethodsReferences/README.md',
         '/Docs/MethodsReferences/(.*)': window.githubRawSource+'Docs/MethodsReferences/$1',
+        '/Docs/ApiReferences/(.*)': window.githubRawSource+'Docs/MethodsReferences/$1',
         '/Changelog': window.githubRawSource+'CHANGELOG.md',
         '/CHANGELOG': window.githubRawSource+'CHANGELOG.md',
         '/Readme': 'https://raw.githubusercontent.com/julien-boudry/Condorcet/master/README.md',

@@ -47,5 +47,5 @@
     * [Write New External Handler Driver](3.AsPhpLibrary/9.ExtendingCondorcet/4.WriteNewExternalHandlerDriver.md) 
 
 * [**Voting Methods**](VotingMethods)
-* [**Methods References**](MethodsReferences)
+* [**API References**](ApiReferences)
 * [**Changelog**](Changelog)
