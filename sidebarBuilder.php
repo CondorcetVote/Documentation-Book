@@ -74,6 +74,8 @@ $summaryMD .= "* [**Changelog**](Changelog)\n";
 var_dump($summaryMD);
 $filesystem->write('_sidebar.md', $summaryMD);
 
+file_put_contents('docs/404.html', file_get_contents('docs/index.html'));
+
 function removeIndex(string $title): string
 {
     $title = trim($title);
