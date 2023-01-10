@@ -1,6 +1,5 @@
-* [**Readme - Presentation**](/Readme)
-* [**Changelog**](Changelog)
-* [<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>](1.Start.md) 
+* [**Condorcet - Presentation**](/GithubReadme)
+* [<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>](README) 
 
 * **As Command Line Application** 
 

@@ -10,7 +10,7 @@ const LIST_SYMBOL = '*';
 
 $sitemapGen = new \Icamys\SitemapGenerator\SitemapGenerator('https://www.condorcet.io', __DIR__.'/docs/');
 $sitemapGen->addURL('/');
-$sitemapGen->addURL('/Readme');
+$sitemapGen->addURL('/GithubReadme');
 
 
 $adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
@@ -26,8 +26,7 @@ $listing = $filesystem->listContents('.', true)
 // var_dump($listing->toArray());
 
 $summaryMD = '';
-$summaryMD .= "* [**Readme - Presentation**](/Readme)\n";
-$summaryMD .= "* [**Changelog**](Changelog)\n";
+$summaryMD .= "* [**Condorcet - Presentation**](/GithubReadme)\n";
 
 $lastPath = false;
 
@@ -66,10 +65,12 @@ foreach ($listing as $file) {
             count($path) < 2 && $summaryMD .= "\n";
         }
 
-        $summaryMD .= str_repeat('  ', $depth).LIST_SYMBOL." [{$title}]({$file->path()}) \n";
-        $sitemapGen->addURL(str_replace('.md', '', '/'.$file->path()));
+        $thePath = !str_contains($file->path(), '1.Start') ? $file->path() : 'README';
+        
+        $summaryMD .= str_repeat('  ', $depth).LIST_SYMBOL." [{$title}]({$thePath}) \n";
+        $sitemapGen->addURL(str_replace('.md', '', '/'.$thePath));
     } else {
-        throw new Exception($file->path().' have no title');
+        throw new Exception($thePath.' have no title');
     }
 }
 

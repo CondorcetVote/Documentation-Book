@@ -12,5 +12,5 @@
 - **<span class="condorcet_secondary">Simple usage as command line application</span>**
 
 [GitHub](https://github.com/julien-boudry/Condorcet)
-[Readme & Project](/Readme)
+[Readme & Project](/GithubReadme)
 [Get Started →](#start)
