@@ -8,6 +8,11 @@ require_once 'vendor/autoload.php';
 
 const LIST_SYMBOL = '*';
 
+$sitemapGen = new \Icamys\SitemapGenerator\SitemapGenerator('https://www.condorcet.io', __DIR__.'/docs/');
+$sitemapGen->addURL('/');
+$sitemapGen->addURL('/Readme');
+
+
 $adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
@@ -22,6 +27,7 @@ $listing = $filesystem->listContents('.', true)
 
 $summaryMD = '';
 $summaryMD .= "* [**Readme - Presentation**](/Readme)\n";
+$summaryMD .= "* [**Changelog**](Changelog)\n";
 
 $lastPath = false;
 
@@ -61,6 +67,7 @@ foreach ($listing as $file) {
         }
 
         $summaryMD .= str_repeat('  ', $depth).LIST_SYMBOL." [{$title}]({$file->path()}) \n";
+        $sitemapGen->addURL(str_replace('.md', '', '/'.$file->path()));
     } else {
         throw new Exception($file->path().' have no title');
     }
@@ -68,13 +75,23 @@ foreach ($listing as $file) {
 
 $summaryMD .= "\n";
 $summaryMD .= "* [**Voting Methods**](VotingMethods)\n";
+$sitemapGen->addURL('/VotingMethods');
 $summaryMD .= "* [**API References**](ApiReferences)\n";
+$sitemapGen->addURL('/ApiReferences');
 $summaryMD .= "* [**Changelog**](Changelog)\n";
+$sitemapGen->addURL('/Changelog');
+
 
 var_dump($summaryMD);
 $filesystem->write('_sidebar.md', $summaryMD);
 
 // file_put_contents('docs/404.html', file_get_contents('docs/index.html'));
+
+// Sitemap
+$sitemapGen->flush();
+$sitemapGen->finalize();
+$sitemapGen->updateRobots();
+
 
 function removeIndex(string $title): string
 {

@@ -3,7 +3,8 @@
     "type": "project",
     "require": {
         "league/flysystem": "^3.12",
-        "symfony/polyfill-mbstring": "^1.27"
+        "symfony/polyfill-mbstring": "^1.27",
+        "icamys/php-sitemap-generator": "^4.4"
     },
     "require-dev": {
         "laravel/pint": "^1.3"
