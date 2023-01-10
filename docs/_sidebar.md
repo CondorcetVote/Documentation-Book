@@ -1,4 +1,5 @@
 * [**Readme - Presentation**](/Readme)
+* [**Changelog**](Changelog)
 * [<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>](1.Start.md) 
 
 * **As Command Line Application** 
@@ -28,7 +29,7 @@
     * [Voting Methods](3.AsPhpLibrary/6.Results/5.VotingMethods.md) 
     * [Pairwise Stats](3.AsPhpLibrary/6.Results/6.PairwiseStats.md) 
     * [Methods Stats](3.AsPhpLibrary/6.Results/7.MethodsStats.md) 
-    * [Vote Methods Options & Warning](3.AsPhpLibrary/6.Results/8.VoteMethodsOptions&Warnings.md) 
+    * [Vote Methods Options & Warning](3.AsPhpLibrary/6.Results/8.VoteMethodsOptionsWarnings.md) 
     * [Proportional Methods](3.AsPhpLibrary/6.Results/9.ProportionalMethods.md) 
   * Go Further 
     * [Play with Election, Candidate & Vote objects](3.AsPhpLibrary/8.GoFurther/1.PlayWithObjects.md) 
@@ -37,8 +38,8 @@
     * [Election files formats](3.AsPhpLibrary/8.GoFurther/4.ElectionFilesFormats.md) 
     * [Get started to handle millions of votes](3.AsPhpLibrary/8.GoFurther/5.GetStartedToHandleMillionsOfVotes.md) 
     * [Objects mutability](3.AsPhpLibrary/8.GoFurther/6.Mutability.md) 
-    * [Exceptions & Errors](3.AsPhpLibrary/8.GoFurther/7.Exceptions&Errors.md) 
-    * [Generators & Iterators](3.AsPhpLibrary/8.GoFurther/8.Generator&Iterators.md) 
+    * [Exceptions & Errors](3.AsPhpLibrary/8.GoFurther/7.Exceptions-Errors.md) 
+    * [Generators & Iterators](3.AsPhpLibrary/8.GoFurther/8.Generator-Iterators.md) 
     * [Votes Random Generator](3.AsPhpLibrary/8.GoFurther/9.VotesRandomGenerator.md) 
   * Extending Condorcet 
     * [Create a new Vote Method](3.AsPhpLibrary/9.ExtendingCondorcet/1.CreateNewVoteMethod.md) 
