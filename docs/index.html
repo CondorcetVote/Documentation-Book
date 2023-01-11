@@ -118,6 +118,9 @@
               document.head.appendChild(m);
             } else {
               existingTag.setAttribute('href', 'https://'+location.hostname+location.pathname);
+
+              var noindex = document.querySelector(`meta[name=robots]`);
+              noindex && noindex.remove();
             }
 
             // console.log(`Update Canonical`);
