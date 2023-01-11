@@ -106,9 +106,19 @@
         function docsifyCanonicalUrl(hook, vm) {
           hook.beforeEach(function (markdown) {
 
+            const WE_ARE_ON_HTML_LOAD = true;
             const existingTag = document.querySelector(`link[rel=canonical]`);
 
-            existingTag.setAttribute('href', 'https://'+location.hostname+location.pathname);
+            if (markdown.includes('WE_ARE_ON_HTML_LOAD')) {
+              existingTag.setAttribute('href', 'https://'+location.hostname);
+
+              var m = document.createElement('meta'); 
+              m.name = 'robots'; 
+              m.content = 'noindex'; 
+              document.head.appendChild(m);
+            } else {
+              existingTag.setAttribute('href', 'https://'+location.hostname+location.pathname);
+            }
 
             // console.log(`Update Canonical`);
 
