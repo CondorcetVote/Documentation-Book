@@ -108,7 +108,7 @@
 
             const existingTag = document.querySelector(`link[rel=canonical]`);
 
-            existingTag.setAttribute('href', location.href);
+            existingTag.setAttribute('href', 'https://'+location.hostname+location.pathname);
 
             // console.log(`Update Canonical`);
 
