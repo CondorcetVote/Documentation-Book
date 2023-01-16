@@ -147,6 +147,13 @@
             // console.log(`Update Title`);
           });
         },
+
+        function docsifyFixLogoLink(hook, vm) {
+          hook.mounted(function () {
+            const logoLinkTag = document.querySelector(`a.app-name-link`);
+            logoLinkTag.setAttribute('href', '/');
+          });
+        },
       ],
 
       alias: {
