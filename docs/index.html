@@ -109,6 +109,7 @@
             const WE_ARE_ON_HTML_LOAD = true;
             const existingTag = document.querySelector(`link[rel=canonical]`);
 
+            // Is a 404
             if (markdown.includes('WE_ARE_ON_HTML_LOAD')) {
               existingTag.setAttribute('href', 'https://'+location.hostname);
 
@@ -116,6 +117,8 @@
               m.name = 'robots'; 
               m.content = 'noindex'; 
               document.head.appendChild(m);
+
+              return '# 404 not found';
             } else {
               existingTag.setAttribute('href', 'https://'+location.hostname+location.pathname);
 
