@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--generator-class="Icamys\SitemapGenerator\SitemapGenerator"-->
 <!--generator-version="4.4.1"-->
-<!--generated-on="2023-01-30T23:18:52+00:00"-->
+<!--generated-on="2023-02-11T17:12:14+00:00"-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.condorcet.io/</loc>
@@ -103,7 +103,7 @@
   <loc>https://www.condorcet.io/3.AsPhpLibrary/8.GoFurther/8.Generator-Iterators</loc>
  </url>
  <url>
-  <loc>https://www.condorcet.io/3.AsPhpLibrary/8.GoFurther/9.VotesRandomGenerator</loc>
+  <loc>https://www.condorcet.io/3.AsPhpLibrary/8.GoFurther/9.VoteRandomizer</loc>
  </url>
  <url>
   <loc>https://www.condorcet.io/3.AsPhpLibrary/9.ExtendingCondorcet/1.CreateNewVoteMethod</loc>
