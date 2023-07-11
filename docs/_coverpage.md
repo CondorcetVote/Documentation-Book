@@ -1,6 +1,6 @@
 ![logo](condorcet-logo-without-text.png ':size=25%')
 
-# **<span class="condorcet_primary">Condorcet</span> <span class="condorcet_secondary">PHP</span>** <small>4.4</small>
+# **<span class="condorcet_primary">Condorcet</span> <span class="condorcet_secondary">PHP</span>** <small>4.5</small>
 
 > The election processor
 
