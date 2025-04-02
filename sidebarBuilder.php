@@ -8,10 +8,6 @@ require_once 'vendor/autoload.php';
 
 const LIST_SYMBOL = '*';
 
-$sitemapGen = new \Icamys\SitemapGenerator\SitemapGenerator('https://www.condorcet.io', __DIR__.'/docs/');
-$sitemapGen->addURL('/');
-$sitemapGen->addURL('/GithubReadme');
-
 
 $adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
 $filesystem = new League\Flysystem\Filesystem($adapter);
@@ -25,10 +21,18 @@ $listing = $filesystem->listContents('.', true)
 
 // var_dump($listing->toArray());
 
-$summaryMD = '';
-$summaryMD .= "* [**Condorcet - Presentation**](/GithubReadme)\n";
+// Create an array structure for the sidebar
+$sidebarItems = [];
 
+// Add the first item - Condorcet Presentation
+$sidebarItems[] = [
+    'text' => 'Condorcet - Presentation',
+    'link' => '/GithubReadme'
+];
+
+$currentSection = null;
 $lastPath = false;
+$currentSectionIndex = -1;
 
 foreach ($listing as $file) {
     $fileContent = file_get_contents(__DIR__.'/docs/'.$file->path());
@@ -51,47 +55,73 @@ foreach ($listing as $file) {
         $depth < 0 && $depth = 0;
 
         $title = removeIndex(trim($title));
-        $depth === 0 && $title = '**'.$title.'**';
-        $title === '**Start**' && $title = '<span class="condorcet_secondary" style="font-weight:700;">**Start**</span>';
+
+        $thePath = !str_contains($file->path(), '1.Start') ? $file->path() : 'README';
+        $link = str_replace('.md', '', '/'.$thePath);
 
         if ($folder !== $lastPath && is_string($folder)) {
             $lastPath = $folder;
             $pathTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $folder);
             $pathTitle = removeIndex($pathTitle);
-            ($depth > 0 ? $depth - 1 : 0) === 0 && $pathTitle = '**'.$pathTitle.'**';
 
-            count($path) < 2 && $summaryMD .= "\n";
-            $summaryMD .= str_repeat('  ', $depth > 0 ? $depth - 1 : 0).LIST_SYMBOL." {$pathTitle} \n";
-            count($path) < 2 && $summaryMD .= "\n";
+            // Create a new section
+            $sidebarItems[] = [
+                'text' => $pathTitle,
+                'items' => []
+            ];
+
+            // Store the index of the current section
+            $currentSectionIndex = count($sidebarItems) - 1;
         }
 
-        $thePath = !str_contains($file->path(), '1.Start') ? $file->path() : 'README';
-        
-        $summaryMD .= str_repeat('  ', $depth).LIST_SYMBOL." [{$title}]({$thePath}) \n";
-        $sitemapGen->addURL(str_replace('.md', '', '/'.$thePath));
+        // Add item to the current section or directly to sidebar if no section
+        if ($currentSectionIndex >= 0 && $depth > 0) {
+            // Add directly to the sidebar items array using the index
+            $sidebarItems[$currentSectionIndex]['items'][] = [
+                'text' => $title,
+                'link' => $link
+            ];
+        } elseif ($depth === 0 && $title !== 'Start') {
+            // Top level items
+            $sidebarItems[] = [
+                'text' => $title,
+                'link' => $link
+            ];
+        }
     } else {
-        throw new Exception($thePath.' have no title');
+        throw new Exception($file->path().' has no title');
     }
 }
 
-$summaryMD .= "\n";
-$summaryMD .= "* [**Voting Methods**](VotingMethods)\n";
-$sitemapGen->addURL('/VotingMethods');
-$summaryMD .= "* [**API References**](ApiReferences)\n";
-$sitemapGen->addURL('/ApiReferences');
-$summaryMD .= "* [**Changelog**](Changelog)\n";
-$sitemapGen->addURL('/Changelog');
+// Add the additional static items
+$sidebarItems[] = [
+    'text' => 'Voting Methods',
+    'link' => '/VotingMethods'
+];
 
+$sidebarItems[] = [
+    'text' => 'API References',
+    'link' => '/ApiReferences'
+];
 
-var_dump($summaryMD);
-$filesystem->write('_sidebar.md', $summaryMD);
+$sidebarItems[] = [
+    'text' => 'Changelog',
+    'link' => '/Changelog'
+];
 
-// file_put_contents('docs/404.html', file_get_contents('docs/index.html'));
+// Create the final sidebar structure
+$sidebarStructure = [
+    'sidebar' => $sidebarItems
+];
 
-// Sitemap
-$sitemapGen->flush();
-$sitemapGen->finalize();
-$sitemapGen->updateRobots();
+// Convert to JSON
+$jsonOutput = json_encode($sidebarStructure, JSON_PRETTY_PRINT);
+
+// Output for debugging
+var_dump($jsonOutput);
+
+// Write to file
+$filesystem->write('sidebar.json', $jsonOutput);
 
 
 function removeIndex(string $title): string
