@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 const LIST_SYMBOL = '*';
 
 
-$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs');
+$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/book');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
 $listing = $filesystem->listContents('.', true)
@@ -35,7 +35,7 @@ $lastPath = false;
 $currentSectionIndex = -1;
 
 foreach ($listing as $file) {
-    $fileContent = file_get_contents(__DIR__.'/docs/'.$file->path());
+    $fileContent = file_get_contents(__DIR__.'/book/'.$file->path());
 
     $re = '/#(.*)\n/m';
 
@@ -57,6 +57,7 @@ foreach ($listing as $file) {
         $title = removeIndex(trim($title));
 
         $thePath = !str_contains($file->path(), '1.Start') ? $file->path() : 'README';
+        $thePath = 'book/'.$thePath;
         $link = str_replace('.md', '', '/'.$thePath);
 
         if ($folder !== $lastPath && is_string($folder)) {
@@ -110,19 +111,19 @@ $sidebarItems[] = [
 ];
 
 // Create the final sidebar structure
-$sidebarStructure = [
-    'sidebar' => $sidebarItems
-];
+$sidebarStructure = $sidebarItems;
 
 // Convert to JSON
-$jsonOutput = json_encode($sidebarStructure, JSON_PRETTY_PRINT);
+$jsonOutput = json_encode(
+    value: $sidebarStructure,
+    flags: JSON_PRETTY_PRINT
+);
 
 // Output for debugging
 var_dump($jsonOutput);
 
 // Write to file
-$filesystem->write('sidebar.json', $jsonOutput);
-
+file_put_contents(__DIR__.'/.vitepress/sidebar.json', $jsonOutput);
 
 function removeIndex(string $title): string
 {
