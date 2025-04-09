@@ -17,6 +17,7 @@ $listing = $filesystem->listContents('.', true)
     ->filter(fn (StorageAttributes $attributes) => str_ends_with($attributes->path(), '.md'))
     ->filter(fn (StorageAttributes $attributes) => ! str_starts_with($attributes->path(), '_'))
     ->filter(fn (StorageAttributes $attributes) => ! str_contains($attributes->path(), 'SUMMARY'))
+    ->filter(fn (StorageAttributes $attributes) => ! str_ends_with($attributes->path(), 'index.md'))
     ->sortByPath();
 
 // var_dump($listing->toArray());
@@ -27,7 +28,7 @@ $sidebarItems = [];
 // Add the first item - Condorcet Presentation
 $sidebarItems[] = [
     'text' => 'Condorcet - Presentation',
-    'link' => '/GithubReadme'
+    'link' => '/gh/Readme'
 ];
 
 $currentSection = null;
@@ -97,7 +98,7 @@ foreach ($listing as $file) {
 // Add the additional static items
 $sidebarItems[] = [
     'text' => 'Voting Methods',
-    'link' => '/VotingMethods'
+    'link' => '/gh/VotingMethods'
 ];
 
 $sidebarItems[] = [
@@ -107,7 +108,7 @@ $sidebarItems[] = [
 
 $sidebarItems[] = [
     'text' => 'Changelog',
-    'link' => '/Changelog'
+    'link' => '/gh/Changelog'
 ];
 
 // Create the final sidebar structure

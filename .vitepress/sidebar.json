@@ -1,7 +1,7 @@
 [
     {
         "text": "Condorcet - Presentation",
-        "link": "\/GithubReadme"
+        "link": "\/gh\/Readme"
     },
     {
         "text": "As Command Line Application",
@@ -174,12 +174,8 @@
         ]
     },
     {
-        "text": "https:\/\/vitepress.dev\/reference\/default-theme-home-page",
-        "link": "\/book\/index"
-    },
-    {
         "text": "Voting Methods",
-        "link": "\/VotingMethods"
+        "link": "\/gh\/VotingMethods"
     },
     {
         "text": "API References",
@@ -187,6 +183,6 @@
     },
     {
         "text": "Changelog",
-        "link": "\/Changelog"
+        "link": "\/gh\/Changelog"
     }
 ]
