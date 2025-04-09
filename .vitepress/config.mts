@@ -6,16 +6,18 @@ export default defineConfig({
   title: 'Condorcet Documentation',
   description: 'Condorcet documentation book',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/book/' },
-      { text: 'Examples', link: '/book/markdown-examples' }
+      { text: 'Presentation', link: '/gh/Readme' },
+      { text: 'Documentation Book', link: '/gh/Readme' },
+      { text: 'API References', link: 'ApiReferences' },
+      { text: 'Voting Methods', link: '/gh/VotingMethods' },
+      { text: 'Tests', link: 'https://github.com/julien-boudry/Condorcet/tree/master/tests' },
     ],
 
     sidebar: sidebar,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/julien-boudry/Condorcet' }
     ]
   }
 })
