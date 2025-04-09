@@ -2,6 +2,6 @@
 /vendor/
 .DS_Store
 composer.lock
-.vitepress/dist
-.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/cache
 node_modules/

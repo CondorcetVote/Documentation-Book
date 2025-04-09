@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 const LIST_SYMBOL = '*';
 
 
-$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/book');
+$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs/book');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
 $listing = $filesystem->listContents('.', true)
@@ -36,7 +36,7 @@ $lastPath = false;
 $currentSectionIndex = -1;
 
 foreach ($listing as $file) {
-    $fileContent = file_get_contents(__DIR__.'/book/'.$file->path());
+    $fileContent = file_get_contents(__DIR__.'/docs/book/'.$file->path());
 
     $re = '/#(.*)\n/m';
 
@@ -124,7 +124,7 @@ $jsonOutput = json_encode(
 var_dump($jsonOutput);
 
 // Write to file
-file_put_contents(__DIR__.'/.vitepress/sidebar.json', $jsonOutput);
+file_put_contents(__DIR__.'/docs/.vitepress/sidebar.json', $jsonOutput);
 
 function removeIndex(string $title): string
 {
