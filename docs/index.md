@@ -6,6 +6,9 @@ hero:
   name: "Condorcet Documentation"
   text: "Condorcet documentation book"
   tagline: My great project tagline
+  image:
+    src: /condorcet-logo-without-text.png
+    alt: Condorcet logo
   actions:
     - theme: brand
       text: Get Started
