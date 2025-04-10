@@ -3,9 +3,29 @@ import sidebar from './sidebar.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Condorcet Documentation',
-  description: 'Condorcet documentation book',
+  title: 'Condorcet',
+  description: 'Condorcet PHP documentation book',
+
+  cleanUrls: true,
+
+  sitemap: {
+    hostname: 'https://condorcet.io'
+  },
+
+  head: [
+    ['link', { rel: 'icon', type: 'image/avif', href: '/condorcet-logo-without-text.avif' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/condorcet-logo-without-text.png' }],
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:locale', content: 'en' }],
+    ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
+    ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.png' }]
+  ],
+
   themeConfig: {
+    search: {provider: 'local'},
+
+    logo: '/condorcet-logo-without-text.avif',
+
     nav: [
       { text: 'Presentation', link: '/gh/Readme' },
       { text: 'Documentation Book', link: '/gh/Readme' },
@@ -15,6 +35,7 @@ export default defineConfig({
     ],
 
     sidebar: sidebar,
+    outline: [2,4],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/julien-boudry/Condorcet' }
