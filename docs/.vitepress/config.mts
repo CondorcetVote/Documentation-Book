@@ -27,6 +27,8 @@ export default defineConfig({
   ignoreDeadLinks: [
     /\/Docs\//,
     /\/api-reference\//,
+    /\/README/,
+    /\.\/Tests/,
   ],
 
   themeConfig: {
@@ -35,7 +37,7 @@ export default defineConfig({
     logo: '/condorcet-logo-without-text.avif',
 
     nav: [
-      { text: 'Presentation', link: '/gh/Readme' },
+      { text: 'Presentation', link: 'https://github.com/julien-boudry/Condorcet/blob/master/README.md' },
       { text: 'Get Started', link: '/book/1.Start.md' },
       { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },

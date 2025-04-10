@@ -29,7 +29,7 @@ $sidebarItems[] = [
 ];
 $sidebarItems[] = [
     'text' => 'Complete Readme',
-    'link' => '/gh/Readme'
+    'link' => 'https://github.com/julien-boudry/Condorcet/blob/master/README.md'
 ];
 
 // Store file information for processing
