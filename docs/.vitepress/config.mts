@@ -26,7 +26,7 @@ export default defineConfig({
 
   ignoreDeadLinks: [
     /\/Docs\//,
-    /\/api-reference\//,
+    // /\/api-reference\//,
     /\/README/,
     /\.\/Tests/,
   ],
