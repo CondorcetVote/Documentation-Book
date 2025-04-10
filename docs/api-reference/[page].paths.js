@@ -1,6 +1,6 @@
 export default {
   async paths() {
-    const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/julien-boudry/Condorcet/refs/heads/master/Docs/ApiReferences/'
+    const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/julien-boudry/Condorcet/refs/heads/dev-4.8/Docs/ApiReferences/'
 
     const response = await fetch(GITHUB_BASE_URL + 'README.md');
     const markdownContent = await response.text();
