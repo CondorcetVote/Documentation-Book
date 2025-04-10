@@ -8,7 +8,6 @@ require_once 'vendor/autoload.php';
 
 const LIST_SYMBOL = '*';
 
-
 $adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs/book');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
@@ -20,8 +19,6 @@ $listing = $filesystem->listContents('.', true)
     ->filter(fn (StorageAttributes $attributes) => ! str_ends_with($attributes->path(), 'index.md'))
     ->sortByPath();
 
-// var_dump($listing->toArray());
-
 // Create an array structure for the sidebar
 $sidebarItems = [];
 
@@ -31,29 +28,22 @@ $sidebarItems[] = [
     'link' => '/gh/Readme'
 ];
 
-$currentSection = null;
-$lastPath = false;
-$currentSectionIndex = -1;
+// Store file information for processing
+$fileEntries = [];
 
+// First pass: collect all file information
 foreach ($listing as $file) {
     $fileContent = file_get_contents(__DIR__.'/docs/book/'.$file->path());
 
     $re = '/#(.*)\n/m';
-
     preg_match_all($re, $fileContent, $matches, PREG_SET_ORDER, 0);
 
-    // Print the entire match result
-    // var_dump($matches);
     $firstMatch = reset($matches);
     $title = is_array($firstMatch) ? $firstMatch[1] : false;
 
     if (is_string($title)) {
-        $path = explode(DIRECTORY_SEPARATOR, $file->path());
-        $fileName = array_pop($path);
-        $folder = end($path);
-
-        $depth = count($path);
-        $depth < 0 && $depth = 0;
+        $pathParts = explode(DIRECTORY_SEPARATOR, $file->path());
+        $fileName = array_pop($pathParts);
 
         $title = removeIndex(trim($title));
 
@@ -61,38 +51,86 @@ foreach ($listing as $file) {
         $thePath = 'book/'.$thePath;
         $link = str_replace('.md', '', '/'.$thePath);
 
-        if ($folder !== $lastPath && is_string($folder)) {
-            $lastPath = $folder;
-            $pathTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $folder);
-            $pathTitle = removeIndex($pathTitle);
-
-            // Create a new section
-            $sidebarItems[] = [
-                'text' => $pathTitle,
-                'items' => []
-            ];
-
-            // Store the index of the current section
-            $currentSectionIndex = count($sidebarItems) - 1;
-        }
-
-        // Add item to the current section or directly to sidebar if no section
-        if ($currentSectionIndex >= 0 && $depth > 0) {
-            // Add directly to the sidebar items array using the index
-            $sidebarItems[$currentSectionIndex]['items'][] = [
-                'text' => $title,
-                'link' => $link
-            ];
-        } elseif ($depth === 0 && $title !== 'Start') {
-            // Top level items
-            $sidebarItems[] = [
-                'text' => $title,
-                'link' => $link
-            ];
-        }
+        $fileEntries[] = [
+            'path' => $pathParts,
+            'title' => $title,
+            'link' => $link,
+            'fullPath' => $file->path()
+        ];
     } else {
         throw new Exception($file->path().' has no title');
     }
+}
+
+// Build a nested structure based on directory hierarchy
+$nestedSections = [];
+
+// Process top-level sections first
+foreach ($fileEntries as $entry) {
+    if (count($entry['path']) === 0 && $entry['title'] !== 'Start') {
+        // Top-level items
+        $sidebarItems[] = [
+            'text' => $entry['title'],
+            'link' => $entry['link']
+        ];
+    } else if (count($entry['path']) > 0) {
+        // Group by first level directory
+        $mainSection = $entry['path'][0];
+
+        if (!isset($nestedSections[$mainSection])) {
+            $mainSectionTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $mainSection);
+            $mainSectionTitle = removeIndex($mainSectionTitle);
+
+            $nestedSections[$mainSection] = [
+                'text' => $mainSectionTitle,
+                'items' => [],
+                'subSections' => []
+            ];
+        }
+
+        // Handle different nesting levels
+        if (count($entry['path']) === 1) {
+            // Direct children of main section
+            $nestedSections[$mainSection]['items'][] = [
+                'text' => $entry['title'],
+                'link' => $entry['link']
+            ];
+        } else if (count($entry['path']) > 1) {
+            // Subsection items
+            $subSection = $entry['path'][1];
+
+            if (!isset($nestedSections[$mainSection]['subSections'][$subSection])) {
+                $subSectionTitle = preg_replace('/([a-z])([A-Z])/m', '$1 $2', $subSection);
+                $subSectionTitle = removeIndex($subSectionTitle);
+
+                $nestedSections[$mainSection]['subSections'][$subSection] = [
+                    'text' => $subSectionTitle,
+                    'collapsed' => true,
+                    'items' => []
+                ];
+            }
+
+            $nestedSections[$mainSection]['subSections'][$subSection]['items'][] = [
+                'text' => $entry['title'],
+                'link' => $entry['link']
+            ];
+        }
+    }
+}
+
+// Build the final structure
+foreach ($nestedSections as $section) {
+    $sectionEntry = [
+        'text' => $section['text'],
+        'items' => $section['items']
+    ];
+
+    // Add subsections if they exist
+    foreach ($section['subSections'] as $subSection) {
+        $sectionEntry['items'][] = $subSection;
+    }
+
+    $sidebarItems[] = $sectionEntry;
 }
 
 // Add the additional static items
@@ -111,17 +149,11 @@ $sidebarItems[] = [
     'link' => '/gh/Changelog'
 ];
 
-// Create the final sidebar structure
-$sidebarStructure = $sidebarItems;
-
 // Convert to JSON
 $jsonOutput = json_encode(
-    value: $sidebarStructure,
+    value: $sidebarItems,
     flags: JSON_PRETTY_PRINT
 );
-
-// Output for debugging
-var_dump($jsonOutput);
 
 // Write to file
 file_put_contents(__DIR__.'/docs/.vitepress/sidebar.json', $jsonOutput);
