@@ -9,7 +9,7 @@ export default defineConfig({
     nav: [
       { text: 'Presentation', link: '/gh/Readme' },
       { text: 'Documentation Book', link: '/gh/Readme' },
-      { text: 'API References', link: 'ApiReferences' },
+      { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },
       { text: 'Tests', link: 'https://github.com/julien-boudry/Condorcet/tree/master/tests' },
     ],
