@@ -3,6 +3,7 @@ import sidebar from './sidebar.json'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'en-CA',
   title: 'Condorcet',
   description: 'Condorcet PHP documentation book',
 
@@ -12,11 +13,13 @@ export default defineConfig({
     hostname: 'https://condorcet.io'
   },
 
+  lastUpdated: true,
+
   head: [
     ['link', { rel: 'icon', type: 'image/avif', href: '/condorcet-logo-without-text.avif' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/condorcet-logo-without-text.png' }],
     ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:locale', content: 'en' }],
+    ['meta', { name: 'og:locale', content: 'en_CA' }],
     ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
     ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.png' }]
   ],
@@ -49,8 +52,29 @@ export default defineConfig({
       copyright: 'Copyright © 2014-present Julien Boudry'
     },
 
+    lastUpdated: {
+      text: 'Last updated (UTC)',
+      formatOptions: {
+        forceLocale: true,
+        dateStyle: 'long',
+        timeStyle: 'medium',
+        timeZone: 'UTC',
+        hour12: false,
+      }
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/julien-boudry/Condorcet' }
-    ]
+    ],
+
+    editLink: {
+      pattern: ({ filePath }) => {
+        if (filePath.startsWith('book/')) {
+          return `https://github.com/CondorcetVote/Documentation-Book/edit/master/docs/${filePath}`
+        } else {
+          return `https://github.com/julien-boudry/Condorcet/`
+        }
+      }
+    }
   }
 })
