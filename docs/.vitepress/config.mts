@@ -32,6 +32,13 @@ export default defineConfig({
       { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },
       { text: 'Tests', link: 'https://github.com/julien-boudry/Condorcet/tree/master/tests' },
+      {
+        text: 'v4.0',
+        items: [
+          { text: 'Changelog', link: '/gh/Changelog' },
+          { text: 'Donations', link: 'https://github.com/sponsors/julien-boudry' },
+        ]
+      },
     ],
 
     sidebar: sidebar,
