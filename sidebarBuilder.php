@@ -24,7 +24,11 @@ $sidebarItems = [];
 
 // Add the first item - Condorcet Presentation
 $sidebarItems[] = [
-    'text' => 'Condorcet - Presentation',
+    'text' => 'Get started',
+    'link' => '/book/1.Start'
+];
+$sidebarItems[] = [
+    'text' => 'Complete Readme',
     'link' => '/gh/Readme'
 ];
 

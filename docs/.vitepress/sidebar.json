@@ -1,6 +1,10 @@
 [
     {
-        "text": "Condorcet - Presentation",
+        "text": "Get started",
+        "link": "\/book\/1.Start"
+    },
+    {
+        "text": "Complete Readme",
         "link": "\/gh\/Readme"
     },
     {

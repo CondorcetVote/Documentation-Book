@@ -28,7 +28,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Presentation', link: '/gh/Readme' },
-      { text: 'Documentation Book', link: '/gh/Readme' },
+      { text: 'Get Started', link: '/book/1.Start.md' },
       { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },
       { text: 'Tests', link: 'https://github.com/julien-boudry/Condorcet/tree/master/tests' },
@@ -36,6 +36,11 @@ export default defineConfig({
 
     sidebar: sidebar,
     outline: [2,4],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2014-present Julien Boudry'
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/julien-boudry/Condorcet' }
