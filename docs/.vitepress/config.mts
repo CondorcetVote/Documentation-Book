@@ -24,6 +24,11 @@ export default defineConfig({
     ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.png' }]
   ],
 
+  ignoreDeadLinks: [
+    /\/Docs\//,
+    /\/api-reference\//,
+  ],
+
   themeConfig: {
     search: {provider: 'local'},
 
