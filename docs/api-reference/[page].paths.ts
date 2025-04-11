@@ -9,11 +9,11 @@ export default {
 
     // Extract links from the markdown content - capture just the filename without extension
     const linkRegex = /\[.*?\]\(\/Docs\/ApiReferences\/(.+?)\.md\)/g;
-    const links = [];
+    const apiReferenceLinks: { pagePath: string; ghPath: string }[] = [];
     let match;
 
     while ((match = linkRegex.exec(markdownContent)) !== null) {
-      links.push({
+      apiReferenceLinks.push({
         pagePath: match[1].replaceAll('%20', ' '),
         ghPath: API_REFERENCE_BASE_URL + match[1] + '.md'
     }); // This now captures only the filename part without extension
@@ -23,7 +23,7 @@ export default {
 
     // Map links to the expected format
     const dynamicPaths = await Promise.all(
-      links.map(async (link) => ({
+      apiReferenceLinks.map(async (link) => ({
         params: { page: link.pagePath },
         content: await (await fetch(link.ghPath)).text()
       }))
