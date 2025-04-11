@@ -144,8 +144,8 @@ $sidebarItems[] = [
 ];
 
 $sidebarItems[] = [
-    'text' => 'API References',
-    'link' => '/ApiReferences'
+    'text' => 'API Reference',
+    'link' => '/api-reference/Index'
 ];
 
 $sidebarItems[] = [

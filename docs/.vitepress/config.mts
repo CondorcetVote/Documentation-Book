@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import sidebar from './sidebar.json'
+import { CONDORCET_BASE_REPO_WEB, CONDORCET_TARGET_VERSION } from './globals.ts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -37,13 +38,13 @@ export default defineConfig({
     logo: '/condorcet-logo-without-text.avif',
 
     nav: [
-      { text: 'Presentation', link: 'https://github.com/julien-boudry/Condorcet/blob/master/README.md' },
+      { text: 'Presentation', link: CONDORCET_BASE_REPO_WEB + '/blob/master/README.md' },
       { text: 'Get Started', link: '/book/1.Start.md' },
       { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },
-      { text: 'Tests', link: 'https://github.com/julien-boudry/Condorcet/tree/master/tests' },
+      { text: 'Tests', link: CONDORCET_BASE_REPO_WEB + '/tree/master/tests' },
       {
-        text: 'v4.0',
+        text: CONDORCET_TARGET_VERSION,
         items: [
           { text: 'Changelog', link: '/gh/Changelog' },
           { text: 'Donations', link: 'https://github.com/sponsors/julien-boudry' },
@@ -71,7 +72,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/julien-boudry/Condorcet' }
+      { icon: 'github', link: CONDORCET_BASE_REPO_WEB }
     ],
 
     editLink: {
@@ -79,7 +80,7 @@ export default defineConfig({
         if (filePath.startsWith('book/')) {
           return `https://github.com/CondorcetVote/Documentation-Book/edit/master/docs/${filePath}`
         } else {
-          return `https://github.com/julien-boudry/Condorcet/`
+          return globalThis.CONDORCET_BASE_REPO_WEB;
         }
       }
     }

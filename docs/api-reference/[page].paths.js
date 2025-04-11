@@ -1,8 +1,10 @@
+import { CONDORCET_BASE_REPO_RAW } from '../.vitepress/globals';
+
 export default {
   async paths() {
-    const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/julien-boudry/Condorcet/refs/heads/dev-4.8/Docs/ApiReferences/'
+    const API_REFERENCE_BASE_URL = CONDORCET_BASE_REPO_RAW + 'Docs/ApiReferences/'
 
-    const response = await fetch(GITHUB_BASE_URL + 'README.md');
+    const response = await fetch(API_REFERENCE_BASE_URL + 'README.md');
     const markdownContent = await response.text();
 
     // Extract links from the markdown content - capture just the filename without extension
@@ -13,7 +15,7 @@ export default {
     while ((match = linkRegex.exec(markdownContent)) !== null) {
       links.push({
         pagePath: match[1].replaceAll('%20', ' '),
-        ghPath: GITHUB_BASE_URL + match[1] + '.md'
+        ghPath: API_REFERENCE_BASE_URL + match[1] + '.md'
     }); // This now captures only the filename part without extension
     }
 
@@ -30,7 +32,7 @@ export default {
     // Static path
     const staticPath = {
       params: { page: 'Index' },
-      content: await (await fetch(GITHUB_BASE_URL + 'README.md')).text()
+      content: await (await fetch(API_REFERENCE_BASE_URL + 'README.md')).text()
     };
 
     const pageList = [staticPath, ...dynamicPaths].map((page) => {
