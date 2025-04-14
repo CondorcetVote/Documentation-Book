@@ -32,7 +32,7 @@ export default {
     // Static path
     const staticPath = {
       params: { page: 'Index' },
-      content: await (await fetch(API_REFERENCE_BASE_URL + 'README.md')).text()
+      content: (await (await fetch(API_REFERENCE_BASE_URL + 'README.md')).text()).replace('Docs/', '../gh/')
     };
 
     const pageList = [staticPath, ...dynamicPaths].map((page) => {
