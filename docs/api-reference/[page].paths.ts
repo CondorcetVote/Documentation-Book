@@ -2,13 +2,13 @@ import { CONDORCET_BASE_REPO_RAW } from '../.vitepress/globals';
 
 export default {
   async paths() {
-    const API_REFERENCE_BASE_URL = CONDORCET_BASE_REPO_RAW + 'Docs/ApiReferences/'
+    const API_REFERENCE_BASE_URL = CONDORCET_BASE_REPO_RAW + 'Docs/api-reference/'
 
     const response = await fetch(API_REFERENCE_BASE_URL + 'README.md');
     const markdownContent = await response.text();
 
     // Extract links from the markdown content - capture just the filename without extension
-    const linkRegex = /\[.*?\]\(\/Docs\/ApiReferences\/(.+?)\.md\)/g;
+    const linkRegex = /\[.*?\]\(\/Docs\/api-reference\/(.+?)\.md\)/g;
     const apiReferenceLinks: { pagePath: string; ghPath: string }[] = [];
     let match;
 
@@ -36,7 +36,7 @@ export default {
     };
 
     const pageList = [staticPath, ...dynamicPaths].map((page) => {
-      page.content = page.content.replaceAll('/Docs/ApiReferences/', '/api-reference/');
+      page.content = page.content.replaceAll('/Docs/api-reference/', '/api-reference/');
 
       return page;
     });
