@@ -1,4 +1,4 @@
-import { CONDORCET_BASE_REPO_RAW } from '../.vitepress/globals';
+import { CONDORCET_BASE_REPO_RAW, CONDORCET_BASE_REPO_TREE } from '../.vitepress/globals';
 
 export default {
   async paths() {
@@ -32,11 +32,16 @@ export default {
     // Static path
     const staticPath = {
       params: { page: 'Index' },
-      content: (await (await fetch(API_REFERENCE_BASE_URL + 'README.md')).text()).replace('Docs/', '../gh/')
+      content: (await (await fetch(API_REFERENCE_BASE_URL + 'README.md')).text())
     };
 
     const pageList = [staticPath, ...dynamicPaths].map((page) => {
-      page.content = page.content.replaceAll('/Docs/api-reference/', '/api-reference/');
+      page.content = page.content
+                      .replaceAll('/Docs/api-reference/', '/api-reference/')
+                      .replaceAll('../../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
+                      .replaceAll('../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
+                      .replaceAll('/Docs/VotingMethods.md', '/gh/VotingMethods')
+                    ;
 
       return page;
     });

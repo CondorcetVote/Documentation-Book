@@ -4,3 +4,4 @@ export const CONDORCET_TARGET_VERSION = '5.0';
 export const CONDORCET_TARGET_BRANCH = 'dev-' + CONDORCET_TARGET_VERSION;
 
 export const CONDORCET_BASE_REPO_RAW = 'https://raw.githubusercontent.com/' + REPO_PATH + '/refs/heads/' + CONDORCET_TARGET_BRANCH + '/';
+export const CONDORCET_BASE_REPO_TREE = CONDORCET_BASE_REPO_WEB + '/tree/' + CONDORCET_TARGET_BRANCH + '/';

@@ -9,7 +9,7 @@ export default {
       // },
       {
         params: { page: 'VotingMethods' },
-        content: (await (await fetch(CONDORCET_BASE_REPO_RAW + 'Docs/VotingMethods.md')).text()).replaceAll('Docs/api-reference/README', '../api-reference/Index/')
+        content: (await (await fetch(CONDORCET_BASE_REPO_RAW + 'Docs/VotingMethods.md')).text()).replaceAll('Docs/api-reference/README.md', '../api-reference/Index')
       },
       {
         params: { page: 'Changelog' },
