@@ -17,7 +17,7 @@ The documentation source is located in the `docs` folder. To contribute:
 
 ## Development
 
-A development container is available to facilitate working on doc website.
+A development container is available to facilitate working on the documentation website.
 It contains all the necessary tools to generate and preview the documentation locally.
 
 ## Project Structure
