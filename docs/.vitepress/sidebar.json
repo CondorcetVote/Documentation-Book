@@ -1,15 +1,11 @@
 [
     {
-        "text": "Get started",
-        "link": "\/book\/1.Start"
-    },
-    {
         "text": "Complete Readme",
         "link": "https:\/\/github.com\/julien-boudry\/Condorcet\/blob\/master\/README.md"
     },
     {
         "text": "Get started",
-        "link": "\/book\/README"
+        "link": "\/book\/1.Start"
     },
     {
         "text": "As Command Line Application",

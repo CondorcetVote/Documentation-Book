@@ -24,10 +24,6 @@ $sidebarItems = [];
 
 // Add the first item - Condorcet Presentation
 $sidebarItems[] = [
-    'text' => 'Get started',
-    'link' => '/book/1.Start'
-];
-$sidebarItems[] = [
     'text' => 'Complete Readme',
     'link' => 'https://github.com/julien-boudry/Condorcet/blob/master/README.md'
 ];
@@ -51,7 +47,7 @@ foreach ($listing as $file) {
 
         $title = removeIndex(trim($title));
 
-        $thePath = !str_contains($file->path(), '1.Start') ? $file->path() : 'README';
+        $thePath = $file->path();
         $thePath = 'book/'.$thePath;
         $link = str_replace('.md', '', '/'.$thePath);
 
