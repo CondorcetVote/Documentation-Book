@@ -15,6 +15,13 @@ The documentation source is located in the `docs` folder. To contribute:
 2. Make your changes to the markdown files in the `docs` folder
 3. Submit your changes via a pull request
 
+## Run
+```shell
+npm run docs:dev
+npm run docs:dev:clear
+npm run docs:build
+```
+
 ## Development
 
 A development container is available to facilitate working on the documentation website.
