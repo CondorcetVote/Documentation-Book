@@ -1,1 +1,4 @@
+---
+editLink: false
+---
 <!-- @content -->
