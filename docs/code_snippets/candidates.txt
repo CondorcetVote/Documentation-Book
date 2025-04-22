@@ -1,0 +1,4 @@
+CandidateA
+CandidateB # You can add comments
+CandidateC ; CandidateD # Or in the same line separated by ; with or without space (will be trimmed)
+CandidateE
