@@ -1,0 +1,1 @@
+$election->removeVote($voteObject);
