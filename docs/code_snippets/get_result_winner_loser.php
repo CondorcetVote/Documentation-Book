@@ -1,4 +1,4 @@
-$result = $election->getResult('Schulze');
+$result = $electionWithVotes->getResult('Schulze');
 
 // All those below return null or the candidate object
 $result->Winner;

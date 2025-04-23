@@ -1,2 +1,4 @@
-$election->parseVotes('data/vote42.txt'); // Path to text file. Absolute or relative.
-$election->parseVotes($my_big_string); // Just my big string.
+$election->parseCandidates('A;B;C;D');
+
+$election->parseVotes('votes.txt'); // Path to text file. Absolute or relative.
+$election->parseVotes($myVotesToParse); // Just a vote string

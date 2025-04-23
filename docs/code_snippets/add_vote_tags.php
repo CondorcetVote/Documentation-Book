@@ -1,3 +1,9 @@
+use CondorcetPHP\Condorcet\Vote;
+
+$election->parseCandidates('Bartok;Lully');
+
+$vote = 'Lully > Bartok';
+
 // Directly with the addVote method (will add it to the Vote object)
 $election->addVote($vote, 'Baroque'); // Please note that a single tag is always created for each vote.
 $election->addVote($vote, 'Baroque, Modern'); // You can also add multiple tags, separated by commas.

@@ -1,14 +1,41 @@
 <?php declare(strict_types=1);
 
-use CondorcetPHP\Condorcet\Election;
+namespace DriverNamespace;
+
+use CondorcetPHP\Condorcet\DataManager\DataHandlerDrivers\PdoDriver\PdoHandlerDriver;
 
 require_once __DIR__ . '/vendor/autoload.php';
+
+class NewHandlerDriver extends PdoHandlerDriver {
+    public function __construct() {
+        $sqlitePath = 'bdd.sqlite';
+
+        if (file_exists($sqlitePath)) {
+            unlink($sqlitePath);
+        }
+
+        parent::__construct(new \PDO('sqlite:'.$sqlitePath), true);
+    }
+}
+
+
+namespace SnippetTester;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+
+use CondorcetPHP\Condorcet\Condorcet;
+use CondorcetPHP\Condorcet\Election;
+use DirectoryIterator;
+use ReflectionClass;
+use Throwable;
 
 // Directory path for code snippets
 const SNIPPETS_DIR = __DIR__ . '/docs/code_snippets';
 
 // Init var
-$myCandidateFile = file_get_contents(SNIPPETS_DIR . '/candidates.txt');
+$myCandidatesToParse = file_get_contents(SNIPPETS_DIR . '/candidates.txt');
+$myVotesToParse = file_get_contents(SNIPPETS_DIR . '/votes.txt');
 
 
 // Get all PHP files from the code_snippets directory
@@ -24,31 +51,46 @@ if (is_dir(SNIPPETS_DIR)) {
     }
 }
 
-// Display the list of PHP files found
-foreach ($phpFiles as $file) {
-    echo "\nTesting file: " . basename($file) . PHP_EOL;
+// Init an election
+$electionModel = new Election;
+$electionWithVotesModel = new Election;
+$electionWithVotesModel->parseCandidates('A;B;C');
+$electionWithVotesModel->parseVotes('A > B > C * 3');
 
+
+// Display the list of PHP files found
+foreach ($phpFiles as $file)
+{
     try {
         // Read the file content
         $code = file_get_contents($file);
+        $code = str_replace("require '", "require '" . SNIPPETS_DIR . DIRECTORY_SEPARATOR, $code);
 
         // Remove the opening PHP tag if it exists
         $code = preg_replace('/^<\?php\s+/', '', $code);
 
         // Replace input
         $code = str_replace('candidates.txt', SNIPPETS_DIR . '/candidates.txt', $code);
+        $code = str_replace('votes.txt', SNIPPETS_DIR . '/votes.txt', $code);
+        $code = str_replace('debian_leader2020_tally.txt', SNIPPETS_DIR . '/debian_leader2020_tally.txt', $code);
+        $code = str_replace('election.cef', SNIPPETS_DIR . '/election.cef', $code);
+        $code = str_replace('david_hill_format.hil', SNIPPETS_DIR . '/david_hill_format.hil', $code);
 
         // Init common var
-        $election = new Election;
-        $election1 = clone $election;
-        $election2 = clone $election;
+        $election = clone $electionModel;
+        $election1 = clone $electionModel;
+        $election2 = clone $electionModel;
+        $electionWithVotes = clone $electionWithVotesModel;
 
         // Evaluate the code
         eval($code);
     } catch (Throwable $e) {
+        echo "\nTesting file: " . basename($file) . PHP_EOL;
         echo "Error: " . $e->getMessage() . PHP_EOL;
+        // throw $e;
+    } finally {
+        // Set back to false for next test
+        Condorcet::$UseTimer = new ReflectionClass(Condorcet::class)->getProperty('UseTimer')->getDefaultValue();
+        $candidates = [];
     }
-
-    echo "------------------------" . PHP_EOL;
 }
-

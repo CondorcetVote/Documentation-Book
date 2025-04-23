@@ -1,4 +1,8 @@
+use CondorcetPHP\Condorcet\Election;
 use CondorcetPHP\Condorcet\Vote;
+
+$election = new Election;
+$election->parseCandidates('A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q;R;S;T');
 
 $vote1 = new Vote('A>B=C=H>G=T>Q');
 $vote2 = new Vote([
@@ -9,8 +13,8 @@ $vote2 = new Vote([
 ]);
 
 $vote3 = new Vote([
-    1 => $CandidateA, // Condorcet\Candidate
-    2 => $election->getCandidatesList()[array_search('B', $election->getCandidatesList(), false)],
+    1 => 'A',
+    2 => $election->getCandidateObjectFromName('B'),
     3 => 'C' // Condorcet will do the job for you.
 ]);
 

@@ -1,9 +1,10 @@
 use \CondorcetPHP\Condorcet\Algo\StatsVerbosity;
+use CondorcetPHP\Condorcet\Election;
 
-$election->getStatsVerbosity(); // StatsVerbosity::STD
+$electionWithVotes->statsVerbosity; // StatsVerbosity::STD
 
-$election->setStatsVerbosity(StatsVerbosity::FULL);
-$result = $election->getResult('Kemeny Young');
+$electionWithVotes->setStatsVerbosity(StatsVerbosity::FULL);
+$result = $electionWithVotes->getResult('Kemeny Young');
 
-$election->getStatsVerbosity(); // StatsVerbosity::FULL
+$electionWithVotes->statsVerbosity; // StatsVerbosity::FULL
 $result->statsVerbosity; // StatsVerbosity::FULL

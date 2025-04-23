@@ -1,7 +1,11 @@
+use CondorcetPHP\Condorcet\Candidate;
 use CondorcetPHP\Condorcet\Tools\Randomizers\VoteRandomizer;
 
-$voteRandomizer = new VoteRandomizer([$candidate1,$candidate2,$candidate3,$candidate4,$candidate5,$candidate6]);
+for ($i = 1; $i <= 6; $i++) {
+    $candidates[] = new Candidate("Candidate $i");
+}
 
+$voteRandomizer = new VoteRandomizer($candidates);
 
 // If not null, each vote will rank maximum of 4 candidates but a minimum of 3.
 $voteRandomizer->maxCandidatesRanked = 4;

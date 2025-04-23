@@ -1,14 +1,14 @@
-$winner = $election->getCondorcetWinner();
-$loser = $election->getCondorcetLoser();
+$winner = $electionWithVotes->getCondorcetWinner();
+$loser = $electionWithVotes->getCondorcetLoser();
 
 if ($winner !== null) {
-    echo 'My winner is ' . $winner->getName();
+    $winner = $winner->name;
 } else {
-    echo 'There is no winner. Cause of Condorcet paradox.';
+    $winner = 'There is no winner. Cause of Condorcet paradox.';
 }
 
 if ($loser !== null) {
-    echo 'My loser is ' . (string) $loser ; // Little tip: \CondorcetPHP\Condorcet\Candidate implements the __toString() magic method.
+    $loser = 'My loser is ' . (string) $loser ; // Little tip: \CondorcetPHP\Condorcet\Candidate implements the __toString() magic method.
 } else {
-    echo 'There is no loser. Cause of Condorcet paradox.';
+    $loser = 'There is no loser. Cause of Condorcet paradox.';
 }

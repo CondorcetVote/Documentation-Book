@@ -1,22 +1,29 @@
 <?php
 require 'play_with_candidates.php';
 
+$myElection1->parseVotes('strangeVote || Koechlin > Debussy * 12');
+
 $myElection1->getVotesList(); // Returns an array of all votes as object.
 
 // How many Vote with tag "strangeVote" ?
-$myElection1->countVotes('strangeVote'); // Return 12 (int)
+assert($myElection1->countVotes('strangeVote') === 12); // true
 
 // Return this 12 votes !
 $myElection1->getVotesList('strangeVote');
 // Or without this tags and get the first of them
-$oneVoteToDelete = $myElection1->getVotesList('strangeVote', false)[0] ;
+$voteWithoutTag = $myElection1->addVote('Caplet = Ligeti');
+$votesListWithoutStrangeTag = $myElection1->getVotesList('strangeVote', false);
+$oneVoteToDelete = reset($votesListWithoutStrangeTag);
+assert($voteWithoutTag === $oneVoteToDelete); // true
+
 
 // Vote objet
-$myVote111->getRanking(); // Return the current ranking
-$myVote111->getContextualRanking($myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
+$oneVote = $myElection1->getVotesList('strangeVote')[0]; // Return the current ranking
+$oneVote->getRanking(); // Return the current ranking
+$oneVote->getContextualRanking($myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
 
 // Change the vote
-$myVote111->setRanking([
+$oneVote->setRanking([
                 $myLutoCandidate,
                 $myDebussyCandidate,
                 $myElection1->getCandidateObjectFromName('Caplet'),
@@ -25,12 +32,12 @@ $myVote111->setRanking([
                 // Note that when a Vote object is linked to one or more elections, you can can only change his ranking by passing Candidate object.
 
 // Check the vote history
-$myVote111->getHistory();
+$oneVote->rankingHistory; // Return the full history of this vote ranking
 
 // Delete Votes
 
 // Delete a specific vote object
-$myElection1->removeVote( $oneVoteToDelete );
+$myElection1->removeVote($oneVoteToDelete);
 
 // Delete all vote with tag "strangeVote" or "frenchies"
 $myElection1->removeVotesByTags( ['strangeVote','frenchies'] );

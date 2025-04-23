@@ -1,1 +1,1 @@
-$election->getResult()->stats;
+$electionWithVotes->getResult()->stats;

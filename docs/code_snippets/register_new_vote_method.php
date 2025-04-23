@@ -1,3 +1,12 @@
-use CondorcetPHP\Condorcet\Condorcet;
+<?php
+namespace MyNamespace {
+    use CondorcetPHP\Condorcet\Algo\Methods\Schulze\SchulzeWinning;
+    use CondorcetPHP\Condorcet\Condorcet;
 
-Condorcet::addMethod('MyNameSpace\AlgorithmName') ;
+    class NewVotingMethod extends SchulzeWinning
+    {
+        const array METHOD_NAME = ['VotingMethodName', 'VotingMethodNameAlias'];
+    }
+
+    Condorcet::addMethod(NewVotingMethod::class);
+}

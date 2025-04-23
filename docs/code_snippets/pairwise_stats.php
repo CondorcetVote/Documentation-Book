@@ -6,8 +6,6 @@ $election->parseCandidates('A;B;C');
 $election->addVote('A>B>C');
 
 $explicitPairwise = $election->getExplicitPairwise(); // Equivalent to $election->getPairwise()->getExplicitPairwise();
-
-print_r($explicitPairwise);
 // Return for each candidate, the result (win/null/lose) face to the others
     [
         'A' => [

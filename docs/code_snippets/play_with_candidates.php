@@ -3,8 +3,8 @@ use CondorcetPHP\Condorcet\Election;
 use CondorcetPHP\Condorcet\Candidate;
 
 // Create Election
-$myElection1 = new Election ();
-$myElection2 = new Election ();
+$myElection1 = new Election;
+$myElection2 = new Election;
 
 // Manage Candidate
 

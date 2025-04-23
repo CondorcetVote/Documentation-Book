@@ -1,4 +1,4 @@
-$election->getResult()->getResultAsString(); // "Claude Debussy > Richard Wagner"
+$electionWithVotes->getResult()->rankingAsString; // "Claude Debussy > Richard Wagner"
 $vote->setRanking('Richard Wagner > Claude Debussy');
-$election->getResult()->getResultAsString(); // Richard Wagner > "Claude Debussy"
-$vote->getHistory(); // Every change is logued
+$electionWithVotes->getResult()->rankingAsString; // Richard Wagner > "Claude Debussy"
+$vote->rankingHistory; // Every changes are logued

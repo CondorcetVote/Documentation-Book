@@ -1,0 +1,6 @@
+tag1,tag2,tag3[...] || A>B=D>C # A comment at the end of the line prefixed by '#'. Never use ';' in comment!
+Titan,CoteBoeuf || A>B=D>C # Tags at first, vote at second, separated by '||'
+A>C>D>B # Line break to start a new vote. Tags are optional. See above for vote syntax.
+tag1,tag2,tag3 || A>B=D>C * 5 # This vote and its tags will be registered 5 times
+   tag1  ,  tag2, tag3     ||    A>B=D>C*2        # Works too.
+C>D>B*8;A=D>B;Julien,Christelle||A>C>D>B*4;D=B=C>A # Alternatively, you can replace the line break by a semicolon.
