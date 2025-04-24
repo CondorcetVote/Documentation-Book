@@ -1,4 +1,4 @@
-name: Tests Php code Snippets
+name: "Tests Php code Snippets"
 
 on: ['push', 'pull_request']
 
