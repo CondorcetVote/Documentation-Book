@@ -41,8 +41,8 @@ $myNewVote->getLinks(); // Get Condorcet objects
 expect($myNewVote->getLinks())->toBe([$election1, $election2]);
 
 // Get the vote ranking in context of each elections
-$contextualRankingInElection1 = $myNewVote->getSimpleRanking(context: $election1);
-$contextualRankingInElection2 = $myNewVote->getSimpleRanking(context: $election2);
+$contextualRankingInElection1 = $myNewVote->getRankingAsString(context: $election1);
+$contextualRankingInElection2 = $myNewVote->getRankingAsString(context: $election2);
 
 expect($contextualRankingInElection1)->toBe('W.Lutoslawski > Debussy > Messiaen > Caplet');
 expect($contextualRankingInElection2)->toBe('W.Lutoslawski > Debussy');

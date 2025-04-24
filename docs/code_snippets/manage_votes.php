@@ -22,7 +22,7 @@ expect($voteWithoutTag === $oneVoteToDelete)->toBe(true);
 // Vote objet
 $oneVote = $myElection1->getVotesList('strangeVote')[0]; // Return the current ranking
 $oneVote->getRanking(); // Return the current ranking
-$oneVote->getContextualRanking($myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
+$oneVote->getRanking(context: $myElection1); // Return the full ranking in the context of election 1 (with 6 candidates)
 
 // Change the vote
 $oneVote->setRanking([
