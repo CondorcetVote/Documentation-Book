@@ -1,6 +1,8 @@
 <?php
 use CondorcetPHP\Condorcet\Vote;
 
+require 'play_with_candidates.php';
+
 $VoteModel = [
     $myDebussyCandidate,
     'Caplet',

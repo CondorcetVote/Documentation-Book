@@ -1,4 +1,4 @@
-$electionWithVotes->getResult('Schulze');
+$result = $electionWithVotes->getResult('Schulze');
 
 $result->byClass; // Namespace of the Schulze module. Like 'CondorcetPHP\Condorcet\Algo\Methods\SchulzeWinning'
 $result->fromMethod; // Method who build this result. Like 'Schulze'.
