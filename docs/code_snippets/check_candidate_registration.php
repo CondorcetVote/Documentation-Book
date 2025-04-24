@@ -5,11 +5,10 @@ $election = new Election(); // Create a new election
 
 $candidate = new Candidate('Wagner'); // Add a candidate to the election
 
-assert($election->canAddCandidate($candidate)); // true: the candidate object and the candidate string name are available.
-assert($election->hasCandidate($candidate) === false); // false
+expect($election->canAddCandidate($candidate))->toBeTrue(); // true: the candidate object and the candidate string name are available.
+expect($election->hasCandidate($candidate))->toBeFalse(); // false: the candidate object and the candidate string name are available.
 
 $election->addCandidate($candidate); // Finally add the candidate to the election
 
-assert($election->hasCandidate($candidate)); // true
-assert($election->hasCandidate(candidate: 'Wagner', strictMode: false)); // true
-
+expect($election->hasCandidate($candidate))->toBeTrue();
+expect($election->hasCandidate(candidate: 'Wagner', strictMode: false))->toBeTrue(); // true: the candidate object and the candidate string name are available.

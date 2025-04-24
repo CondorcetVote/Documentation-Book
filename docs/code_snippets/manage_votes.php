@@ -6,15 +6,17 @@ $myElection1->parseVotes('strangeVote || Koechlin > Debussy * 12');
 $myElection1->getVotesList(); // Returns an array of all votes as object.
 
 // How many Vote with tag "strangeVote" ?
-assert($myElection1->countVotes('strangeVote') === 12); // true
+expect($myElection1->countVotes('strangeVote'))->toBe(12);
 
-// Return this 12 votes !
+// Return the 12 votes !
 $myElection1->getVotesList('strangeVote');
+
 // Or without this tags and get the first of them
 $voteWithoutTag = $myElection1->addVote('Caplet = Ligeti');
 $votesListWithoutStrangeTag = $myElection1->getVotesList('strangeVote', false);
 $oneVoteToDelete = reset($votesListWithoutStrangeTag);
-assert($voteWithoutTag === $oneVoteToDelete); // true
+
+expect($voteWithoutTag === $oneVoteToDelete)->toBe(true);
 
 
 // Vote objet
