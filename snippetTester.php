@@ -90,6 +90,9 @@ foreach ($phpFiles as $file)
         $code = str_replace('election.cef', SNIPPETS_DIR . '/election.cef', $code);
         $code = str_replace('david_hill_format.hil', SNIPPETS_DIR . '/david_hill_format.hil', $code);
 
+        // Transform assert() calls to add a second argument new \Exception
+        $code = preg_replace('/assert\((.+)\);/', 'assert($1, new \Exception);', $code);
+
         // Init common var
         $election = clone $electionModel;
         $election1 = clone $electionModel;
