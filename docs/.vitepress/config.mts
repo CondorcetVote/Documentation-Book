@@ -11,7 +11,7 @@ export default defineConfig({
   cleanUrls: true,
 
   sitemap: {
-    hostname: 'https://condorcet.io'
+    hostname: 'https://docs.condorcet.io'
   },
 
   lastUpdated: true,
