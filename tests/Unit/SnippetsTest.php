@@ -32,11 +32,11 @@ test('snippets', function (string $file): void {
     $code = preg_replace('/^<\?php\s+/', '', $code);
 
     // Replace input
-    $code = str_replace('candidates.txt', SNIPPETS_DIR . '/candidates.txt', $code);
-    $code = str_replace('votes.txt', SNIPPETS_DIR . '/votes.txt', $code);
-    $code = str_replace('debian_leader2020_tally.txt', SNIPPETS_DIR . '/debian_leader2020_tally.txt', $code);
-    $code = str_replace('election.cef', SNIPPETS_DIR . '/election.cef', $code);
-    $code = str_replace('david_hill_format.hil', SNIPPETS_DIR . '/david_hill_format.hil', $code);
+    $code = str_replace('candidates.txt', SNIPPETS_DIR . DIRECTORY_SEPARATOR . 'candidates.txt', $code);
+    $code = str_replace('votes.txt', SNIPPETS_DIR . DIRECTORY_SEPARATOR . 'votes.txt', $code);
+    $code = str_replace('debian_leader2020_tally.txt', SNIPPETS_DIR . DIRECTORY_SEPARATOR . 'debian_leader2020_tally.txt', $code);
+    $code = str_replace('election.cef', SNIPPETS_DIR . DIRECTORY_SEPARATOR . 'election.cef', $code);
+    $code = str_replace('david_hill_format.hil', SNIPPETS_DIR . DIRECTORY_SEPARATOR . 'david_hill_format.hil', $code);
 
     // Transform assert() calls to add a second argument new \Exception
     // $code = preg_replace('/assert\((.+)\);/', 'assert($1, new \Exception("failed to assert"));', $code);
