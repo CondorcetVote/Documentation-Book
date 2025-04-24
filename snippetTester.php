@@ -30,6 +30,20 @@ use DirectoryIterator;
 use ReflectionClass;
 use Throwable;
 
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    // Ne traite que les erreurs qui correspondent au niveau de reporting actuel
+    if (!(error_reporting() & $errno)) {
+        return false;
+    }
+
+    // Convertit les warnings et autres erreurs non fatales en exceptions
+    if ($errno !== E_ERROR) {
+        throw new \ErrorException($errstr, 0, $errno, $errfile, $errline);
+    }
+
+    return false; // Pour les erreurs fatales, laisse PHP gérer normalement
+});
+
 // Directory path for code snippets
 const SNIPPETS_DIR = __DIR__ . '/docs/code_snippets';
 
