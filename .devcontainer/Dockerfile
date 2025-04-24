@@ -1,3 +1,2 @@
-FROM mcr.microsoft.com/devcontainers/typescript-node:20-bookworm
+FROM mcr.microsoft.com/devcontainers/typescript-node:22-bookworm
 
-RUN npm i docsify-cli -g
