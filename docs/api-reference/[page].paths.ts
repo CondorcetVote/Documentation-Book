@@ -41,6 +41,7 @@ export default {
                       .replaceAll('../../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
                       .replaceAll('../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
                       .replaceAll('/Docs/VotingMethods.md', '/gh/VotingMethods')
+                      .replaceAll('../README.md', CONDORCET_BASE_REPO_TREE + 'README.md')
                     ;
 
       return page;
