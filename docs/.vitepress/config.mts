@@ -18,11 +18,10 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/avif', href: '/condorcet-logo-without-text.avif' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/condorcet-logo-without-text.png' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en_CA' }],
     ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
-    ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.png' }]
+    ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.avif' }]
   ],
 
   ignoreDeadLinks: [
