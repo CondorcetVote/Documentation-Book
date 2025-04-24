@@ -23,7 +23,7 @@ namespace SnippetTester;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-// Vérifie si les assertions sont activées
+// Check if assertions are enabled
 if (!filter_var(ini_get('zend.assertions'), FILTER_VALIDATE_BOOLEAN)) {
     trigger_error('Warning: PHP assertions are disabled (zend.assertions=0). Some tests may not work as expected.', E_USER_WARNING);
 }
@@ -35,17 +35,12 @@ use ReflectionClass;
 use Throwable;
 
 set_error_handler(function($errno, $errstr, $errfile, $errline) {
-    // Ne traite que les erreurs qui correspondent au niveau de reporting actuel
-    if (!(error_reporting() & $errno)) {
-        return false;
-    }
-
-    // Convertit les warnings et autres erreurs non fatales en exceptions
+    // Converts warnings and other non-fatal errors into exceptions
     if ($errno !== E_ERROR) {
         throw new \ErrorException($errstr, 0, $errno, $errfile, $errline);
     }
 
-    return false; // Pour les erreurs fatales, laisse PHP gérer normalement
+    return false; // For fatal errors, let PHP handle normally
 });
 
 // Directory path for code snippets
@@ -95,7 +90,7 @@ foreach ($phpFiles as $file)
         $code = str_replace('david_hill_format.hil', SNIPPETS_DIR . '/david_hill_format.hil', $code);
 
         // Transform assert() calls to add a second argument new \Exception
-        $code = preg_replace('/assert\((.+)\);/', 'assert($1, new \Exception);', $code);
+        $code = preg_replace('/assert\((.+)\);/', 'assert($1, new \Exception("failed to assert"));', $code);
 
         // Init common var
         $election = clone $electionModel;
@@ -107,7 +102,7 @@ foreach ($phpFiles as $file)
         eval($code);
     } catch (Throwable $e) {
         echo "\nTesting file: " . basename($file) . PHP_EOL;
-        echo "Error: " . $e->getMessage() . PHP_EOL;
+        echo "Error: " . $e->getMessage() . " / line: " . $e->getLine() . PHP_EOL;
         // throw $e;
     } finally {
         // Set back to false for next test

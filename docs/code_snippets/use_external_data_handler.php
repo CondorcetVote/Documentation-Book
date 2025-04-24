@@ -4,6 +4,6 @@ use CondorcetPHP\Condorcet\DataManager\DataHandlerDrivers\DataHandlerDriverInter
 use DriverNamespace\NewHandlerDriver;
 
 $driver = new NewHandlerDriver(); // Must be ready to use (connection, access etc..)
-assert($driver instanceof DataHandlerDriverInterface, 'Driver must implement ExternalDataHandlerInterface');
+assert($driver instanceof DataHandlerDriverInterface); // true
 
 $election->setExternalDataHandler($driver);
