@@ -41,7 +41,7 @@ export default defineConfig({
       { text: 'Get Started', link: '/book/1.Start.md' },
       { text: 'API References', link: '/api-reference/Index' },
       { text: 'Voting Methods', link: '/gh/VotingMethods' },
-      { text: 'Tests', link: CONDORCET_BASE_REPO_TREE + '/tests' },
+      { text: 'Tests', link: CONDORCET_BASE_REPO_TREE + 'tests' },
       {
         text: CONDORCET_TARGET_VERSION,
         items: [
