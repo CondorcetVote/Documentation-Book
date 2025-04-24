@@ -8,15 +8,15 @@ require_once 'vendor/autoload.php';
 
 const LIST_SYMBOL = '*';
 
-$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__.'/docs/book');
+$adapter = new League\Flysystem\Local\LocalFilesystemAdapter(__DIR__ . '/docs/book');
 $filesystem = new League\Flysystem\Filesystem($adapter);
 
 $listing = $filesystem->listContents('.', true)
-    ->filter(fn (StorageAttributes $attributes) => $attributes->isFile())
-    ->filter(fn (StorageAttributes $attributes) => str_ends_with($attributes->path(), '.md'))
-    ->filter(fn (StorageAttributes $attributes) => ! str_starts_with($attributes->path(), '_'))
-    ->filter(fn (StorageAttributes $attributes) => ! str_contains($attributes->path(), 'SUMMARY'))
-    ->filter(fn (StorageAttributes $attributes) => ! str_ends_with($attributes->path(), 'index.md'))
+    ->filter(fn(StorageAttributes $attributes) => $attributes->isFile())
+    ->filter(fn(StorageAttributes $attributes) => str_ends_with($attributes->path(), '.md'))
+    ->filter(fn(StorageAttributes $attributes) => ! str_starts_with($attributes->path(), '_'))
+    ->filter(fn(StorageAttributes $attributes) => ! str_contains($attributes->path(), 'SUMMARY'))
+    ->filter(fn(StorageAttributes $attributes) => ! str_ends_with($attributes->path(), 'index.md'))
     ->sortByPath();
 
 // Create an array structure for the sidebar
@@ -25,7 +25,7 @@ $sidebarItems = [];
 // Add the first item - Condorcet Presentation
 $sidebarItems[] = [
     'text' => 'Complete Readme',
-    'link' => 'https://github.com/julien-boudry/Condorcet/blob/master/README.md'
+    'link' => 'https://github.com/julien-boudry/Condorcet/blob/master/README.md',
 ];
 
 // Store file information for processing
@@ -33,7 +33,7 @@ $fileEntries = [];
 
 // First pass: collect all file information
 foreach ($listing as $file) {
-    $fileContent = file_get_contents(__DIR__.'/docs/book/'.$file->path());
+    $fileContent = file_get_contents(__DIR__ . '/docs/book/' . $file->path());
 
     $re = '/#(.*)\n/m';
     preg_match_all($re, $fileContent, $matches, PREG_SET_ORDER, 0);
@@ -48,17 +48,17 @@ foreach ($listing as $file) {
         $title = removeIndex(trim($title));
 
         $thePath = $file->path();
-        $thePath = 'book/'.$thePath;
-        $link = str_replace('.md', '', '/'.$thePath);
+        $thePath = 'book/' . $thePath;
+        $link = str_replace('.md', '', '/' . $thePath);
 
         $fileEntries[] = [
             'path' => $pathParts,
             'title' => $title,
             'link' => $link,
-            'fullPath' => $file->path()
+            'fullPath' => $file->path(),
         ];
     } else {
-        throw new Exception($file->path().' has no title');
+        throw new Exception($file->path() . ' has no title');
     }
 }
 
@@ -71,9 +71,9 @@ foreach ($fileEntries as $entry) {
         // Top-level items
         $sidebarItems[] = [
             'text' => $entry['title'],
-            'link' => $entry['link']
+            'link' => $entry['link'],
         ];
-    } else if (count($entry['path']) > 0) {
+    } elseif (count($entry['path']) > 0) {
         // Group by first level directory
         $mainSection = $entry['path'][0];
 
@@ -84,7 +84,7 @@ foreach ($fileEntries as $entry) {
             $nestedSections[$mainSection] = [
                 'text' => $mainSectionTitle,
                 'items' => [],
-                'subSections' => []
+                'subSections' => [],
             ];
         }
 
@@ -93,9 +93,9 @@ foreach ($fileEntries as $entry) {
             // Direct children of main section
             $nestedSections[$mainSection]['items'][] = [
                 'text' => $entry['title'],
-                'link' => $entry['link']
+                'link' => $entry['link'],
             ];
-        } else if (count($entry['path']) > 1) {
+        } elseif (count($entry['path']) > 1) {
             // Subsection items
             $subSection = $entry['path'][1];
 
@@ -106,13 +106,13 @@ foreach ($fileEntries as $entry) {
                 $nestedSections[$mainSection]['subSections'][$subSection] = [
                     'text' => $subSectionTitle,
                     'collapsed' => true,
-                    'items' => []
+                    'items' => [],
                 ];
             }
 
             $nestedSections[$mainSection]['subSections'][$subSection]['items'][] = [
                 'text' => $entry['title'],
-                'link' => $entry['link']
+                'link' => $entry['link'],
             ];
         }
     }
@@ -122,7 +122,7 @@ foreach ($fileEntries as $entry) {
 foreach ($nestedSections as $section) {
     $sectionEntry = [
         'text' => $section['text'],
-        'items' => $section['items']
+        'items' => $section['items'],
     ];
 
     // Add subsections if they exist
@@ -136,27 +136,27 @@ foreach ($nestedSections as $section) {
 // Add the additional static items
 $sidebarItems[] = [
     'text' => 'Voting Methods',
-    'link' => '/gh/VotingMethods'
+    'link' => '/gh/VotingMethods',
 ];
 
 $sidebarItems[] = [
     'text' => 'API Reference',
-    'link' => '/api-reference/Index'
+    'link' => '/api-reference/Index',
 ];
 
 $sidebarItems[] = [
     'text' => 'Changelog',
-    'link' => '/gh/Changelog'
+    'link' => '/gh/Changelog',
 ];
 
 // Convert to JSON
 $jsonOutput = json_encode(
     value: $sidebarItems,
-    flags: JSON_PRETTY_PRINT
+    flags: JSON_PRETTY_PRINT,
 );
 
 // Write to file
-file_put_contents(__DIR__.'/docs/.vitepress/sidebar.json', $jsonOutput);
+file_put_contents(__DIR__ . '/docs/.vitepress/sidebar.json', $jsonOutput);
 
 function removeIndex(string $title): string
 {
