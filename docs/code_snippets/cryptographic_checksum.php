@@ -8,4 +8,4 @@ $toStore = serialize($election);
 unset($election);
 $newElection = unserialize($toStore);
 
-assert($newElection->getChecksum() === $originalChecksum); // true
+expect($originalChecksum)->toBe($newElection->getChecksum());

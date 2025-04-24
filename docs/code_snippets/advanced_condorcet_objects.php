@@ -25,7 +25,7 @@ $lutoCandidate->nameHistory;
 
 // In what elections, this candidates have a part ?
 $lutoCandidate->getLinks(); // Get Condorcet objects
-assert($lutoCandidate->countLinks() === 2); // Or just count it
+expect($lutoCandidate->getLinks())->toBe([$election1, $election2]);
 
 // The same vote applied to multiple elections.
 
@@ -38,7 +38,7 @@ $election2->addVote($myNewVote);
 
 // In what election, this candidates have a part ?
 $myNewVote->getLinks(); // Get Condorcet objects
-assert($myNewVote->countLinks() === 2); // Or just count it
+expect($myNewVote->getLinks())->toBe([$election1, $election2]);
 
 // Get the vote ranking in context of each elections
 $contextualRankingInElection1 = $myNewVote->getContextualRanking($election1);
