@@ -23,6 +23,10 @@ namespace SnippetTester;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+// Vérifie si les assertions sont activées
+if (!filter_var(ini_get('zend.assertions'), FILTER_VALIDATE_BOOLEAN)) {
+    trigger_error('Warning: PHP assertions are disabled (zend.assertions=0). Some tests may not work as expected.', E_USER_WARNING);
+}
 
 use CondorcetPHP\Condorcet\Condorcet;
 use CondorcetPHP\Condorcet\Election;
