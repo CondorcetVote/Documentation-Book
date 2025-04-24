@@ -6,7 +6,7 @@ on:
   # Runs on pushes targeting the `main` branch. Change this to `master` if you're
   # using the `master` branch as the default branch.
   workflow_run:
-    workflows: ["test_snippets"]  # Nom exact de votre autre workflow
+    workflows: ["Tests Php code Snippets"]  # Nom exact de votre autre workflow
     types:
       - completed
     branches: [v5]
