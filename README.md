@@ -5,7 +5,7 @@ This repository contains the source files for the official Condorcet PHP documen
 ## Important Links
 
 - **Condorcet PHP Project**: [GitHub Repository](https://github.com/julien-boudry/Condorcet)
-- **Online Documentation**: [Documentation Book](https://www.condorcet.io)
+- **Online Documentation**: [Documentation Book](https://docs.condorcet.io)
 
 ## Contributing to the Documentation
 
