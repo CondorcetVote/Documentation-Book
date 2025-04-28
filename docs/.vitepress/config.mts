@@ -17,7 +17,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ['link', { rel: 'icon', type: 'image/avif', href: '/condorcet-logo-without-text.avif' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en_CA' }],
     ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
