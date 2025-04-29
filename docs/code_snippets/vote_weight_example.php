@@ -13,7 +13,7 @@ $voteWithWeight->setWeight(2); // You set a weight, but weight is still not allo
 // Return 'A > C > D > B'
 $election->getResult('Schulze Winning')->rankingAsString;
 
-$election->allowsVoteWeight(true);
+$election->authorizeVoteWeight = true;
 
 // Return 'A = D > C > B'
 $election->getResult('Schulze Winning')->rankingAsString;

@@ -1,5 +1,5 @@
 use CondorcetPHP\Condorcet\Vote;
-$election->allowsVoteWeight();
+$election->authorizeVoteWeight = true;
 $election->parseCandidates('A;B;C;D');
 
 $vote = new Vote('A>B');

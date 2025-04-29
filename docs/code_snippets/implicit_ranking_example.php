@@ -16,7 +16,6 @@ $election->getWinner('Ranked Pairs'); // Return candidate B
 
 // Supporting not ranked candidate
 $election->implicitRankingRule = false;
-$election->implicitRankingRule; // False.
 $election->getWinner('Ranked Pairs'); // Return candidate A
 
 // Rollback

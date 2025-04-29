@@ -6,7 +6,7 @@ $candidateB = new Candidate('B');
 $candidateC = new Candidate('C');
 
 $election1 = new Election;
-$election1->allowsVoteWeight(true);
+$election1->authorizeVoteWeight = true;
 
 $election1->addCandidate($candidateA);
 $election1->addCandidate($candidateB);

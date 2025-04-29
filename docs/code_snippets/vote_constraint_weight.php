@@ -1,6 +1,6 @@
 use \CondorcetPHP\Condorcet\Constraints\NoTie;
 
-$election->allowsVoteWeight();
+$election->authorizeVoteWeight = true;
 $election->parseCandidates('A;B;C;D');
 $election->parseVotes('
     A>B>C>D
@@ -27,7 +27,7 @@ $election->countValidVoteWithConstraints(); // return 1
 $election->countInvalidVoteWithConstraints(); // return 4
 
 $election->getWinner(); // Return Candidate A
-$election->setImplicitRanking(false);
+$election->implicitRankingRule(false);
 $election->getWinner(); // Return Candidate B
 
 // The vote B^42 become valid under constraint, since implicit ranking is false

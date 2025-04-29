@@ -9,7 +9,7 @@ $election->addCandidate('Brad');
 $election->addCandidate('Delilah');
 $election->addCandidate('Scott');
 
-$election->setImplicitRanking(false);
+$election->implicitRankingRule(false);
 
 $election->parseVotes('
     Andrea *25
