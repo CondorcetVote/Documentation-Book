@@ -1,6 +1,6 @@
 use CondorcetPHP\Condorcet\Algo\Tools\StvQuotas;
 
-StvQuotas::fromString('imperiali'); // Return StvQuotas::IMPERIALI.
+expect(StvQuotas::fromString('imperiali'))->toBe(StvQuotas::IMPERIALI);
 
 // Statically compute a quotas.
-StvQuotas::HARE->getQuota(votesWeight: 40, seats: 10); // Return 4.0 because the Hare formula is: $votes / $seats
+expect(StvQuotas::HARE->getQuota(votesWeight: 40, seats: 10))->toBe(4.0); // Because the Hare formula is: $votes / $seats

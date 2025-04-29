@@ -16,3 +16,5 @@ $vote = [];
 $vote[1] = 'Debussy,Wagner';
 $vote[2] = [$pucciniCandidate, 'Varese'];
 $election->addVote($vote);
+
+expect($election->countVotes())->toBe(2);

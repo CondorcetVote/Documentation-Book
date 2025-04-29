@@ -21,3 +21,5 @@ $vote3 = new Vote([
 $election->addVote($vote1);
 $election->addVote($vote2);
 $election->addVote($vote3);
+
+expect($election->countVotes())->toBe(3);

@@ -7,3 +7,5 @@ $json_votes = json_encode( [
 ] );
 
 $election->addVotesFromJson($json_votes);
+
+expect($election->countVotes())->toBe(7);

@@ -1,7 +1,10 @@
 use \CondorcetPHP\Condorcet\Constraints\NoTie;
 
 $election->addConstraint(NoTie::class);
-$election->getConstraints(); // Return [NoTie::class]
+
+expect($election->getConstraints())->toBe([
+    NoTie::class
+]);
 
 $election->parseCandidates('A;B;C;D');
 $election->parseVotes('
@@ -10,12 +13,12 @@ $election->parseVotes('
     A > B > C = D
 ' );
 
-$election->getWinner(); // return Candidate B
-$election->countValidVoteWithConstraints(); // return 1
-$election->countInvalidVoteWithConstraints(); // return 2
+expect($election->getWinner()->name)->toBe('B');
+expect($election->countValidVoteWithConstraints())->toBe(1);
+expect($election->countInvalidVoteWithConstraints())->toBe(2);
 
 $election->clearConstraints();
 
-$election->getWinner(); // Return Candidate A
-$election->countValidVoteWithConstraints(); // return 3
-$election->countInvalidVoteWithConstraints(); // return 0
+expect($election->getWinner()->name)->toBe('A');
+expect($election->countValidVoteWithConstraints())->toBe(3);
+expect($election->countInvalidVoteWithConstraints())->toBe(0);

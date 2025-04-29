@@ -10,13 +10,11 @@ $election->parseVotes('
 $voteWithWeight = $election->addVote('D > C > B'); // Returns a new vote object
 $voteWithWeight->setWeight(2); // You set a weight, but weight is still not allowed at the election level.
 
-// Return 'A > C > D > B'
-$election->getResult('Schulze Winning')->rankingAsString;
+expect($election->getResult('Schulze Winning')->rankingAsString)->toBe('A > C > D > B');
 
 $election->authorizeVoteWeight = true;
 
-// Return 'A = D > C > B'
-$election->getResult('Schulze Winning')->rankingAsString;
+expect($election->getResult('Schulze Winning')->rankingAsString)->toBe('A = D > C > B');
 
 $election->removeVote($voteWithWeight);
 
@@ -24,18 +22,14 @@ $election->parseVotes('
     D > C > B ^2
 ');
 
-// Return 'A = D > C > B',
-$election->getResult('Schulze Winning')->rankingAsString;
+expect($election->getResult('Schulze Winning')->rankingAsString)->toBe('A = D > C > B');
 
 $election->addVote('D > C > B');
 
-$election->getVotesListAsString();
-// Return D > C > B > A with 2 lines. one for weight ^2 and one for force ^1
-/*
-A > C > D > B * 6
+expect($election->getVotesListAsString())->toBe( // Return D > C > B > A with 2 lines. one for weight ^2 and one for weight^1
+'A > C > D > B * 6
 C > B > D > A * 3
 D > B > A > C * 3
 D > C > B > A ^2 * 1
 B > A > D > C * 1
-D > C > B > A * 1
-*/
+D > C > B > A * 1');
