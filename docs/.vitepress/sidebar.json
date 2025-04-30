@@ -144,10 +144,6 @@
                         "link": "\/book\/3.AsPhpLibrary\/8.GoFurther\/6.Mutability"
                     },
                     {
-                        "text": "Exceptions & Errors",
-                        "link": "\/book\/3.AsPhpLibrary\/8.GoFurther\/7.Exceptions-Errors"
-                    },
-                    {
                         "text": "Generators & Iterators",
                         "link": "\/book\/3.AsPhpLibrary\/8.GoFurther\/8.Generator-Iterators"
                     },
