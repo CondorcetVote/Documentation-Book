@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+title: Official Documentation Book
 
 hero:
   name: '<span style="-webkit-text-fill-color:#f67255;">Condorcet</span> PHP'
