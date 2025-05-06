@@ -1,3 +1,4 @@
+<?php
 use \CondorcetPHP\Condorcet\Constraints\NoTie;
 
 $election->authorizeVoteWeight = true;
@@ -12,27 +13,27 @@ $election->parseVotes('
 $election->getWinner(); // Return Candidate B
 
 $election->addConstraint(NoTie::class);
-$election->getWinner(); // Return Candidate A
+expect($election->getWinner()->name)->toBe('A');
 
 $election->clearConstraints();
-$election->getWinner(); // return Candidate B
+expect($election->getWinner()->name)->toBe('B');
 
 $election->addConstraint(NoTie::class);
-$election->getWinner(); // Return Candidate A
+expect($election->getWinner()->name)->toBe('A');
 
-$election->sumValidVoteWeightsWithConstraints(); // Return 1
-$election->sumVoteWeights(); // Return 46 (1 + 3 + 42)
-$election->countVotes(); // Return 5
-$election->countValidVoteWithConstraints(); // return 1
-$election->countInvalidVoteWithConstraints(); // return 4
+expect($election->sumValidVoteWeightsWithConstraints())->toBe(1);
+expect($election->sumVoteWeights())->toBe(1 + 3 + 42);
+expect($election->countVotes())->toBe(5);
+expect($election->countValidVoteWithConstraints())->toBe(1);
+expect($election->countInvalidVoteWithConstraints())->toBe(4);
 
-$election->getWinner(); // Return Candidate A
+expect($election->getWinner()->name)->toBe('A');
 $election->implicitRankingRule(false);
-$election->getWinner(); // Return Candidate B
+expect($election->getWinner()->name)->toBe('B');
 
 // The vote B^42 become valid under constraint, since implicit ranking is false
-$election->sumValidVoteWeightsWithConstraints(); // Return 43
-$election->sumVoteWeights(); // Return 46
-$election->countVotes(); // Return 5
-$election->countValidVoteWithConstraints(); // Return 2
-$election->countInvalidVoteWithConstraints(); // Return 3
+expect($election->sumValidVoteWeightsWithConstraints())->toBe(43);
+expect($election->sumVoteWeights())->toBe(46);
+expect($election->countVotes())->toBe(5);
+expect($election->countValidVoteWithConstraints())->toBe(2);
+expect($election->countInvalidVoteWithConstraints())->toBe(3);
