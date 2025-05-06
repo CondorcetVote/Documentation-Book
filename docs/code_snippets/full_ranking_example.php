@@ -8,8 +8,8 @@ $election->addVote('Copland > Cage > Ives = Bernstein > Barber');
 
 $result = $election->getResult('Schulze');
 
-$winner = $result->Winner->name;
-$loser = $result->Loser;
+$winner = $result->Winner ?? 'No method winner';;
+$loser = $result->Loser ?? 'No method loser';
 $condorcetWinner = $election->getCondorcetWinner() ?? 'No Condorcet winner';
 $condorcetLoser =  $election->getCondorcetLoser() ?? 'No Condorcet Loser';
 
