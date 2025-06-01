@@ -21,7 +21,9 @@ export default defineConfig({
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en_CA' }],
     ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
-    ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.avif' }]
+    ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.avif' }],
+
+    ['script', {  src: 'https://app.rybbit.io/api/script.js', 'data-site-id': '859', defer: ''}]
   ],
 
   ignoreDeadLinks: [
