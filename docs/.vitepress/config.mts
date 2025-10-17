@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import sidebar from './sidebar.json'
-import { CONDORCET_BASE_REPO_WEB, CONDORCET_TARGET_VERSION, CONDORCET_BASE_REPO_TREE } from './globals.ts'
+import { CONDORCET_BASE_REPO_WEB, CONDORCET_TARGET_VERSION, CONDORCET_BASE_REPO_TREE, CONDORCET_BASE_REPO_API_DOCS_RAW } from './globals.ts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,6 +9,12 @@ export default defineConfig({
   description: 'Condorcet PHP documentation book',
 
   cleanUrls: true,
+
+  vite: {
+    define: {
+      CONDORCET_BASE_REPO_API_DOCS_RAW: JSON.stringify(CONDORCET_BASE_REPO_API_DOCS_RAW)
+    }
+  },
 
   sitemap: {
     hostname: 'https://docs.condorcet.io'
@@ -78,9 +84,9 @@ export default defineConfig({
     editLink: {
       pattern: ({ filePath }) => {
         if (filePath.startsWith('book/')) {
-          return `https://github.com/CondorcetVote/Documentation-Book/edit/master/docs/${filePath}`
+          return `${CONDORCET_BASE_REPO_API_DOCS_RAW}${filePath}`
         } else {
-          return globalThis.CONDORCET_BASE_REPO_WEB;
+          return CONDORCET_BASE_REPO_API_DOCS_RAW;
         }
       }
     }
