@@ -94,10 +94,11 @@ export default defineConfig({
 
     editLink: {
       pattern: ({ filePath }) => {
+        const baseUrl = 'https://github.com/CondorcetVote/Documentation-Book/edit/master/docs/';
         if (filePath.startsWith('book/')) {
-          return `${CONDORCET_BASE_REPO_API_DOCS_RAW}${filePath}`
+          return `${baseUrl}${filePath}`
         } else {
-          return CONDORCET_BASE_REPO_API_DOCS_RAW;
+          return baseUrl;
         }
       }
     },
