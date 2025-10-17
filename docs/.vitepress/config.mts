@@ -40,7 +40,9 @@ export default defineConfig({
 
   transformPageData(pageData) {
     const url = `${CONDORCET_DOC_PROD_HOSTNAME}/${pageData.relativePath}`
-      .replace('.md', '');
+      .replace('.md', '')
+      .replace(/index$/, '')
+      ;
 
     pageData.frontmatter.head ??= [];
     pageData.frontmatter.head.push([
