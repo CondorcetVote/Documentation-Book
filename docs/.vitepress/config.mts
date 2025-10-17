@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import sidebar from './sidebar.json'
-import { CONDORCET_BASE_REPO_WEB, CONDORCET_TARGET_VERSION, CONDORCET_BASE_REPO_TREE, CONDORCET_BASE_REPO_API_DOCS_RAW } from './globals.ts'
+import { CONDORCET_BASE_REPO_WEB, CONDORCET_TARGET_VERSION, CONDORCET_BASE_REPO_TREE, CONDORCET_BASE_REPO_API_DOCS_RAW, CONDORCET_DOC_PROD_HOSTNAME } from './globals.ts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,7 +17,7 @@ export default defineConfig({
   },
 
   sitemap: {
-    hostname: 'https://docs.condorcet.io'
+    hostname: CONDORCET_DOC_PROD_HOSTNAME
   },
 
   lastUpdated: true,
@@ -29,7 +29,7 @@ export default defineConfig({
     ['meta', { name: 'og:site_name', content: 'Condorcet PHP Documentation' }],
     ['meta', { name: 'og:image', content: '/condorcet-logo-without-text.avif' }],
 
-    ['script', {  src: 'https://app.rybbit.io/api/script.js', 'data-site-id': '859', defer: ''}]
+    ['script', { src: 'https://app.rybbit.io/api/script.js', 'data-site-id': '859', defer: '' }]
   ],
 
   ignoreDeadLinks: [
@@ -38,8 +38,19 @@ export default defineConfig({
     /\.\/Tests/,
   ],
 
+  transformPageData(pageData) {
+    const url = `${CONDORCET_DOC_PROD_HOSTNAME}/${pageData.relativePath}`
+      .replace('.md', '');
+
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: url }
+    ]);
+  },
+
   themeConfig: {
-    search: {provider: 'local'},
+    search: { provider: 'local' },
 
     logo: '/condorcet-logo-without-text.avif',
 
@@ -59,7 +70,7 @@ export default defineConfig({
     ],
 
     sidebar: sidebar,
-    outline: [2,4],
+    outline: [2, 4],
 
     footer: {
       message: 'Released under the MIT License.',
@@ -89,6 +100,7 @@ export default defineConfig({
           return CONDORCET_BASE_REPO_API_DOCS_RAW;
         }
       }
-    }
+    },
+
   }
 })

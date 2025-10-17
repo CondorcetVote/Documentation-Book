@@ -7,3 +7,5 @@ export const CONDORCET_BASE_REPO_RAW = 'https://raw.githubusercontent.com/' + RE
 export const CONDORCET_BASE_REPO_TREE = CONDORCET_BASE_REPO_WEB + '/tree/' + CONDORCET_TARGET_BRANCH + '/';
 
 export const CONDORCET_BASE_REPO_API_DOCS_RAW = 'https://github.com/CondorcetVote/Documentation-Book/edit/master/docs/';
+
+export const CONDORCET_DOC_PROD_HOSTNAME = 'https://docs.condorcet.io';
