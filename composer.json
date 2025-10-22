@@ -1,10 +1,18 @@
 {
     "name": "condorcet/book",
     "type": "project",
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../PhpReference"
+        }
+    ],
     "require": {
         "league/flysystem": "^3.12",
         "ext-mbstring": "*",
-        "php": "^8.4"
+        "php": "^8.4",
+        "julien-boudry/php-reference": "dev-dev"
     },
     "require-dev": {
         "laravel/pint": "^1.3",
