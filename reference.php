@@ -10,8 +10,14 @@ return [
     // Output directory for the generated documentation
     'output' => __DIR__ . '/docs/api-ref',
 
+    // Index File name
+    'index-file-name' => 'index',
+
     // Do not clean the output directory before generation
     'append' => false,
+
+    // Never prompt for user interaction (e.g., yes/no prompts), especially if the output directory is not empty
+    'no-interaction' => true,
 
     // Public API definition - can be:
     // - An instance of a class implementing PublicApiDefinitionInterface
