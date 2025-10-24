@@ -8,7 +8,7 @@ return [
     'namespace' => 'CondorcetPHP\Condorcet',
 
     // Output directory for the generated documentation
-    'output' => __DIR__ . '/docs/api-ref',
+    'output' => __DIR__ . '/docs/api-reference',
 
     // Index File name
     'index-file-name' => 'index',
