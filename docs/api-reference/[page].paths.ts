@@ -37,11 +37,16 @@ export default {
 
     const pageList = [staticPath, ...dynamicPaths].map((page) => {
       page.content = page.content
+                      // Fix empty links that become ./index
+                      .replace(/\]\(\)/g, '](#)')
                       .replaceAll('/Docs/api-reference/', '/api-reference/')
                       .replaceAll('../../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
                       .replaceAll('../tests', CONDORCET_BASE_REPO_TREE + 'tests/')
                       .replaceAll('/Docs/VotingMethods.md', '/gh/VotingMethods')
                       .replaceAll('../README.md', CONDORCET_BASE_REPO_TREE + 'README.md')
+                      .replaceAll('/api-reference/index.md', '/api-reference/Index')
+                      .replaceAll('./index.md', '/api-reference/Index')
+                      .replaceAll('./index', '/api-reference/Index')
                     ;
 
       return page;
