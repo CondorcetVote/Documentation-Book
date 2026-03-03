@@ -31,3 +31,10 @@ features:
   - title: App or Library
     details: Advanced usage as a PHP library or simple operation as a command line application
 ---
+
+
+::: info See Also — Condorcet Desktop
+***[Condorcet Desktop](https://github.com/julien-boudry/Condorcet.Desktop)** is a fully interactive web & desktop application built on top of this library. Create elections, manage candidates and votes, and compute results through an intuitive graphical interface.*
+
+*A live demo is available at **[desktop.condorcet.vote](https://desktop.condorcet.vote/)** — no installation required. A fully local desktop version powered by NativePHP is coming soon.*
+:::
